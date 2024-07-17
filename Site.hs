@@ -1,0 +1,67 @@
+#! /usr/bin/env nix-shell
+#! nix-shell -p "haskellPackages.ghcWithPackages (p: [p.mustache p.pandoc p.shake p.deriving-aeson])"
+#! nix-shell -i runhaskell
+
+-- pulling heavily from https://abhinavsarkar.net/posts/static-site-generator-using-shake/
+-- docs:
+-- https://hackage.haskell.org/package/pandoc-3.2.1/docs/doc-index-All.html
+-- https://hackage.haskell.org/package/mustache-2.4.2/docs/doc-index.html
+--
+{-# LANGUAGE ApplicativeDo, DataKinds, DeriveGeneric #-}
+{-# LANGUAGE DerivingVia, LambdaCase, TypeApplications #-}
+
+module Main where
+
+import Control.Monad (forM, void)
+import Data.Aeson.Types (Result (..))
+import Data.List (nub, sortOn)
+import Data.Text (Text)
+import Data.Time (UTCTime, defaultTimeLocale, formatTime, parseTimeM)
+import Deriving.Aeson
+import Deriving.Aeson.Stock (PrefixedSnake)
+import Development.Shake (Action, Rules, (%>), (|%>), (~>))
+import Development.Shake.FilePath ((<.>), (</>))
+import Text.Pandoc (Block (Plain), Meta (..), MetaValue (..), Pandoc (..))
+import qualified Data.Aeson.Types as A
+import qualified Data.HashMap.Strict as HM
+import qualified Data.Ord as Ord
+import qualified Data.Text as T
+import qualified Development.Shake as Shake
+import qualified Development.Shake.FilePath as Shake
+import qualified Text.Mustache as Mus
+import qualified Text.Mustache.Compile as Mus
+import qualified Text.Pandoc as Pandoc
+
+main :: IO ()
+main = Shake.shakeArgs Shake.shakeOptions $ do
+  Shake.withTargetDocs "Build the site" $
+    "build" ~> buildTargets
+  Shake.withTargetDocs "Clean the built site" $
+    "clean" ~> Shake.removeFilesAfter outputDir ["//*"]
+
+outputDir :: String
+outputDir = "publish"
+
+buildTargets :: Action ()
+buildTargets = do
+    assetPaths <- Shake.getDirectoryFiles "" assetGlobs
+
+typstToHtml :: FilePath -> Action Text
+typstToHtml filePath = do
+  content <- Shake.readFile' filePath
+  Shake.quietly . Shake.traced "Typst to HTML" $ do
+    doc <- runPandoc . Pandoc.readTypst readerOptions . T.pack $ content
+    
+    runPandoc . Pandoc.writeHtml5String writerOptions $ doc
+  where
+    readerOptions =
+      Pandoc.def {Pandoc.readerExtensions = Pandoc.pandocExtensions}
+    writerOptions =
+      Pandoc.def {Pandoc.writerExtensions = Pandoc.pandocExtensions}
+
+assetGlobs :: [String]
+assetGlobs = ["css/*.css", "images/*.png"]
+
+runPandoc action =
+      Pandoc.runIO (Pandoc.setVerbosity Pandoc.ERROR >> action)
+        >>= either (fail . show) return
