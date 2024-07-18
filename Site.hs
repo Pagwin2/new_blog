@@ -46,8 +46,8 @@ main = Shake.shakeArgs Shake.shakeOptions $ do
 outputDir :: String
 outputDir = "publish"
 
-buildTargets :: Action ()
-buildTargets = do
+buildSite :: Action ()
+buildSite = do
     -- static files
     assetPaths <- Shake.getDirectoryFiles "" assetGlobs
     --  path concat each asset path so it's output into the outputDir
@@ -59,7 +59,17 @@ buildTargets = do
     -- handle posts
     postPaths <- Shake.getDirectoryFiles "" postGlobs
     Shake.need $ map indexHtmlOutputPath postPaths
-    
+
+    -- remaining pages, index.xml = rss feed
+    Shake.need $ map (outputDir </>) ["index.html", "index.xml"]
+
+-- make a rule of the pattern outputDir/asset_name which copes from outputDir/../pages
+assets :: Rules ()
+assets = map (outputDir </>) assetGlobs |%> \target -> do
+  let src = Shake.dropDirectory1 target </> "pages"
+  Shake.copyFileChanged src target
+  Shake.putInfo $ "Copied " <> target <> " from " <> src
+
 typstToHtml :: FilePath -> Action Text
 typstToHtml filePath = do
   content <- Shake.readFile' filePath
@@ -72,6 +82,10 @@ typstToHtml filePath = do
       Pandoc.def {Pandoc.readerExtensions = Pandoc.pandocExtensions}
     writerOptions =
       Pandoc.def {Pandoc.writerExtensions = Pandoc.pandocExtensions}
+
+data Page = Page {pageTitle :: Text, pageContent :: Text}
+  deriving (Show, Generic)
+  deriving (ToJSON) via PrefixedSnake "page" Page
 
 assetGlobs :: [String]
 assetGlobs = ["static/*"]
