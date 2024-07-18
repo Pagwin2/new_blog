@@ -32,6 +32,10 @@ import qualified Text.Mustache as Mus
 import qualified Text.Mustache.Compile as Mus
 import qualified Text.Pandoc as Pandoc
 
+-- target = thing we want
+-- Rule = pattern of thing being made + actions to produce the thing
+-- Action = actions to produce a thing
+
 main :: IO ()
 main = Shake.shakeArgs Shake.shakeOptions $ do
   Shake.withTargetDocs "Build the site" $
@@ -44,8 +48,18 @@ outputDir = "publish"
 
 buildTargets :: Action ()
 buildTargets = do
+    -- static files
     assetPaths <- Shake.getDirectoryFiles "" assetGlobs
+    --  path concat each asset path so it's output into the outputDir
+    Shake.need $ map (outputDir </>) assetPaths
+    
+    -- take the misc pages which aren't blog posts and make their html files
+    Shake.need $ map indexHtmlOutputPath pagePaths
 
+    -- handle posts
+    postPaths <- Shake.getDirectoryFiles "" postGlobs
+    Shake.need $ map indexHtmlOutputPath postPaths
+    
 typstToHtml :: FilePath -> Action Text
 typstToHtml filePath = do
   content <- Shake.readFile' filePath
@@ -60,8 +74,18 @@ typstToHtml filePath = do
       Pandoc.def {Pandoc.writerExtensions = Pandoc.pandocExtensions}
 
 assetGlobs :: [String]
-assetGlobs = ["css/*.css", "images/*.png"]
+assetGlobs = ["static/*"]
+
+pagePaths :: [String]
+pagePaths = ["about.md", "contact.md"]
+
+postGlobs :: [String]
+postGlobs = ["posts/*.typ"]
 
 runPandoc action =
       Pandoc.runIO (Pandoc.setVerbosity Pandoc.ERROR >> action)
         >>= either (fail . show) return
+
+indexHtmlOutputPath :: FilePath -> FilePath
+indexHtmlOutputPath srcPath =
+  outputDir </> Shake.dropExtension srcPath </> "index.html"
