@@ -1,4 +1,13 @@
-body .dark {
+/*https://color.adobe.com/create/color-contrast-analyzer*/
+/*dark theme*/
+/* TODO: make links stand out more*/
+body{
     background: #000;
-    color: #49b;
+    color: #5ac;
 }
+/*light theme*/
+/*
+body {
+    background: #FA8072;
+    color: #000;
+}*/
