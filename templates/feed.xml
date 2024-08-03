@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Pagwin's website</title>
+        <link>https://pagwin.xyz/</link>
+        <description>Recent content on Pagwin's website</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 20 Feb 2024 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://pagwin.xyz/index.xml" rel="self" type="application/rss+xml"/>
+<!--
+        <item>
+            <title></title>
+            <link><>
+            <pubDate></pubDate>
+            <guid></guid>
+            <description></description>
+        </item>
+-->
+    </channel>
+</rss>
