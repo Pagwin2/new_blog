@@ -1,13 +1,44 @@
 /*https://color.adobe.com/create/color-contrast-analyzer*/
 /*dark theme*/
-/* TODO: make links stand out more*/
-body{
-    background: #000;
-    color: #5ac;
+body.dark{
+    --bg-color: #000;
+    --link-clicked: #B250D8;
+    --link-unclicked: #d80;
+    --normal-text: #5ac;
 }
 /*light theme*/
-/*
+body.light{
+    --bg-color: #FDAAA3;
+    --link-unclicked: #147;
+    --link-clicked: #042;
+    --normal-text: #000;
+}
+
 body {
-    background: #FA8072;
-    color: #000;
-}*/
+    background: var(--bg-color);
+    color: var(--normal-text);
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    color: var(--link-unclicked);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--link-clicked);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#header {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+}
+.nav-link {
+}
