@@ -2,6 +2,7 @@
 title: "How this website was made"
 description: "It's with hugo and the rest of this is probably gonna be short and boring viewer discretion is advised"
 date: 2020-09-30
+tags: []
 ---
 ## Prelude
 Before we get to how I actually made this site let's discussed how I failed to make this site(repeatedly). I was inspired to make a simple website/blog from [this blog post](https://k1ss.org/blog/20191004a), I rapidly regretted having that as my main inspiration. I tried setting up scripts for generating pages using the output from pandoc, making the pages look nice and what not as well as make a script for generating an rss feed but rapidly realized that all of this was going to be a pain and gave up. Rinse and repeat a couple of times over several months to a year or so. 

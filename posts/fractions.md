@@ -1,5 +1,4 @@
 ---
-
 title: "Fractions"
 
 description: "So I've been thinking about representing fractions/rational numbers in binary effieciently..."
@@ -8,6 +7,7 @@ date: 2023-08-07
 
 draft: false
 
+tags: []
 ---
 
 # Fractions

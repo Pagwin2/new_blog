@@ -1,5 +1,4 @@
 ---
-
 title: "Serenity pains"
 
 description: "A rant against how serenity forces the developer to handle state"
@@ -8,6 +7,7 @@ date: 2022-09-01
 
 draft: false
 
+tags: []
 ---
 
 This is the second blog article I've written dissing on how a library does something, the [first time](/blog/mineflayer_why) being effectively "Mineflayer doesn't do things the way I want it to and that annoys me". This article will probably follow in that tradition but unlike the Mineflayer one where I would've been inconvenienced to do what I want with Serenity I need to make my code potentially unsound to do what I want.

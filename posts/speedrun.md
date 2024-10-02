@@ -1,5 +1,4 @@
 ---
-
 title: "Speeding through misc stuff"
 
 description: "I want to get out a bunch of stuff that's in the git repo or my head so I'm dumping it here"
@@ -8,6 +7,7 @@ date: 2023-11-11
 
 draft: false
 
+tags: []
 ---
 
 # Speedrun time

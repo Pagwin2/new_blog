@@ -1,8 +1,8 @@
-
 ---
 title: "Mineflayer pains"
 description: "Describing all the pains with mineflayer I've dealt with so far"
 date: 2021-01-10
+tags: []
 ---
 ## Preface
 Given I'm gonna be complaining about [mineflayer](https://github.com/PrismarineJS/mineflayer) you may be wondering why I don't roll with something else given my complaints. The problem with that is that there is nothing else to my knowledge or at least nothing else high level, not even in other languages. There probably is and I just didn't look hard enough but oh well. Also I would've built up my own thing from scratch but reverse engineering/reimplementing a network protocol without official docs and without even unofficial docs if you're trying to do stuff with older versions is kinda hard and if you wanna see how far I got then you can look at the [repo with my work](https://github.com/Pagwin-Fedora/McProtocolLearning) and I refused to work with the slightly lower level(relative to mineflayer) [node minecraft protocol](https://github.com/PrismarineJS/node-minecraft-protocol)(made by the same person) because if I'm using someone else's work I may as well go all the way to the highest level

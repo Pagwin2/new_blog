@@ -1,5 +1,4 @@
 ---
-
 title: "Pogo so far"
 
 description: "A summary of the work I've done on pogo so far and where I intend to go with it"
@@ -7,7 +6,7 @@ description: "A summary of the work I've done on pogo so far and where I intend 
 date: 2022-01-31
 
 draft: false
-
+tags: []
 ---
 
 So in [My last blog](https://pagwin.xyz/blog/gh_actions/), I briefly mentioned a project I'm working on called [Pogo](https://github.com/Pagwin-Fedora/Pogo) and then said absolutely nothing about what it actually is or what I was going to do with it. I did say I wanted to write a blog article on it though and this is that blog article.

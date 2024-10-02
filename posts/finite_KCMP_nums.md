@@ -1,5 +1,4 @@
 ---
-
 title: "Finite KCMP numbers"
 
 description: "Fuck it my brain has a bit too much free time so why not figure out a proof for an isomorphism between programs writen in a turing complete language and natural numbers and use it to do fun stuff"
@@ -8,6 +7,7 @@ date: 2022-12-20
 
 draft: true
 
+tags: []
 ---
 
 # Finite KCMP numbers

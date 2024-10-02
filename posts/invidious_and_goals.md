@@ -1,5 +1,4 @@
 ---
-
 title: "Yeeting the distractions and setting goals"
 
 description: "So recently I've begun work on trying to remove distractions so I'm more likely to work on productive stuff and this blog is effectively a lightning round of things I did to accomplish that"
@@ -8,6 +7,7 @@ date: 2022-09-01
 
 draft: false
 
+tags: []
 ---
 
 So recently I’ve engaged in a renewed push to be productive somewhat consistently and this time it just may work(unlike the 3-5 other times). With this push, I’ve decided to begin moving off of youtube by going down to my subscriptions. In order to do that I implemented a few small projects.

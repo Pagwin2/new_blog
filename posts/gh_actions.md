@@ -1,5 +1,4 @@
 ---
-
 title: "Setting up CD for this site"
 
 description: "How I setup Github actions to automatically update this site"
@@ -8,6 +7,7 @@ date: 2022-01-22
 
 draft: false
 
+tags: []
 ---
 
 So recently I got a bit of a bee in my bonnet to go setup CD for this website. The main reasons that drove this were 1. deploying the site was mildly tedious which is a good enough reason on it's own and 2. I wanted to learn how to do it.

@@ -1,5 +1,4 @@
 ---
-
 title: "Pogo again"
 
 description: "I swear I'm going to finish it this time (I'd borked the format for this post in hugo previously so sorry if you noticed)"
@@ -7,7 +6,7 @@ description: "I swear I'm going to finish it this time (I'd borked the format fo
 date: 2023-01-01
 
 draft: true
-
+tags: []
 ---
 
 # Another blog post that mentions Pogo

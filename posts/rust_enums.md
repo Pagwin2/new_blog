@@ -1,5 +1,4 @@
 ---
-
 title: "Rust Match and Enums"
 
 description: "A blog article I wrote to win a dumb argument"
@@ -7,7 +6,7 @@ description: "A blog article I wrote to win a dumb argument"
 date: "2022-09-06"
 
 draft: false
-
+tags: []
 ---
 
 As the description of this article says I wrote this to try and probably fail to win an argument. Namely, a friend ~~argued~~ asked "Why use rust enums just use an interface and manual type checks?" specifically the context was me advocating for the use of rust enums instead of C's union types. Example:

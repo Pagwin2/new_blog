@@ -1,5 +1,4 @@
 ---
-
 title: "Fractions Sidequest"
 
 description: "In my last blog I wrote about my explorations on a new number type that specifies fractions rather than approximate binimal(? decimal has a latin root for 10 but floating point uses binary so what word?) or integers"
@@ -8,6 +7,7 @@ date: 2023-08-08
 
 draft: false
 
+tags: []
 ---
 
 # The Sidequest

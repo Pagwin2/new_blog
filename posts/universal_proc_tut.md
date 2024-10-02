@@ -3,6 +3,7 @@ title: "A universal tutorial on the basics for every* programming language"
 description: "A tutorial that covers all the basic concepts that procedural languages commonly have"
 date: 2021-07-03
 draft: false
+tags: []
 ---
 ## Prelude
 No this isn't comprehensive, so no you won't be able to immediately go start making something after having read this and no this doesn't cover everything you might possibly run into, see [#The Asterisk](#The%20Asterisk). Also the examples will be in Pseudocode so this isn't a generic python/javascript tutorial :P.

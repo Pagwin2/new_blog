@@ -1,5 +1,4 @@
 ---
-
 title: "Rust Type Hiccups"
 
 description: "A couple of hiccups I've run into with rust's type system"
@@ -8,6 +7,7 @@ date: 2022-12-20
 
 draft: false
 
+tags: []
 ---
 
 # Rust type hiccups

@@ -1,5 +1,4 @@
 ---
-
 title: "Comparing Rust and C++"
 
 description: "A post on how I view rust and C++ in relation to each other and my thoughts on them"
@@ -7,7 +6,7 @@ description: "A post on how I view rust and C++ in relation to each other and my
 date: "2024-04-11"
 
 draft: true
-
+tags: []
 ---
 
 # Less black and white than the hype suggests
