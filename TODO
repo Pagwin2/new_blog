@@ -5,3 +5,5 @@ handle dark/light theming correctly (https://www.joshwcomeau.com/react/dark-mode
 get code blocks working properly
 
 ico?
+
+add CSS styling rule(s) so headers don't get link colors
