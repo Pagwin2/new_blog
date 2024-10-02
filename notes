@@ -14,7 +14,13 @@ https://fonts.google.com/knowledge/using_type/implementing_open_type_features_on
 https://fonts.google.com/knowledge/choosing_type/pairing_typefaces
 https://fonts.google.com/knowledge/choosing_type/pairing_typefaces_within_a_family_superfamily
 
+https://web.dev/articles/optimize-webfont-loading
+
 noted fonts:
+Hanuman https://fonts.google.com/specimen/Hanuman
+TT2020 https://www.fontspace.com/tt2020-font-f42044
+"Zilla Slab", Inter, X-LocaleSpecific, sans-serif
+https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/
 Bookerly
 "Source Sans Pro", "Lucida Sans Unicode", "Helvetica", "Trebuchet MS", sans-serif, "Noto Emoji", "Quivira"
 Palatino,"Palatino Linotype","Palatino LT STD",serif
@@ -23,4 +29,4 @@ Courier New', monospace;
 line-height: 1.5;
 https://fonts.google.com/specimen/Marcellus?preview.size=79&stroke=Serif
 https://fonts.google.com/specimen/Tinos?preview.size=79&stroke=Serif
-https://fonts.google.com/noto/specimen/Noto+Serif+Display?classification=Display&stroke=Serif&stylecount=18&preview.text=Hello%20there
+Noto serif: https://fonts.google.com/noto/specimen/Noto+Serif+Display?classification=Display&stroke=Serif&stylecount=18&preview.text=Hello%20there
