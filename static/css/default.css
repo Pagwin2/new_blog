@@ -79,10 +79,11 @@ a:hover {
 }
 
 #content {
-    display: inline-block;
+    display: block;
     margin: 1em;
     padding: 1em;
-    min-width: calc(100% - 5em);
+    /* min-width: calc(100% - 5em); */
+    max-width: 960px;
     border: 0.5em solid var(--content-border-color);
     border-radius: 0.5em;
 }
