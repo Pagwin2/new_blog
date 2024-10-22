@@ -2,6 +2,8 @@
 
 hi #footnote[Hi this is a thing]
 
+#image("/static/images/pfp.webp")
+
 a
 
 b
