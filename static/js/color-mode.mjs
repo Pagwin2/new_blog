@@ -1,7 +1,7 @@
 // this script is intentionally not a module so it'll block loading the document until we set color mode
 
 // shamelessly stolen from https://www.joshwcomeau.com/react/dark-mode/
-function getInitialColorMode() {
+export function getInitialColorMode() {
   const persistedColorPreference =
     window.localStorage.getItem('color-mode');
   const hasPersistedPreference =
@@ -25,7 +25,11 @@ function getInitialColorMode() {
   // color themes, let's default to 'light'.
   return 'light';
 }
-function setMode(mode){
+export function setMode(mode, options){
+    if(options == undefined){
+        options = {};
+    }
+    const {store} = options;
     if(document.body.classList.contains("light")){
         document.body.classList.replace("light", mode);
     }
@@ -35,10 +39,12 @@ function setMode(mode){
     else {
         document.body.classList.add(color_mode);
     }
-    localStorage.setItem("color-mode", mode);
+    if(store == undefined || store){
+        localStorage.setItem("color-mode", mode);
+    }
 }
 // repeats set code but who cares, the logic is different
-function toggleMode(){
+export function toggleMode(){
     let mode;
     if(document.body.classList.contains("light")){
         document.body.classList.replace("light", "dark");
@@ -56,7 +62,7 @@ function toggleMode(){
 
 // start grabbing the css in the background
 const bg_css = (async ()=>{
-    const css_txt = fetch("/static/css/default.css").then(res=>res.text());
+    const css_txt = fetch("/static/css/colors.css").then(res=>res.text());
     const css = new CSSStyleSheet();
     await css.replace(await css_txt);
     return css;
@@ -64,7 +70,7 @@ const bg_css = (async ()=>{
 
 // set color mode
 const color_mode = getInitialColorMode();
-setMode(color_mode);
+setMode(color_mode, {store:false});
 
 // now that color mode is set lets go actually set the css
 document.adoptedStyleSheets.push(await bg_css);
