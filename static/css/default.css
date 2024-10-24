@@ -82,10 +82,16 @@ a:hover {
     display: block;
     margin: 1em;
     padding: 1em;
-    /* min-width: calc(100% - 5em); */
+    /* needed due to flex*/
+    width: 100%;
     max-width: 960px;
     border: 0.5em solid var(--content-border-color);
     border-radius: 0.5em;
+}
+#content-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 pre {
