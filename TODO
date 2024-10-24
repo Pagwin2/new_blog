@@ -1,14 +1,16 @@
-get RSS feed up and running
+position code blocks in a way I like
 
 handle dark/light theming correctly (https://www.joshwcomeau.com/react/dark-mode/) seems useful for that
 
-~~get code blocks working properly, namely get them colored (probably with https://highlightjs.org/), maybe add a red border, consider https://github.com/highlightjs/highlight.js?tab=readme-ov-file#using-web-workers~~
-
-get highlight js theme set to my preference, make sure to add nesting in CSS so it'll be active when the light/dark class is active
-    https://highlightjs.org/examples
-    https://github.com/highlightjs/base16-highlightjs/blob/main/themes/google-light.css
+get RSS feed up and running
 
 ico?
+
+analytics
+
+~~get code blocks working properly, namely get them colored (probably with https://highlightjs.org/), maybe add a red border, consider https://github.com/highlightjs/highlight.js?tab=readme-ov-file#using-web-workers~~
+
+~~get highlight js theme set to my preference, make sure to add nesting in CSS so it'll be active when the light/dark class is active~~
 
 ~~add CSS styling rule(s) so headers don't get link colors~~
 

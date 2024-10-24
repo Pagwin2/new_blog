@@ -99,7 +99,8 @@ pre {
     max-width: calc(100% - 2em);
     width: fit-content;
     overflow:scroll;
-    background: #444;
+    /*background: #444;*/
     border-radius: 0.5em;
-    padding: 1em;
+    /*border: 0.2em solid red;*/
+    padding: 0.5em;
 }

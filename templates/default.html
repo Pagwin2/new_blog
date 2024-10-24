@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{{title}}} · Pagwin's website</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/default.css" />
+    <link rel="preload" type="text/css" href="/static/css/default.css" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://pagwin.xyz/index.xml">
     <script type="module" src="/static/js/code_highlighting.mjs"></script>
 </head>
 
-<body class="dark">
+<body class="light">
+    <!--script is at the top of body, it needs body defined but we want to start work on downloading and loading it asap, we can have it block by having it not be a module but that has performance problems for slower internet that makes me prefer having it as a module even if users get a flicker of unstylized page-->
+    <script type="module" src="/static/js/color-mode.mjs"></script>
     <div id="header">
         <a class="nav-link" href="/">Home</a>
         <a class="nav-link" href="/posts/">Blog Posts</a>
