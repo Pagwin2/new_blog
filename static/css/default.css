@@ -87,3 +87,13 @@ a:hover {
     border: 0.5em solid var(--content-border-color);
     border-radius: 0.5em;
 }
+
+pre {
+    min-height: 2em;
+    max-width: calc(100% - 2em);
+    width: fit-content;
+    overflow:scroll;
+    background: #444;
+    border-radius: 0.5em;
+    padding: 1em;
+}

@@ -1,10 +1,14 @@
 <div class="info">
-  {{{date}}}
+    {{{date}}}
 </div>
+{{#has_tags}}
 <div class="info">
-  Tags:
-  {{#tags}}
+    Tags:
+    {{#tags}}
     <a href="/tags/{{{.}}}/">{{{.}}}</a>
-  {{/tags}}
+    {{/tags}}
 </div>
+{{/has_tags}}
+<hr>
+</hr>
 {{{content}}}

@@ -96,7 +96,7 @@ services:
       - backend
 ```
 and here's an nginx config
-```
+```nginx
 worker_processes  1;
 
 events {

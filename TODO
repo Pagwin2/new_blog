@@ -2,10 +2,12 @@ get RSS feed up and running
 
 handle dark/light theming correctly (https://www.joshwcomeau.com/react/dark-mode/) seems useful for that
 
-get code blocks working properly, namely get them colored (probably with https://highlightjs.org/), maybe add a red border, consider https://github.com/highlightjs/highlight.js?tab=readme-ov-file#using-web-workers of course this assumes that can't be fixed in typst due to pandoc
+get code blocks working properly, namely get them colored (probably with https://highlightjs.org/), maybe add a red border, consider https://github.com/highlightjs/highlight.js?tab=readme-ov-file#using-web-workers
 
 ico?
 
 ~~add CSS styling rule(s) so headers don't get link colors~~
 
-center titles properly
+~~center titles properly~~
+
+center content box properly
