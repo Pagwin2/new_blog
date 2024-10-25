@@ -25,13 +25,29 @@ a:hover {
 }
 
 #content {
-    display: block;
+    display: block flex;
     margin: 1em;
     padding: 1em;
-    /* needed due to flex*/
+    /* needed due to flex parent*/
     width: 100%;
     max-width: 960px;
     border-radius: 0.5em;
+
+    /* needed due to being flex itself*/
+    flex-direction:column;
+    /* put things in center*/
+    /* not sure if I want everything centered or just code blocks but I like everything centered atm*/
+    justify-content: center;
+    align-items: center;
+}
+blockquote {
+    /*font-style: italic;*/
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    p{
+        /*margin is annoying in this case*/
+        margin: 0;
+    }
 }
 #content-outer {
     display: flex;
@@ -48,4 +64,8 @@ pre {
     border-radius: 0.5em;
     /*border: 0.2em solid red;*/
     padding: 0.5em;
+}
+
+hr {
+    width: 100%;
 }
