@@ -30,7 +30,10 @@ a:hover {
     padding: 1em;
     /* needed due to flex parent*/
     width: 100%;
-    max-width: 960px;
+    /*https://ux.stackexchange.com/a/34125*/
+    /*https://ux.stackexchange.com/a/34148*/
+    /*https://pearsonified.com/golden-ratio-typography-intro/*/
+    max-width: 55em;
     border-radius: 0.5em;
 
     /* needed due to being flex itself*/
