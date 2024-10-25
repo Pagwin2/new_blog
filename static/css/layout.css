@@ -33,7 +33,9 @@ a:hover {
     /*https://ux.stackexchange.com/a/34125*/
     /*https://ux.stackexchange.com/a/34148*/
     /*https://pearsonified.com/golden-ratio-typography-intro/*/
+    /*https://grtcalculator.com/*/
     max-width: 55em;
+    border: 0.5em solid;
     border-radius: 0.5em;
 
     /* needed due to being flex itself*/
@@ -71,4 +73,9 @@ pre {
 
 hr {
     width: 100%;
+}
+
+p {
+    /*https://pearsonified.com/golden-ratio-typography-intro/ is where this came from and tbh having a bigger line height does make things more readable although I tune it down a bit*/
+    line-height: 1.5;
 }
