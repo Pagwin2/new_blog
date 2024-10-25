@@ -11,6 +11,8 @@ body.dark{
     --header-bg: #333;
     --nav-link-color: #6B0;
     --content-border-color: #5ac;
+    /*stolen from code theme*/
+    --blockquote-bg: rgb(29, 31, 33);
 }
 /*
  *#ABABD4;
@@ -39,6 +41,7 @@ body.light{
      * #115e84*/
     --nav-link-color: #118411;
     --content-border-color: #026;
+    --blockquote-bg: #fff;
 }
 
 body {
@@ -64,4 +67,15 @@ a:visited {
 
 #content {
     border: 0.5em solid var(--content-border-color);
+}
+
+blockquote {
+    background: var(--blockquote-bg);
+    strong {
+        color:red;
+    }
+}
+
+pre:has( > code) {
+    background: var(--blockquote-bg);
 }
