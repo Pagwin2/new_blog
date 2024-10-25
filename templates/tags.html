@@ -1,0 +1,9 @@
+{{! keeping around in case I want tags list in future}}
+{{#has_tags}}
+<div class="info">
+    Tags:
+    {{#tags}}
+    <a href="/tags/{{{.}}}/">{{{.}}}</a>
+    {{/tags}}
+</div>
+{{/has_tags}}
