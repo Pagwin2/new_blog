@@ -1,7 +1,7 @@
 /*
  * wrapping Google Light so it fits my purposes
  * */
-body.dark{
+@media (prefers-color-scheme: dark){
 /*!
   Theme: Google Dark
   Author: Seth Wright (http://sethawright.com)

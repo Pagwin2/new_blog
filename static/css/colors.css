@@ -1,6 +1,7 @@
 /* https://color.adobe.com/create/color-contrast-analyzer */
 /*dark theme*/
-body.dark{
+@media (prefers-color-scheme: dark) {
+:root {
     --bg-color: #000;
     /*
      * #5ac
@@ -14,6 +15,7 @@ body.dark{
     /*stolen from code theme*/
     --blockquote-bg: rgb(29, 31, 33);
 }
+}
 /*
  *#ABABD4;
  *bs-primary-bg-subtle: #cfe2ff;
@@ -25,7 +27,8 @@ body.dark{
   --bs-light-bg-subtle: #fcfcfd;
  * */
 /*light theme*/
-body.light{
+@media (prefers-color-scheme: light) {
+:root {
     --bg-color: #e2e3e5;
     --normal-text: #000;
     --link-unclicked: #2535B4;
@@ -43,7 +46,7 @@ body.light{
     --content-border-color: #026;
     --blockquote-bg: #fff;
 }
-
+}
 body {
     background: var(--bg-color);
     color: var(--normal-text);

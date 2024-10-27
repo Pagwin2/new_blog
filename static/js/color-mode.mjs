@@ -1,4 +1,8 @@
-// this script is intentionally not a module so it'll block loading the document until we set color mode
+// DEPRECATED in favor of using in browser theme handling 8a7917a0cd34bd7637d9a9a8ad327e4b847cdeed is last commit using this
+// This code is deprecated due to the js doing some amount of fighting with inbuilt browser capabilities, such as https://developer.chrome.com/blog/paint-holding
+
+
+// (FALSE before being removed this was a module allowing for a flash of the layout without colors) this script is intentionally not a module so it'll block loading the document until we set color mode
 
 // shamelessly stolen from https://www.joshwcomeau.com/react/dark-mode/
 export function getInitialColorMode() {
