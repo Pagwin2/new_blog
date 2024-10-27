@@ -35,7 +35,7 @@ a:hover {
     /*https://pearsonified.com/golden-ratio-typography-intro/*/
     /*https://grtcalculator.com/*/
     max-width: 55em;
-    border: 0.5em solid;
+    border: 0.5em solid white;
     border-radius: 0.5em;
 
     /* needed due to being flex itself*/
