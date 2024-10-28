@@ -6,6 +6,10 @@ ico?
 
 analytics
 
+Webmention analytics https://www.w3.org/TR/webmention/#receiving-webmentions
+
+Webmention linked sites where possible https://www.w3.org/TR/webmention/#sending-webmentions
+
 ~~get code blocks working properly, namely get them colored (probably with https://highlightjs.org/), maybe add a red border, consider https://github.com/highlightjs/highlight.js?tab=readme-ov-file#using-web-workers~~
 
 ~~get highlight js theme set to my preference, make sure to add nesting in CSS so it'll be active when the light/dark class is active~~
