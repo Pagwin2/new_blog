@@ -62,7 +62,11 @@ blockquote {
 
 pre {
     min-height: 2em;
-    max-width: calc(100% - 2em);
+    /* 
+     * Not sure why this isn't the same as the #content width.
+     * Is the font size different for some reason?
+     * */
+    max-width: 82em;
     width: fit-content;
     overflow:scroll;
     /*background: #444;*/
