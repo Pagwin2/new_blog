@@ -1,3 +1,4 @@
+@layer baseline, print;
 /* https://color.adobe.com/create/color-contrast-analyzer */
 /*dark theme*/
 @media (prefers-color-scheme: dark) {
@@ -7,6 +8,7 @@
      * #5ac
      * */
     --normal-text: #CCC;
+    --focus-outline-color: #f00;
     --link-clicked: #B250D8;
     --link-unclicked: #d80;
     --header-bg: #333;
@@ -31,6 +33,7 @@
 :root {
     --bg-color: #e2e3e5;
     --normal-text: #000;
+    --focus-outline-color: #f00;
     --link-unclicked: #2535B4;
     --link-clicked: #832244;
     /*#E6DDE6
@@ -47,11 +50,17 @@
     --blockquote-bg: #fff;
 }
 }
+@layer baseline{
 body {
     background: var(--bg-color);
     color: var(--normal-text);
 }
 
+/*iffy if this should be here but it doesn't mess with the layout so I'll allow it*/
+:focus-visible {
+  outline: 2px solid var(--focus-outline-color);
+  border-radius: 0.25rem;
+}
 .nav-link {
     color: var(--nav-link-color) !important;
 }
@@ -81,4 +90,5 @@ blockquote {
 
 pre:has( > code) {
     background: var(--blockquote-bg);
+}
 }
