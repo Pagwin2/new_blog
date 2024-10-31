@@ -68,10 +68,12 @@ pre {
     box-sizing: border-box;
     min-height: 2em;
     /* 
-     * Not sure why this isn't the same as the #content width.
-     * Is the font size different for some reason?
+     * previously a cludge of 75 em this is now a cludge of 2 different vendor extensions
+     * 
      * */
-    max-width: 75em;
+    max-width: -moz-available;
+    max-width: -webkit-fill-available;;
+    max-width: fill-available;
     width: fit-content;
     overflow:scroll;
     /*background: #444;*/
