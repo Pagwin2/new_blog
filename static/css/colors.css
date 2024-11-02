@@ -3,7 +3,7 @@
 /*dark theme*/
 @media (prefers-color-scheme: dark) {
 :root {
-    --bg-color: #000;
+    --bg-color: #1c1b19;
     /*
      * #5ac
      * */
