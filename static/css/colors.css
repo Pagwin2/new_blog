@@ -1,6 +1,7 @@
 @layer baseline, print;
 /* https://color.adobe.com/create/color-contrast-analyzer */
 /*dark theme*/
+@layer baseline{
 @media (prefers-color-scheme: dark) {
 :root {
     --bg-color: #1c1b19;
@@ -50,6 +51,7 @@
     --blockquote-bg: #fff;
 }
 }
+}
 @layer baseline{
 body {
     background: var(--bg-color);
@@ -90,5 +92,15 @@ blockquote {
 
 pre:has( > code) {
     background: var(--blockquote-bg);
+}
+}
+@media print {
+@layer print{
+
+:root {
+    /*trying to avoid accidentally eating the entire printer's ink supply with bg color*/
+    --bg-color: #FFF;
+}
+
 }
 }

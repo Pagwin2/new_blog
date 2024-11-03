@@ -100,15 +100,17 @@ p {
 }
 /* I mean why not? */
 @media print {
-    @layer print{
-        #header {
-            visibility: hidden;
-        }
-        #content {
-            border-style: none;
-        }
-        pre {
-            page-break-inside: avoid;
-        }
-    }
+@layer print{
+
+#header {
+    visibility: hidden;
+}
+#content {
+    border-style: none;
+}
+pre {
+    page-break-inside: avoid;
+}
+
+}
 }
