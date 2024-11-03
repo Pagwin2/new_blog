@@ -4,6 +4,8 @@ emphasis category viewer is in via different header color
 
 specify ul styling to be specific to posts list
 
+experiment with ul margin vs padding in posts list for accessibility without focus border looking ridiculous
+
 Fix articles with inline html in them and/or links
 
 ico?
