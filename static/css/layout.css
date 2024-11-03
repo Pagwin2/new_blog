@@ -31,8 +31,8 @@ a:hover {
 #content {
     box-sizing: border-box;
     display: block flex;
-    margin: calc(24px + 3em) 1em 1em 1em;
-    padding: 1em;
+    margin: calc(24px + 3rem) 1rem 1rem 1rem;
+    padding: 1rem;
     /* needed due to flex parent*/
     width: 100%;
     /*https://ux.stackexchange.com/a/34125*/
@@ -40,7 +40,7 @@ a:hover {
     /*https://pearsonified.com/golden-ratio-typography-intro/*/
     /*https://grtcalculator.com/*/
     max-width: 55em;
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
 
     /* needed due to being flex itself*/
     flex-direction:column;
@@ -52,7 +52,7 @@ a:hover {
 blockquote {
     /*font-style: italic;*/
     padding: 0.5em 1em;
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
     p{
         /*margin is annoying in this case*/
         margin: 0;
@@ -77,9 +77,9 @@ pre {
     width: fit-content;
     overflow:scroll;
     /*background: #444;*/
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
     /*border: 0.2em solid red;*/
-    padding: 0.5em;
+    padding: 0.5rem;
 }
 
 hr {
@@ -95,7 +95,7 @@ p {
 /* we really want to make sure this doesn't stick around when colors load in regardless of when/how colors get loaded in*/
 @layer pre-load{
     #content {
-        border: 0.5em solid white;
+        border: 0.5rem solid white;
     }
 }
 /* I mean why not? */
