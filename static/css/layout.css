@@ -40,6 +40,7 @@ a:hover {
     /*https://pearsonified.com/golden-ratio-typography-intro/*/
     /*https://grtcalculator.com/*/
     max-width: 55em;
+
     border-radius: 0.5rem;
 
     /* needed due to being flex itself*/
@@ -64,6 +65,14 @@ blockquote {
     align-items: center;
 }
 
+/* div element with this class can be a bitch so need to select those as well as pre*/
+.sourceCode {
+    max-width: -moz-available;
+    max-width: -webkit-fill-available;;
+    max-width: fill-available;
+    width: fit-content;
+}
+
 pre {
     box-sizing: border-box;
     min-height: 2em;
@@ -71,10 +80,6 @@ pre {
      * previously a cludge of 75 em this is now a cludge of 2 different vendor extensions
      * 
      * */
-    max-width: -moz-available;
-    max-width: -webkit-fill-available;;
-    max-width: fill-available;
-    width: fit-content;
     overflow:scroll;
     /*background: #444;*/
     border-radius: 0.5rem;
