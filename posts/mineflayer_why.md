@@ -2,6 +2,7 @@
 title: "Mineflayer pains"
 description: "Describing all the pains with mineflayer I've dealt with so far"
 date: 2021-01-10
+draft: false
 tags: []
 ---
 ## Preface

@@ -2,6 +2,7 @@
 title: "How this website was made"
 description: "It's with hugo and the rest of this is probably gonna be short and boring viewer discretion is advised"
 date: 2020-09-30
+draft: false
 tags: []
 ---
 ## Prelude
