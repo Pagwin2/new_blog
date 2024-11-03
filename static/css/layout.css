@@ -74,6 +74,11 @@ blockquote {
 }
 
 pre {
+    /*We also need it on pre because not all pre blocks are source code >:(*/
+    max-width: -moz-available;
+    max-width: -webkit-fill-available;;
+    max-width: fill-available;
+    width: fit-content;
     box-sizing: border-box;
     min-height: 2em;
     /* 
