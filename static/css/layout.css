@@ -109,7 +109,7 @@ p {
 }
 
 #content > ul > li > a {
-  padding: 1rem;
+  margin: 1rem;
 }
 }
 /* we really want to make sure this doesn't stick around when colors load in regardless of when/how colors get loaded in*/
