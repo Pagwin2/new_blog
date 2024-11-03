@@ -1,6 +1,8 @@
 get RSS feed up and running
 
-Figure out why the header width is fucked on mobile as well as why the box is all the way to the left
+emphasis category viewer is in via different header color
+
+specify ul styling to be specific to posts list
 
 Fix articles with inline html in them and/or links
 
@@ -25,3 +27,5 @@ Webmention linked sites where possible https://www.w3.org/TR/webmention/#sending
 ~~position code blocks in a way I like~~
 
 ~~handle dark/light theming correctly (https://www.joshwcomeau.com/react/dark-mode/) seems useful for that~~
+
+~~Figure out why the header width is fucked on mobile as well as why the box is all the way to the left~~

@@ -96,6 +96,21 @@ p {
     /*https://pearsonified.com/golden-ratio-typography-intro/ is where this came from and tbh having a bigger line height does make things more readable although I tune it down a bit*/
     line-height: 1.5;
 }
+/*TODO specify for posts list*/
+#content > ul {
+  padding: 0;
+  list-style: none;
+}
+
+#content > ul > li {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+#content > ul > li > a {
+  padding: 1rem;
+}
 }
 /* we really want to make sure this doesn't stick around when colors load in regardless of when/how colors get loaded in*/
 @layer pre-load{
