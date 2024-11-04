@@ -14,6 +14,7 @@
     --link-unclicked: #d80;
     --header-bg: #333;
     --nav-link-color: #6B0;
+    --nav-link-bg-color: #444;
     --content-border-color: #5ac;
     /*stolen from code theme*/
     --blockquote-bg: rgb(29, 31, 33);
@@ -47,6 +48,7 @@
     /*#841163
      * #115e84*/
     --nav-link-color: #118411;
+    --nav-link-bg-color: #bbb;
     --content-border-color: #026;
     --blockquote-bg: #fff;
 }
@@ -65,6 +67,7 @@ body {
 }
 .nav-link {
     color: var(--nav-link-color) !important;
+    background-color: var(--nav-link-bg-color);
 }
 
 a {

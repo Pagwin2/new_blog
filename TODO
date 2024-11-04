@@ -1,10 +1,16 @@
 get RSS feed up and running
 
-emphasis category viewer is in via different header color
+emphasize category viewer is in via different header color
 
 specify ul styling to be specific to posts list
 
 experiment with ul margin vs padding in posts list for accessibility without focus border looking ridiculous
+
+Fix typography on mobile (mostly just anchors at this point)
+    https://stackoverflow.com/questions/16387400/getting-the-right-font-size-on-every-mobile-device#35155083
+    https://css-tricks.com/viewport-sized-typography/
+
+make tapping and holding or hovering changes header nav-link bg
 
 maybe make it so #content or a parent class which has everything but header scrolls intead of the normal page, needs and overflow css attr and height 100% for body/html and maybe flex-box and/or grid (this is to make scroll not appear on header)
 
@@ -13,6 +19,8 @@ Fix articles with inline html in them and/or links
 ico?
 
 analytics
+    https://github.com/electerious/Ackee
+    https://umami.is/ (https://github.com/umami-software/umami)
 
 Webmention analytics https://www.w3.org/TR/webmention/#receiving-webmentions
 
