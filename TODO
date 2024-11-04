@@ -1,5 +1,7 @@
 get RSS feed up and running
 
+get preferred font setup https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face (see also notes)
+
 emphasize category viewer is in via different header color
 
 specify ul styling to be specific to posts list
