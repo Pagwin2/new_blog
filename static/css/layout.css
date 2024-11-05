@@ -88,6 +88,28 @@ time {
     justify-content: center;
     align-items: center;
 }
+header {
+    max-width: -moz-available;
+    max-width: -webkit-fill-available;;
+    max-width: fill-available;
+    display: block flex;
+    flex-direction:column;
+    /* put things in center*/
+    /* not sure if I want everything centered or just code blocks but I like everything centered atm*/
+    justify-content: center;
+    align-items: center;
+}
+article {
+    max-width: -moz-available;
+    max-width: -webkit-fill-available;;
+    max-width: fill-available;
+    display: block flex;
+    flex-direction:column;
+    /* put things in center*/
+    /* not sure if I want everything centered or just code blocks but I like everything centered atm*/
+    justify-content: center;
+    align-items: center;
+}
 blockquote {
     /*font-style: italic;*/
     padding: 0.5em 1em;
