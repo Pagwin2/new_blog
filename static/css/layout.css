@@ -135,7 +135,6 @@ p {
 #content > ul > li {
   display: flex;
   align-items: center;
-  white-space: nowrap;
 }
 
 #content > ul > li > a {
