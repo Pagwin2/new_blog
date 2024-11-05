@@ -162,16 +162,6 @@ p {
     line-height: 1.5;
 }
 
-dl{
-  padding: 0;
-  list-style: none;
-}
-
-
-dt > a, dl > div > time, dl > time{
-  /*margin: 1rem;*/
-}
-
 }
 /* we really want to make sure this doesn't stick around when colors load in regardless of when/how colors get loaded in*/
 @layer pre-load{
