@@ -2,6 +2,9 @@
 
 @layer baseline {
 
+:root {
+    --base-text-size: 1.75vh;
+}
 body {
     padding: 0px;
     margin: 0px;
@@ -24,6 +27,7 @@ a:hover {
     border-radius: 0.5rem;
 }
 
+/*font sizes*/
 h1 {
   font-size:3vh;
 }
@@ -31,13 +35,19 @@ h2 {
   font-size: 2.4vh;
 }
 p{
-  font-size: 1.75vh;
+  font-size: var(--base-text-size);
 }
 a {
-    font-size: 1.75vh;
+    font-size: var(--base-text-size);
+}
+pre {
+    font-size: var(--base-text-size);
+}
+.sourceCode {
+    font-size: var(--base-text-size);
 }
 .info {
-    font-size: 1.75vh;
+    font-size: var(--base-text-size);
 }
 
 
