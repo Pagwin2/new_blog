@@ -1,6 +1,9 @@
 <ul>
     {{#posts}}
-    <li><a href="{{link}}">{{title}}</a> - {{date}}</li>
+    <li>
+        <h3><a href="{{link}}">{{title}}</a></h3>
+        <time datetime="{{{iso_date}}}">{{date}}</time>
+    </li>
     <hr />
     {{/posts}}
 </ul>

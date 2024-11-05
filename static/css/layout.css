@@ -43,6 +43,9 @@ a {
 pre {
     font-size: var(--base-text-size);
 }
+time {
+    font-size: var(--base-text-size);
+}
 .sourceCode {
     font-size: var(--base-text-size);
 }
