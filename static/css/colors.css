@@ -83,7 +83,7 @@ a:visited {
 }
 
 #content {
-    border: 0.5rem solid var(--content-border-color);
+    border: 0.7rem solid var(--content-border-color);
 }
 
 blockquote {

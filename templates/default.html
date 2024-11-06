@@ -6,13 +6,19 @@
     <!-- not sure if this is good or bad for mobile
     <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <title>{{{title}}} · Pagwin's website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="/static/css/layout.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/colors.css" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/index.xml">
     <script type="module" src="/static/js/code_highlighting.mjs"></script>
 </head>
 
-<body class="light">
+<body>
     <!-- originally handled dark v light via js but decided it would be better to just do it all in css and have no toggle 8a7917a0cd34bd7637d9a9a8ad327e4b847cdeed is the last commit where I had the system setup -->
     <div id="header">
         <a class="nav-link" href="/">Home</a>

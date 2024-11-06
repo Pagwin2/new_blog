@@ -3,12 +3,12 @@
 @layer baseline {
 
 :root {
-    --base-text-size: 1.75vh;
+    --base-text-size: 2vh;
 }
 body {
     padding: 0px;
     margin: 0px;
-    font-family: Georgia, serif;
+    font-family: "Atkinson Hyperlegible", Georgia, serif;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -30,10 +30,10 @@ a:hover {
 
 /*font sizes*/
 h1 {
-  font-size:3vh;
+  font-size:3.5vh;
 }
 h2 {
-  font-size: 2.4vh;
+  font-size: 3vh;
 }
 p{
   font-size: var(--base-text-size);
@@ -167,7 +167,7 @@ p {
 /* we really want to make sure this doesn't stick around when colors load in regardless of when/how colors get loaded in*/
 @layer pre-load{
     #content {
-        border: 0.5rem solid white;
+        border: 0.7rem solid white;
     }
 }
 /* I mean why not? */
