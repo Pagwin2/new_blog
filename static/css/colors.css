@@ -96,6 +96,13 @@ blockquote {
 pre:has( > code) {
     background: var(--blockquote-bg);
 }
+/*fancy user selection for funsies*/
+/*
+::selection {
+  background-color: indigo;
+  color: white;
+}
+ */
 }
 @media print {
 @layer print{
