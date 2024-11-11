@@ -18,6 +18,8 @@
     --content-border-color: #5ac;
     /*stolen from code theme*/
     --blockquote-bg: rgb(29, 31, 33);
+    --highlight-bg: #fff;
+    --highlight-fg: #000;
 }
 }
 /*
@@ -51,6 +53,8 @@
     --nav-link-bg-color: #bbb;
     --content-border-color: #026;
     --blockquote-bg: #fff;
+    --highlight-bg: #000;
+    --highlight-fg: #fff;
 }
 }
 }
@@ -97,12 +101,10 @@ pre:has( > code) {
     background: var(--blockquote-bg);
 }
 /*fancy user selection for funsies*/
-/*
 ::selection {
-  background-color: indigo;
-  color: white;
+  background-color: var(--highlight-bg);
+  color: var(--highlight-fg);
 }
- */
 }
 @media print {
 @layer print{

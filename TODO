@@ -1,18 +1,13 @@
 get RSS feed up and running (add utm stuff)
 
-get preferred font setup https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face (see also notes) set font-display to "swap"
-
 emphasize category viewer is in via different header color
 
-specify ul styling to be specific to posts list
-
-experiment with ul margin vs padding in posts list for accessibility without focus border looking ridiculous
-
-Fix typography on mobile (mostly just anchors at this point)
-    https://stackoverflow.com/questions/16387400/getting-the-right-font-size-on-every-mobile-device#35155083
-    https://css-tricks.com/viewport-sized-typography/
+post jump points and table of contents
 
 make tapping and holding or hovering changes header nav-link bg
+
+Fix forced colors as needed 
+    https://beeps.website/blog/2024-10-02-the-changelog-eleventy-3-forced-colours-new-art/#forced-colour-fixes!
 
 maybe make it so #content or a parent class which has everything but header scrolls intead of the normal page, needs and overflow css attr and height 100% for body/html and maybe flex-box and/or grid (this is to make scroll not appear on header)
 
@@ -43,3 +38,9 @@ Webmention linked sites where possible https://www.w3.org/TR/webmention/#sending
 ~~handle dark/light theming correctly (https://www.joshwcomeau.com/react/dark-mode/) seems useful for that~~
 
 ~~Figure out why the header width is fucked on mobile as well as why the box is all the way to the left~~
+
+~~get preferred font setup https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face (see also notes) set font-display to "swap"~~
+
+~~Fix typography on mobile (mostly just anchors at this point)~~
+    https://stackoverflow.com/questions/16387400/getting-the-right-font-size-on-every-mobile-device#35155083
+    https://css-tricks.com/viewport-sized-typography/
