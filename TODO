@@ -2,7 +2,7 @@ get RSS feed up and running (add utm stuff)
 
 emphasize category viewer is in via different header color
 
-post jump points and table of contents
+post jump points and table of contents (be wary of having this take up too much space on mobile)
 
 make tapping and holding or hovering changes header nav-link bg
 
@@ -19,9 +19,7 @@ analytics
     https://github.com/electerious/Ackee
     https://umami.is/ (https://github.com/umami-software/umami)
 
-Webmention analytics https://www.w3.org/TR/webmention/#receiving-webmentions
-
-Webmention linked sites where possible https://www.w3.org/TR/webmention/#sending-webmentions
+Make references(the tiny number things) appear to the side instead of the bottom on desktop, try to make it bottom of page in print or bottom of print otherwise
 
 ~~get code blocks working properly, namely get them colored (probably with https://highlightjs.org/), maybe add a red border, consider https://github.com/highlightjs/highlight.js?tab=readme-ov-file#using-web-workers~~
 
