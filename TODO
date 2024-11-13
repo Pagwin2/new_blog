@@ -2,6 +2,8 @@ get RSS feed up and running (add utm stuff)
 
 make post list datetime elem in dd so html spec is happy (need css so it can be repositioned back to the right)
 
+Remove !important in css
+
 emphasize category viewer is in via different header color
 
 post jump points and table of contents (be wary of having this take up too much space on mobile)
