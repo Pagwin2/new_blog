@@ -3,7 +3,7 @@
 @layer baseline {
 
 :root {
-    --base-text-size: 2vh;
+    --base-text-size: 1.1rem;
 }
 body {
     padding: 0px;
@@ -23,7 +23,7 @@ a:hover {
 }
 
 .nav-link{
-    font-size: 3vh;
+    font-size: 2rem;
     padding: 0em 0.25em;
     border-radius: 0.5rem;
 }
