@@ -30,10 +30,10 @@ a:hover {
 
 /*font sizes*/
 h1 {
-  font-size:3.5vh;
+  font-size:1.95rem;
 }
 h2 {
-  font-size: 3vh;
+  font-size: 1.65rem;
 }
 p{
   font-size: var(--base-text-size);
