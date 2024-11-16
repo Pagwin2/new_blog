@@ -4,7 +4,7 @@
     <link>https://pagwin.xyz/</link>
     <updated>{{now}}</updated>
     <description>All of pagwin's blog posts</description>
-    <generator>PSB</generator>
+    <generator uri="https://git.pagwin.xyz/Pagwin/psb">PSB</generator>
     <language>en-us</language>
     <link href="https://pagwin.xyz/index.xml" rel="self" type="application/rss+xml"/>
     <author>

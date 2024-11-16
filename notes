@@ -1,20 +1,9 @@
+Maybe make it so headers use a cool serif font and text uses atkinson or some other sans serif font.
+
 https://abhinavsarkar.net/posts/static-site-generator-using-shake/
 https://randoma11y.com/
 https://fonts.google.com/knowledge/choosing_type
-https://fonts.google.com/knowledge/choosing_type/a_checklist_for_choosing_type
-https://fonts.adobe.com/
 https://www.goatcounter.com/
-
-google font articles:
-https://fonts.google.com/knowledge/choosing_type/emotive_considerations_for_choosing_typefaces
-https://fonts.google.com/knowledge/choosing_type/choosing_reliable_typefaces
-https://fonts.google.com/knowledge/choosing_type/exploring_typefaces_with_multiple_weights_or_grades
-https://fonts.google.com/knowledge/introducing_type/introducing_alternate_glyphs
-https://fonts.google.com/knowledge/introducing_type/open_type_features_in_practice
-https://fonts.google.com/knowledge/using_type/implementing_open_type_features_on_the_web
-https://fonts.google.com/knowledge/choosing_type/pairing_typefaces
-https://fonts.google.com/knowledge/choosing_type/pairing_typefaces_within_a_family_superfamily
-
 https://web.dev/articles/optimize-webfont-loading
 
 noted fonts:
@@ -23,6 +12,8 @@ Atkinson Hyperlegible Font https://www.brailleinstitute.org/freefont/
 Liberation serif https://fonts.adobe.com/fonts/liberation-serif
 Marek Slab 
 ET Book https://edwardtufte.github.io/et-book/
+Cardo https://fonts.google.com/specimen/Cardo
+Architects Daughter https://fonts.google.com/specimen/Architects+Daughter
 Hanuman https://fonts.google.com/specimen/Hanuman
 TT2020 https://www.fontspace.com/tt2020-font-f42044
 "Zilla Slab", Inter, X-LocaleSpecific, sans-serif
