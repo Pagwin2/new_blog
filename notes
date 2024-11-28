@@ -1,3 +1,5 @@
+Phthalo green #123524
+
 Maybe make it so headers use a cool serif font and text uses atkinson or some other sans serif font.
 
 https://abhinavsarkar.net/posts/static-site-generator-using-shake/
@@ -7,10 +9,12 @@ https://www.goatcounter.com/
 https://web.dev/articles/optimize-webfont-loading
 
 noted fonts:
+"Averia Serif Libre",cursive
 Piazzolla https://piazzolla.huertatipografica.com/
 Atkinson Hyperlegible Font https://www.brailleinstitute.org/freefont/
 Liberation serif https://fonts.adobe.com/fonts/liberation-serif
 Marek Slab 
+Courier New
 Milonga https://fonts.google.com/specimen/Milonga
 ET Book https://edwardtufte.github.io/et-book/
 Cardo https://fonts.google.com/specimen/Cardo

@@ -105,6 +105,15 @@ pre:has( > code) {
   background-color: var(--highlight-bg);
   color: var(--highlight-fg);
 }
+
+h1, h2,h3,h4,h5,h6{
+  text-shadow: 2px 2px 0px #888;
+}
+/*
+ *h1, h2,h3,h4,h5,h6{
+  text-shadow: 2px 2px 1px light-dark(lab(25% -10% -20%), lab(75% -10% -20%));
+}
+ * */
 }
 @media print {
 @layer print{
