@@ -12,6 +12,9 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.dt-subtitle {
+    margin-left:0px;
+}
 
 a {
     font-weight: bold;

@@ -1,6 +1,4 @@
 MVP necessary:
-- add utm stuff
-- make post list datetime elem in dd so html spec is happy (need css so it can be repositioned back to the right)
 - Fix articles with inline html in them and/or links
 
 MVP unneeded:

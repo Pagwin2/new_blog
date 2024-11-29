@@ -12,7 +12,7 @@
     {{#posts}}
     <entry>
         <title>{{title}}</title>
-        <link href="{{link}}"/>
+        <link href="{{link}}?utm_source=web_feed"/>
         <updated>{{iso_date}}</updated>
         <summary>{{summary}}</summary>
         <id>{{id}}</id>
