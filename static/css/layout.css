@@ -29,6 +29,12 @@ a:hover {
     font-size: 2rem;
     padding: 0em 0.25em;
     border-radius: 0.5rem;
+    font-variant: small-caps;
+    font-family: "Courier Prime", Georgia, serif;
+}
+
+dt >a {
+  font-family: "Courier Prime", Georgia, serif;
 }
 
 /*font sizes*/
