@@ -3,7 +3,9 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 455.731 455.731" xml:space="preserve">
          <style>
-            @import url("/static/css/icon-colors.css");
+            @layer color-import, futureproof;
+            @import url("/static/css/icon-colors.css") layer(import-color);
+            @layer futureproof{
             .box {
                 fill: var(--background-color);
             }
@@ -13,9 +15,7 @@
             .circle {
                 fill: var(--secondary-color);
             }
-            /*.icon {
-                fill: var(--primary-color);
-            }*/
+            }
          </style>
          <a href="/index.xml" target="_top">
 <g>

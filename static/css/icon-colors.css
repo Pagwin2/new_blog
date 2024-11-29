@@ -1,6 +1,3 @@
-@layer futureproof;
-
-@layer futureproof{
 
 @media (prefers-color-scheme: dark){
 :root {
@@ -17,4 +14,3 @@
 }
 }
 
-}

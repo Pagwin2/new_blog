@@ -72,7 +72,7 @@ impl Add for Frac{
 
 This code feels bad even from a code quality point of view but idk why, regardless it's hilariously bad performance wise.
 
-<video width="700" height="400" controls src="/video/frac_gen_v1.mp4"></video>
+<video width="700" height="400" controls src="/static/video/frac_gen_v1.mp4"></video>
 
 Considering that we're "only" doing addition this is incredibly slow. Slower than addition in (insert butt of the joke language of this week here). All that in mind something is definitely up and if you read the code above and think about it enough you'll probably see it.
 
@@ -154,7 +154,7 @@ async fn recurse(f1:Frac,f2:Frac, remaining:u64)->Vec<Frac>{
 
 looks good at first glance(actual version code quality is bad but blog version seems alright). What happens when we run it?
 
-<video width="700" height="400" controls src="/video/frac_gen_v2.mp4"></video>
+<video width="700" height="400" controls src="/static/video/frac_gen_v2.mp4"></video>
 
 Oh... we run out of memory... or well we run out of 30 gigabytes of memory because I set a limit to avoid effecting the other stuff running on the server(because it isn't mine). But why? Doing the math if all we had to deal with was the fractions we'd be using about `17501876*4/1000**3 ~ 0.07 GB`, if we include the overhead of all the Vecs we make and are pretty agressive with how much memory they use maybe 0.21 GB which is a difference of over 142x. So what's the rest of the memory?
 
@@ -196,7 +196,7 @@ fn recurse(f1:Frac,f2:Frac, remaining:u64)->Vec<Frac>{
 
 This solves the whole running out of memory thing. A funny side effect is that now it's even faster(even though it's 1 thread).
 
-<video width="700" height="400" controls src="/video/frac_gen_v3.mp4"></video>
+<video width="700" height="400" controls src="/static/video/frac_gen_v3.mp4"></video>
 
 So that was fun going through and making all this work out well, now I can generate gigabytes upon gigabytes of fractions with ease.
 

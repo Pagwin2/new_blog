@@ -1,7 +1,4 @@
-MVP necessary:
 - Fix articles with inline html in them and/or links
-
-MVP unneeded:
 - post jump points and table of contents (be wary of having this take up too much space on mobile)
 - ico?
 - Make references(the tiny number things) appear to the side instead of the bottom on desktop, try to make it bottom of page in print or bottom of print otherwise

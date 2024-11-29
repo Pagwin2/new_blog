@@ -11,8 +11,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
-    <link rel="stylesheet" href="https://use.typekit.net/tux2tbi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <meta name="theme-color" content="#1c1b19" media="(prefers-color-scheme: dark)">
     <meta name="theme-color" content="#e2e3e5" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" type="text/css" href="/static/css/layout.css" />
@@ -32,8 +32,11 @@
         <main id="content">
             {{{content}}}
         </main>
-        <!-- don't bother with anchor on outside anchor is inside svg-->
-        <object class="icon" data="/static/images/rss.svg"></object>
+        <footer style="margin:20px;">
+            <!-- don't bother with anchor on outside anchor is inside svg-->
+            <a href="/index.xml"> <object width="100" height="100" class="icon"
+                    data="/static/images/rss.svg"></object></a>
+        </footer>
     </div>
 </body>
 
