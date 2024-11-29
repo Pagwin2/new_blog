@@ -3,7 +3,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 455.731 455.731" xml:space="preserve">
          <style>
-            @import url("/css/icon-colors.css");
+            @import url("/static/css/icon-colors.css");
             .box {
                 fill: var(--background-color);
             }
@@ -17,6 +17,7 @@
                 fill: var(--primary-color);
             }*/
          </style>
+         <a href="/index.xml" target="_top">
 <g>
 	<rect x="0" y="0" class="box" width="455.731" height="455.731"/>
 	<g>
@@ -28,4 +29,5 @@
 		<circle class="icon circle" cx="109.833" cy="346.26" r="46.088"/>
 	</g>
 </g>
+</a>
 </svg>

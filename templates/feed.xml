@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<feed xmlns:atom="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom">
     <title>Pagwin's Blog</title>
-    <link>https://pagwin.xyz/</link>
+    <link href="https://pagwin.xyz/"/>
     <updated>{{now}}</updated>
-    <description>All of pagwin's blog posts</description>
     <generator uri="https://git.pagwin.xyz/Pagwin/psb">PSB</generator>
-    <language>en-us</language>
+    <id>https://pagwin.xyz/posts</id>
     <link href="https://pagwin.xyz/index.xml" rel="self" type="application/rss+xml"/>
     <author>
         <name>Pagwin</name>
-        <email>rss-contact@pagwin.xyz</email>
     </author>
     {{#posts}}
     <entry>
         <title>{{title}}</title>
         <link href="{{link}}"/>
         <updated>{{iso_date}}</updated>
-        <summary>{{description}}</summary>
+        <summary>{{summary}}</summary>
         <id>{{id}}</id>
-        {{iso_date}}
     </entry>
     {{/posts}}
-<!--
--->
-<!--
-        <item>
-            <title></title>
-            <link><>
-            <pubDate></pubDate>
-            <guid></guid>
-            <description></description>
-        </item>
--->
-</rss>
+</feed>

@@ -1,48 +1,12 @@
-get RSS feed up and running (add utm stuff)
+MVP necessary:
+- add utm stuff
+- make post list datetime elem in dd so html spec is happy (need css so it can be repositioned back to the right)
+- Fix articles with inline html in them and/or links
 
-make post list datetime elem in dd so html spec is happy (need css so it can be repositioned back to the right)
-
-Remove !important in css
-
-emphasize category viewer is in via different header color
-
-post jump points and table of contents (be wary of having this take up too much space on mobile)
-
-make tapping and holding or hovering changes header nav-link bg
-
-Fix forced colors as needed 
-    https://beeps.website/blog/2024-10-02-the-changelog-eleventy-3-forced-colours-new-art/#forced-colour-fixes!
-
-maybe make it so #content or a parent class which has everything but header scrolls intead of the normal page, needs and overflow css attr and height 100% for body/html and maybe flex-box and/or grid (this is to make scroll not appear on header)
-
-Fix articles with inline html in them and/or links
-
-ico?
-
-analytics
+MVP unneeded:
+- post jump points and table of contents (be wary of having this take up too much space on mobile)
+- ico?
+- Make references(the tiny number things) appear to the side instead of the bottom on desktop, try to make it bottom of page in print or bottom of print otherwise
+- analytics
     https://github.com/electerious/Ackee
     https://umami.is/ (https://github.com/umami-software/umami)
-
-Make references(the tiny number things) appear to the side instead of the bottom on desktop, try to make it bottom of page in print or bottom of print otherwise
-
-~~get code blocks working properly, namely get them colored (probably with https://highlightjs.org/), maybe add a red border, consider https://github.com/highlightjs/highlight.js?tab=readme-ov-file#using-web-workers~~
-
-~~get highlight js theme set to my preference, make sure to add nesting in CSS so it'll be active when the light/dark class is active~~
-
-~~add CSS styling rule(s) so headers don't get link colors~~
-
-~~center titles properly~~
-
-~~center content box properly~~
-
-~~position code blocks in a way I like~~
-
-~~handle dark/light theming correctly (https://www.joshwcomeau.com/react/dark-mode/) seems useful for that~~
-
-~~Figure out why the header width is fucked on mobile as well as why the box is all the way to the left~~
-
-~~get preferred font setup https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face (see also notes) set font-display to "swap"~~
-
-~~Fix typography on mobile (mostly just anchors at this point)~~
-    https://stackoverflow.com/questions/16387400/getting-the-right-font-size-on-every-mobile-device#35155083
-    https://css-tricks.com/viewport-sized-typography/

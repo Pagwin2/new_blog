@@ -1,7 +1,3 @@
-Phthalo green #123524
-
-Maybe make it so headers use a cool serif font and text uses atkinson or some other sans serif font.
-
 https://abhinavsarkar.net/posts/static-site-generator-using-shake/
 https://randoma11y.com/
 https://fonts.google.com/knowledge/choosing_type
@@ -10,25 +6,12 @@ https://web.dev/articles/optimize-webfont-loading
 
 noted fonts:
 "Averia Serif Libre",cursive
-Piazzolla https://piazzolla.huertatipografica.com/
-Atkinson Hyperlegible Font https://www.brailleinstitute.org/freefont/
-Liberation serif https://fonts.adobe.com/fonts/liberation-serif
-Marek Slab 
+Architects Daughter https://fonts.google.com/specimen/Architects+Daughter
 Courier New
 Milonga https://fonts.google.com/specimen/Milonga
 ET Book https://edwardtufte.github.io/et-book/
-Cardo https://fonts.google.com/specimen/Cardo
-Architects Daughter https://fonts.google.com/specimen/Architects+Daughter
 Hanuman https://fonts.google.com/specimen/Hanuman
 TT2020 https://www.fontspace.com/tt2020-font-f42044
-"Zilla Slab", Inter, X-LocaleSpecific, sans-serif
-https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/
 Bookerly
-"Source Sans Pro", "Lucida Sans Unicode", "Helvetica", "Trebuchet MS", sans-serif, "Noto Emoji", "Quivira"
 Palatino,"Palatino Linotype","Palatino LT STD",serif
-Georgia
-Courier New', monospace;
-line-height: 1.5;
-https://fonts.google.com/specimen/Marcellus?preview.size=79&stroke=Serif
 https://fonts.google.com/specimen/Tinos?preview.size=79&stroke=Serif
-Noto serif: https://fonts.google.com/noto/specimen/Noto+Serif+Display?classification=Display&stroke=Serif&stylecount=18&preview.text=Hello%20there

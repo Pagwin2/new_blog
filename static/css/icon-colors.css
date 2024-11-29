@@ -1,5 +1,20 @@
+@layer futureproof;
+
+@layer futureproof{
+
+@media (prefers-color-scheme: dark){
 :root {
-    --background-color: rgba(0,0,0,1);
-    --primary-color: green;
-    --secondary-color: blue;
+    --background-color: rgba(0,0,0,0);
+    --primary-color: white;
+    --secondary-color: white;
+}
+}
+@media (prefers-color-scheme: light){
+:root {
+    --background-color: rgba(0,0,0,0);
+    --primary-color: black;
+    --secondary-color: black;
+}
+}
+
 }

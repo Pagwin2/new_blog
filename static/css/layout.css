@@ -35,6 +35,10 @@ h1 {
 h2 {
   font-size: 1.65rem;
 }
+h1, h2, h3, h4, h5, h6 {
+    /*I want serifs dangit*/
+    font-family: "courier-std", serif;
+}
 p{
   font-size: var(--base-text-size);
 }
@@ -124,8 +128,12 @@ blockquote {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-
+.icon {
+    width: 2rem;
+    height: 2rem;
+}
 /* div element with this class can be a bitch so need to select those as well as pre*/
 .sourceCode {
     max-width: -moz-available;

@@ -3,7 +3,7 @@ title: "Yeeting the distractions and setting goals"
 
 description: "So recently I've begun work on trying to remove distractions so I'm more likely to work on productive stuff and this blog is effectively a lightning round of things I did to accomplish that"
 
-date: 2022-09-01
+date: 2022-09-02
 
 draft: false
 
