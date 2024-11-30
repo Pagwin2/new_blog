@@ -68,7 +68,7 @@ time {
 }
 
 
-#header {
+header#header {
     box-sizing: border-box;
     display: flex;
     flex-flow: row nowrap;
@@ -108,7 +108,7 @@ main {
     max-width: -webkit-fill-available;;
     max-width: fill-available;
 }
-header {
+header#article-header {
     max-width: -moz-available;
     max-width: -webkit-fill-available;;
     max-width: fill-available;
@@ -148,6 +148,11 @@ blockquote {
 .icon {
     width: 2rem;
     height: 2rem;
+}
+/*https://stackoverflow.com/questions/35269947/how-can-i-align-one-item-right-with-flexbox#35270047*/
+.back-shover {
+    margin-left:auto;
+    margin-top:auto;
 }
 /* div element with this class can be a bitch so need to select those as well as pre*/
 .sourceCode {
