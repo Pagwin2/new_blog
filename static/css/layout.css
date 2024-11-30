@@ -101,6 +101,12 @@ time {
     /* not sure if I want everything centered or just code blocks but I like everything centered atm*/
     justify-content: center;
     align-items: center;
+
+}
+main {
+    max-width: -moz-available;
+    max-width: -webkit-fill-available;;
+    max-width: fill-available;
 }
 header {
     max-width: -moz-available;
@@ -178,6 +184,12 @@ hr {
 p {
     /*https://pearsonified.com/golden-ratio-typography-intro/ is where this came from and tbh having a bigger line height does make things more readable although I tune it down a bit*/
     line-height: 1.5;
+}
+
+footer {
+    display: flex;
+    margin:20px;
+    /*width:100%;*/
 }
 
 }
