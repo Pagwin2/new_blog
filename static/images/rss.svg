@@ -3,9 +3,10 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 455.731 455.731" xml:space="preserve">
          <style>
-            @layer color-import, futureproof;
+            @layer import-color, base, print;
             @import url("/static/css/icon-colors.css") layer(import-color);
-            @layer futureproof{
+            @import url("/static/css/icon-print.css") layer(print);
+            @layer base{
             .box {
                 fill: var(--background-color);
             }
