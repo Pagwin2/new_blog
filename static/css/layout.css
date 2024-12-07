@@ -139,11 +139,11 @@ blockquote {
         margin: 0;
     }
 }
+/*might need to become grid when adding in table of contents and sidenotes*/
 #content-outer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 .icon {
     width: 2rem;
