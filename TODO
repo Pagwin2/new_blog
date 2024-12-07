@@ -2,6 +2,7 @@
 - robots.txt
 - make overflow behavior in print so scrollbars go away and full content visibl
 - make h1 elems in article content h2 elems
+- add aria roles where sensible https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
 - Fix articles with inline html in them and/or links
 - post jump points and table of contents (be wary of having this take up too much space on mobile)
 - ico?
@@ -9,3 +10,4 @@
 - analytics
     https://github.com/electerious/Ackee
     https://umami.is/ (https://github.com/umami-software/umami)
+- search functionality

@@ -15,6 +15,7 @@
     --header-bg: hsl(0,0%,15%);
     --nav-link-color: #6B0;
     --nav-link-bg-color: hsl(0,0%,25%);
+    --nav-link-bg-color-hover:hsl(0,0%,20%);
     --content-border-color: #5ac;
     /*stolen from code theme*/
     --blockquote-bg: rgb(29, 31, 33);
@@ -51,6 +52,7 @@
      * #115e84*/
     --nav-link-color: #118411;
     --nav-link-bg-color: hsl(0,0%,75%);
+    --nav-link-bg-color-hover:hsl(0,0%,70%);
     --content-border-color: #026;
     --blockquote-bg: rgb(226,224,222);
     --highlight-bg: #000;
@@ -62,6 +64,10 @@
 .nav-link {
     color: var(--nav-link-color);
     background-color: var(--nav-link-bg-color);
+}
+
+.nav-link:hover {
+  background: var(--nav-link-bg-color-hover);
 }
 }
 @layer baseline{
@@ -110,6 +116,7 @@ pre:has( > code), pre.hljs {
 }
 
 }
+
 @media print {
 @layer print{
 
