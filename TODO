@@ -1,5 +1,6 @@
 - sitemap
 - robots.txt
+- make overflow behavior in print so scrollbars go away and full content visibl
 - make h1 elems in article content h2 elems
 - Fix articles with inline html in them and/or links
 - post jump points and table of contents (be wary of having this take up too much space on mobile)

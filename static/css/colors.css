@@ -4,7 +4,7 @@
 @layer baseline{
 @media (prefers-color-scheme: dark) {
 :root {
-    --bg-color: #1c1b19;
+    --bg-color: #000;
     /*
      * #5ac
      * */
@@ -12,9 +12,9 @@
     --focus-outline-color: #f00;
     --link-clicked: #B250D8;
     --link-unclicked: #d80;
-    --header-bg: #333;
+    --header-bg: hsl(0,0%,15%);
     --nav-link-color: #6B0;
-    --nav-link-bg-color: #444;
+    --nav-link-bg-color: hsl(0,0%,25%);
     --content-border-color: #5ac;
     /*stolen from code theme*/
     --blockquote-bg: rgb(29, 31, 33);
