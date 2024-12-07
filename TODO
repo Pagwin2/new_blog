@@ -2,6 +2,7 @@
 - robots.txt
 - make overflow behavior in print so scrollbars go away and full content visibl
 - make h1 elems in article content h2 elems
+- make h2 elems have anchor elems with rel="bookmark" and a name to make them proper bookmarks
 - add aria roles where sensible https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
 - Fix articles with inline html in them and/or links
 - post jump points and table of contents (be wary of having this take up too much space on mobile)
