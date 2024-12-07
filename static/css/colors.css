@@ -35,7 +35,7 @@
 /*light theme*/
 @media (prefers-color-scheme: light) {
 :root {
-    --bg-color: #e2e3e5;
+    --bg-color: #fff;
     --normal-text: #000;
     --focus-outline-color: #f00;
     --link-unclicked: #2535B4;
@@ -46,11 +46,11 @@
      * promising
      * #b4d2ec*/
 
-    --header-bg: #ccc;
+    --header-bg: hsl(0,0%,85%);
     /*#841163
      * #115e84*/
     --nav-link-color: #118411;
-    --nav-link-bg-color: #bbb;
+    --nav-link-bg-color: hsl(0,0%,75%);
     --content-border-color: #026;
     --blockquote-bg: #fff;
     --highlight-bg: #000;
