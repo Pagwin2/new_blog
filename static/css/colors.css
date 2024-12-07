@@ -52,7 +52,7 @@
     --nav-link-color: #118411;
     --nav-link-bg-color: hsl(0,0%,75%);
     --content-border-color: #026;
-    --blockquote-bg: #fff;
+    --blockquote-bg: rgb(226,224,222);
     --highlight-bg: #000;
     --highlight-fg: #fff;
 }
@@ -99,8 +99,9 @@ blockquote {
     }
 }
 
-pre:has( > code) {
-    background: var(--blockquote-bg);
+pre:has( > code), pre.hljs {
+    /*I don't wanna dig into highlight.js internals to make !important redundant*/
+    background: var(--blockquote-bg) !important;
 }
 /*fancy user selection for funsies*/
 ::selection {
