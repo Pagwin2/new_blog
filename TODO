@@ -1,14 +1,21 @@
+- make separate blog list page redundant
+- move socials to footer
+- change navbar into home button
+- RSS icon on hover css
+- investigate fixing paragraph spacing https://zellwk.com/blog/2016-05-04-wrong-about-vertical-rhythm/
 - sitemap
 - robots.txt
 - make overflow behavior in print so scrollbars go away and full content visibl
 - make h1 elems in article content h2 elems
-- make h2 elems have anchor elems with rel="bookmark" and a name to make them proper bookmarks
+- make h2 elems have anchor elems with rel="bookmark" and a name to make them proper bookmarks, also add :target css as needed
+- stick stuff under h elements into section elems
 - add aria roles where sensible https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
 - Fix articles with inline html in them and/or links
-- post jump points and table of contents (be wary of having this take up too much space on mobile)
+- post jump points and table of contents (be wary of having this take up too much space on mobile) absolutely positioned on the left on desktop please
 - ico?
-- Make references(the tiny number things) appear to the side instead of the bottom on desktop, try to make it bottom of page in print or bottom of print otherwise
+- Make references(the tiny number things) appear to the side instead of the bottom on desktop, try to make it bottom of page in print or bottom of print otherwise, might need grid or float hard to say atm
 - analytics
     https://github.com/electerious/Ackee
     https://umami.is/ (https://github.com/umami-software/umami)
 - search functionality
+- seek out RSS icon for home button maybe?
