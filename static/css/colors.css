@@ -72,6 +72,11 @@
     background-color: var(--nav-link-bg-color);
 }
 
+/*avoiding color issues of nesting anchor inside objects for header icon links*/
+a.icon:has(.nav-link){
+    color: rgba(0,0,0,0);
+}
+
 .nav-link:hover {
   background: var(--nav-link-bg-color-hover);
 }
