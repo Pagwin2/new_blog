@@ -39,12 +39,12 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.27913"
+       style=""
        id="rect1"
-       width="347.72086"
-       height="347.72086"
-       x="87.139565"
-       y="163.13957"
+       width="500"
+       height="500"
+       x="6"
+       y="150.13957"
        class="primary-bg" />
     <path
        sodipodi:type="star"
@@ -66,11 +66,10 @@
        inkscape:transform-center-x="-3.6937831e-06"
        class="primary-bg" />
     <rect
-       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:3.77952756;stroke-opacity:1;stroke-dasharray:none"
        id="rect2"
        width="68.574364"
        height="138.57436"
-       x="220.71281"
+       x="320.71281"
        y="372.71283"
        rx="2.1683502"
        ry="1.9701023"
@@ -78,8 +77,8 @@
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.26186;stroke-dasharray:none;stroke-opacity:1"
        id="path2"
-       cx="279.36908"
-       cy="444.36908"
+       cx="375"
+       cy="444"
        rx="4.3690701"
        ry="4.3690696"
        class="secondary-bg" />
@@ -99,9 +98,27 @@
        id="path3"
        class="primary-stroke" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:3.41671;stroke-dasharray:none;stroke-opacity:1"
        d="m 150.0427,352.23855 v 98.14697 z"
        id="path4"
        class="primary-stroke" />
   </g>
+  <style>
+  .primary-bg {
+   fill:#000000;
+   fill-opacity:1;
+  }
+  .primary-stroke {
+   stroke:#000000;
+   stroke-width:2.27913 
+  }
+  .secondary-bg{
+
+  }
+  .secondary-border{
+       stroke:#ffffff;
+       stroke-width:3.77952756;
+       stroke-opacity:1;
+       stroke-dasharray:none;
+  }
+  </style>
 </svg>
