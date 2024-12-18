@@ -1,7 +1,10 @@
 - make separate blog list page redundant
-- move socials to footer
+- move socials to footer (and iconify them)
 - change navbar into home button
 - RSS icon on hover css
+- add button to save articles for offline reading
+- add alt text to any images either blank or actual text rather than just nothing
+- add aria roles where sensible https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
 - investigate fixing paragraph spacing https://zellwk.com/blog/2016-05-04-wrong-about-vertical-rhythm/
 - sitemap
 - robots.txt
@@ -9,7 +12,6 @@
 - make h1 elems in article content h2 elems
 - make h2 elems have anchor elems with rel="bookmark" and a name to make them proper bookmarks, also add :target css as needed
 - stick stuff under h elements into section elems
-- add aria roles where sensible https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
 - Fix articles with inline html in them and/or links
 - post jump points and table of contents (be wary of having this take up too much space on mobile) absolutely positioned on the left on desktop please
 - ico?
