@@ -19,6 +19,7 @@ body {
 a {
     font-weight: bold;
     text-decoration: none;
+    width: fit-content;
 }
 
 a:hover {
