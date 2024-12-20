@@ -1,15 +1,13 @@
-- get house svg
-- move socials to header/footer (and iconify them)
-- RSS icon on hover css
-- add button to save articles for offline reading
-- add alt text to any images either blank or actual text rather than just nothing
-- add aria roles where sensible https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
-- investigate fixing paragraph spacing https://zellwk.com/blog/2016-05-04-wrong-about-vertical-rhythm/
+- move socials to header/footer as icons
+- icon on hover css
 - sitemap
 - robots.txt
+- add aria roles where sensible https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
 -----cutoff-----
+- add button to save articles for offline reading
+- investigate fixing paragraph spacing https://zellwk.com/blog/2016-05-04-wrong-about-vertical-rhythm/
 - make overflow behavior in print so scrollbars go away and full content visible
-- make h1 elems in article content h2 elems
+- make h1 elems in article content h2 elems or otherwise fix semantics
 - make h2 elems have anchor elems with rel="bookmark" and a name to make them proper bookmarks, also add :target css as needed
 - stick stuff under h elements into section elems
 - Fix articles with inline html in them and/or links
