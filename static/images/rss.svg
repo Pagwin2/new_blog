@@ -3,7 +3,15 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 455.731 455.731" xml:space="preserve">
          <style>
-            @layer import-color, base, print;
+            @layer default-color, import-color, base, print;
+            @layer default-color {
+            :root {
+                --background-color: rgba(0,0,0,0);
+                --primary-color: blue;
+                --secondary-color: blue;
+            }
+            }
+
             @import url("/static/css/icon-colors.css") layer(import-color);
             @import url("/static/css/icon-print.css") layer(print);
             @layer base{

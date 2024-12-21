@@ -37,7 +37,16 @@
   <title
      id="title1">home</title>
          <style>
-            @layer import-color, base, print;
+            @layer default-color, import-color, base, print;
+
+            @layer default-color {
+            :root {
+                --background-color: rgba(0,0,0,0);
+                --primary-color: blue;
+                --secondary-color: blue;
+            }
+            }
+
             @import url("/static/css/icon-colors.css") layer(import-color);
             @import url("/static/css/icon-print.css") layer(print);
             @layer base{
