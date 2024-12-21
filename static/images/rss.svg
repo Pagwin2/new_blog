@@ -12,8 +12,6 @@
             }
             }
 
-            @import url("/static/css/icon-colors.css") layer(import-color);
-            @import url("/static/css/icon-print.css") layer(print);
             @layer base{
             .box {
                 fill: var(--background-color);
@@ -25,6 +23,10 @@
                 fill: var(--secondary-color);
             }
             }
+         </style>
+         <style>
+            @import url("/static/css/icon-colors.css") layer(import-color);
+            @import url("/static/css/icon-print.css") layer(print);
          </style>
          <a href="/index.xml" target="_top">
 <g>

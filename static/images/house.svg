@@ -47,8 +47,6 @@
             }
             }
 
-            @import url("/static/css/icon-colors.css") layer(import-color);
-            @import url("/static/css/icon-print.css") layer(print);
             @layer base{
                 .box {
                     fill: var(--background-color);
@@ -57,6 +55,10 @@
                     fill: var(--primary-color);
                 }
             }
+         </style>
+         <style>
+            @import url("/static/css/icon-colors.css") layer(import-color);
+            @import url("/static/css/icon-print.css") layer(print);
          </style>
   <a href="/" target="_top">
   <rect x="0" y="0" class="box" width="2048" height="1192"/>
