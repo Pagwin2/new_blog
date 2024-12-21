@@ -38,8 +38,10 @@ dt {
   font-family: "Courier Prime", Georgia, serif;
 
   text-overflow: ellipsis;
-  overflow:hidden;
   white-space: nowrap;
+  overflow:hidden;
+  /*needed to fix the outline vanishing due to overflow hidden*/
+  padding: 2px;
 }
 /*font sizes*/
 h1 {
