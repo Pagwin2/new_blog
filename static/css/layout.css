@@ -246,6 +246,8 @@ footer {
 pre {
     page-break-inside: avoid;
 }
-
+.socials {
+    display: none;
+}
 }
 }
