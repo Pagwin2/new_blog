@@ -8,8 +8,14 @@
 body {
     padding: 0px;
     margin: 0px;
+
     font-family: "Atkinson Hyperlegible", Georgia, serif;
     -webkit-font-smoothing: antialiased;
+
+    /*make the width and scrolling behavior correct
+     * If horizontal scrolling is needed the layout broke*/
+    width: 100vw;
+    overflow: hidden scroll;
 }
 
 .dt-subtitle {
