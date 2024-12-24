@@ -43,6 +43,7 @@ footer {
     display: grid;
     justify-content: center;
     align-content: center;
+    /*footer isn't a keyword it's just the string I chose*/
     grid-template-areas: "footer"
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
