@@ -14,7 +14,7 @@
 
             @layer base{
             .box {
-                fill: var(--background-color);
+                fill: rgba(0,0,0,0);
             }
             .big-arc, .small-arc {
                 fill: var(--primary-color);

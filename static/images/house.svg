@@ -49,7 +49,7 @@
 
             @layer base{
                 .box {
-                    fill: var(--background-color);
+                    fill: rgba(0,0,0,0);
                 }
                 .primary_color {
                     fill: var(--primary-color);

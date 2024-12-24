@@ -1,14 +1,14 @@
 
 @media (prefers-color-scheme: dark){
 :root {
-    --background-color: rgba(0,0,0,0);
+    --background-color: black;
     --primary-color: white;
     --secondary-color: white;
 }
 }
 @media (prefers-color-scheme: light){
 :root {
-    --background-color: rgba(0,0,0,0);
+    --background-color: white;
     --primary-color: black;
     --secondary-color: black;
 }
