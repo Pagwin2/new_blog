@@ -25,15 +25,15 @@
     <!-- originally handled dark v light via js but decided it would be better to just do it all in css and have no toggle 8a7917a0cd34bd7637d9a9a8ad327e4b847cdeed is the last commit where I had the system setup -->
     <header id="header" role="menubar">
         <div class="left">
-            <a class="obj-wrapper" rel="prefetch" href="/" role="menuitem"><object aria-hidden="true" tabindex="-1"
+            <a class="obj-wrapper" rel="prefetch" href="/" role="menuitem"><object aria-label="Home" tabindex="-1"
                     class="icon svg" data="/static/images/house.svg">
-                    <a href="/" class="nav-link" aria-hidden="true" tabindex="-1">home</a>
+                    <a href="/" class="nav-link" aria-hidden="true" tabindex="-1">Home</a>
                 </object></a>
         </div>
         <div class="right">
-            <a class="obj-wrapper" role="menuitem" href="/index.xml"> <object aria-hidden="true" tabindex="-1"
+            <a class="obj-wrapper" role="menuitem" href="/index.xml"> <object aria-label="Web Feed" tabindex="-1"
                     class="icon svg" data="/static/images/rss.svg">
-                    <a href="/index.xml" class="nav-link" aria-hidden="true" tabindex="-1">web feed</a>
+                    <a href="/index.xml" class="nav-link" aria-hidden="true" tabindex="-1">Web Feed</a>
                 </object>
             </a>
             <!--TODO hamburger menu??-->
@@ -48,16 +48,17 @@
     </div>
     <footer>
         <div class="socials">
-            <a class="obj-wrapper" href="https://github.com/Pagwin-Fedora"><object aria-hidden="true" tabindex="-1"
-                    class="icon svg small" data="/static/images/github.svg">
+            <a class="obj-wrapper" aria-label="Github" href="https://github.com/Pagwin-Fedora"><object aria-label="true"
+                    tabindex="-1" class="icon svg small" data="/static/images/github.svg">
                     <a href="https://github.com/Pagwin-Fedora" class="nav-link" aria-hidden="true"
                         tabindex="-1">Github</a>
                 </object></a>
-            <a class="obj-wrapper" href="https://www.linkedin.com/in/spencer-powell-pagwin/"><object aria-hidden="true"
-                    tabindex="-1" class="icon svg small" data="/static/images/linkedin.svg">
+            <a class="obj-wrapper" aria-label="LinkedIn"
+                href="https://www.linkedin.com/in/spencer-powell-pagwin/"><object aria-hidden="true" tabindex="-1"
+                    class="icon svg small" data="/static/images/linkedin.svg">
 
                     <a href="https://www.linkedin.com/in/spencer-powell-pagwin/" class="nav-link" aria-hidden="true"
-                        tabindex="-1">Linkedin</a>
+                        tabindex="-1">LinkedIn</a>
                 </object></a>
         </div>
     </footer>
