@@ -9,7 +9,7 @@ body {
     padding: 0px;
     margin: 0px;
 
-    font-family: "Atkinson Hyperlegible", Georgia, serif;
+    font-family: "Atkinson Hyperlegible", sans-serif;
     -webkit-font-smoothing: antialiased;
 
     /*make the width and scrolling behavior correct
@@ -62,7 +62,7 @@ footer {
     padding: 0em 0.25em;
     border-radius: 0.5rem;
     font-variant: small-caps;
-    font-family: "Courier Prime", Georgia, serif;
+    font-family: "Courier Prime", serif;
 }
 
 dt {
