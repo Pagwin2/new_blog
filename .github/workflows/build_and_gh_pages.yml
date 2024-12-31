@@ -8,7 +8,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v4
       - name: Build files
-        uses: Pagwin-Fedora/psb@v1
+        uses: Pagwin-Fedora/psb@v1.1
 
   deploy_site:
     name: Publish Site
