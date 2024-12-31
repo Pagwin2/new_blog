@@ -5,6 +5,8 @@ jobs:
     name: Generate Site
     runs-on: ubuntu-latest
     steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
       - name: Build files
         uses: Pagwin-Fedora/psb@v1
 
