@@ -5,10 +5,14 @@ jobs:
     name: Generate Site
     runs-on: ubuntu-latest
     steps:
-      - name: checkout repo
+      - name: Checkout Repo
         uses: actions/checkout@v4
       - name: Build files
         uses: Pagwin-Fedora/psb@v1.1
+      - name: Upload site as artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: publish/
 
   deploy_site:
     name: Publish Site
