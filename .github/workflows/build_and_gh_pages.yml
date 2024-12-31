@@ -1,0 +1,27 @@
+on: [push]
+
+jobs:
+  build_site:
+    name: Generate Site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build files
+        uses: Pagwin-Fedora/psb@v1
+
+  deploy_site:
+    name: Publish Site
+    needs: build_site
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    runs-on: ubuntu-latest
+    steps:
+    - name: Publish to Github pages
+      uses: actions/deploy-pages@v4
