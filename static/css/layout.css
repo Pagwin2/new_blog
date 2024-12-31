@@ -204,7 +204,11 @@ pre {
      * previously a cludge of 75 em this is now a cludge of 2 different vendor extensions
      * 
      * */
-    overflow:scroll;
+
+    /*
+     * need to may y axis scroll hidden for chromium
+     * */
+    overflow:scroll hidden;
     /*background: #444;*/
     border-radius: 0.5rem;
     /*border: 0.2em solid red;*/
