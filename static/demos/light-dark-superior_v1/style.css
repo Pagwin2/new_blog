@@ -1,0 +1,35 @@
+.hide {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark){
+    :root {
+        --background-color: black;
+        --text-color: white;
+    }
+    :root:has(#css_state:checked){
+        --background-color: white;
+        --text-color: black;
+    }
+}
+@media (prefers-color-scheme: light){
+    :root {
+        --background-color: white;
+        --text-color: black;
+    }
+    :root:has(#css_state:checked){
+        --background-color: black;
+        --text-color: white;
+    }
+}
+
+p {
+    color: var(--text-color);
+}
+body {
+    background: var(--background-color);
+}
+
+#light_dark_toggle{
+    display:block;
+}

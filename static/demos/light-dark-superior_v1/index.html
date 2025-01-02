@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <!--
+        in the context of github pages where we have no
+        backend the form element is for demonstration
+        rather than actual function in the demo
+        in an implementation with a proper backend the
+        form element would allow for the toggle button
+        to work without Javascript
+    -->
+    <form action="" method="post">
+        <!--
+            id present so service worker shenanigans are
+            more durable and css has something to latch
+            onto
+
+            hidden because the user should never see this
+            checkbox
+        -->
+        <input id="css_state" type="checkbox" hidden>
+        <!--
+            hidden because if a user agent doesn't support
+            CSS we don't want to show the light-dark toggle
+
+            id present so the css can make it visible again and js can grab it
+        -->
+        <input id="light_dark_toggle" type="submit" value="Toggle light/dark theme" hidden>
+    </form>
+    <p class="hide">Light and/or dark theming is only applicable if you have CSS, if you see this then either the CSS
+        hasn't loaded yet or your user agent doesn't support CSS</p>
+    <noscript>
+        <p>While an implementation with a proper backened wouldn't need javascript this demo does due to being hosted on
+            github pages. Specifically the javascript is needed to create a service worker to do the work a backend
+            would be doing otherwise.</p>
+    </noscript>
+    <p>Hello this is some text, should be black on white background if you're light theme and white on black background
+        if you're dark theme</p>
+</body>
+
+</html>
