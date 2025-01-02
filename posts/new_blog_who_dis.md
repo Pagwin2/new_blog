@@ -173,7 +173,7 @@ Sidenote: apparently this doesn't work if you're using dark reader which is unfo
 
 ### Accessibility work
 
-I want this site to be accessible because browsers do a pretty good job at having the web be accessible by default and I didn't want to break that. That meant making sure my HTML was actually compliant with the [w3c checker](https://validator.w3.org/) which I just ran at time of writing and apparently some of my other accessibility work on the site messed it up after I went and fixed it... whatever it's fine. It also meant setting some aria values, namely all the objects got an `aria-label` and some things needed to be `aria-hidden` and/or get their `tabindex` set to -1. Otherwise I was mostly fine already, I think I went through with [Orca](https://orca.gnome.org/) and it seemed fine but I don't use a screen reader regularly so I may be wrong, sorry if I made things worse.
+I want this site to be accessible because browsers do a pretty good job at having the web be accessible by default and I didn't want to break that. That meant making sure my HTML was actually compliant with the [w3c checker](https://validator.w3.org/) which I just ran at time of writing and apparently some of my other accessibility work on the site messed it up after I went and fixed it... whatever it's fine. It also meant setting some ARIA values, namely all the objects got an `aria-label` and some things needed to be `aria-hidden` and/or get their `tabindex` set to -1. Otherwise I was mostly fine already, I think I went through with [Orca](https://orca.gnome.org/) and it seemed fine but I don't use a screen reader regularly so I may be wrong, sorry if I made things worse.
 
 ### Printing css
 
