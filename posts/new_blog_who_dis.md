@@ -3,14 +3,14 @@ title: "Blog revamp"
 
 description: "I redid the blog and made my own static site generator"
 
-date: "2024-12-31"
+date: "2025-01-02"
 
-draft: true
+draft: false
 
 tags: []
 ---
 
-Hello again 3 people reading this blog. The three being me, the bot gestalt consciousness that seems to have noticed this blog, and a british person named Josh a decade after this post is published. It's been a bit, more than the normal a bit in fact. There are 2 reasons for that, 1) I've been busy when I had blog article topics rattling in my head and 2) I wanted to finish this revamp first. Anyways onto some highlights of making the new site.
+Hello again three people reading this blog. The three being me, the bot gestalt consciousness that seems to have noticed this blog, and a British person named Josh a decade after this post is published. It's been a bit, more than the normal a bit in fact. There are two reasons for that, 1) I've been busy when I had blog article topics rattling in my head and 2) I wanted to finish this revamp first. Anyways onto some highlights of making the new site.
 
 (Sorry if you happen to be using a feed reader on my blog, I probably messed up your feed a bit)
 
@@ -26,7 +26,7 @@ However I wasn't satisfied with that initial version for a few reasons.
 
 #### Refactoring the code into multiple files
 
-While the original blog gave a single file setup I found modifying it kinda annoying for reasons I can't put my finger on and have now forgotten. Regardless I split things up into 5 files.
+While the original blog gave a single file setup I found modifying it kinda annoying for reasons I can't put my finger on and have now forgotten. Regardless I split things up into five files.
 
 - `Main.hs` entrypoint into the program and where various things come toegether to actually describe the program.
 - `Utilities.hs` various utility functions I didn't consider appropriate for Main.
@@ -40,15 +40,21 @@ This is actually the last addition I made but it's also the simplest, in `Config
 
 #### Adding a Web Feed
 
-To add a output for a Web Feed I needed to pass all the post objects to a template which generates the feed. So I did that, the original blog this is based on had a posts list page so I basically just had to do a modified version of that. Speaking of.
+To add a output for a Web Feed I needed to pass all the post objects to a template which generates the feed. So I did that.
+
+> Uuuh more details?
+
+... Fine the generator (named PSB), goes through and reads all the files in the posts directory to generate all the html and what not. In addition to converting markdown/typst into html it also grabs meta data and that output and the metadata all gets packaged into a `Post` type. All of those post types are put into a list and the list is passed to the code that generates the RSS feed.
+
+(the sass above was sponsored by "having someone read my post before publishing and them correctly pointing out that I'm not explaining enough")
 
 #### Removing the posts page
 
-More details on this when I get to describing building the site but I realized that the way things were shaking out that it made no sense to have a separate posts page so I deleted support for it from the static site generator.
+More details on this when I get to describing building the site but I realized that the way things were shaking out that it made no sense to have a separate posts page so I removed the code for it from the static site generator.
 
 #### Adding in Typst support
 
-Here's the pain in the ass one I decided to do. I like [Typst](https://typst.app/), it makes making my documents and math homework pretty, easy and Pandoc added support to it semi-recently which partially inspired me to make this. However adding it into the static site generator required that I handle dispatching to appropriate Actions depending on the file extension, reading from a separate yaml file because Pandoc doesn't support grabbing Typst Metadata and plugging all that into a duplication of the code that handles the Markdown except having Pandoc read Typst instead of Markdown.
+Here's the pain in the ass one I decided to do. I like [Typst](https://typst.app/), it makes making my documents and math homework pretty, easy. Also Pandoc added support to it semi-recently and learning that partially inspired me to make this. However adding it into the static site generator required that I handle dispatching to appropriate Actions depending on the file extension. In addition I had to read from a separate yaml file because Pandoc doesn't support grabbing Typst Metadata.
 
 Wanna know what the worst part is? I'm probably never going to use that functionality for an actual article... yes seriously. This project took long enough that in the back of by dumb brain I realized that
 
@@ -81,9 +87,9 @@ RUN export folder=$(ls /mnt/dist-newstyle/build/x86_64-linux) && mv /mnt/dist-ne
 ENTRYPOINT ["/mnt/psb", "build"]
 ```
 
-By the way the static site generator is named Pagwin's Site Generator or PSB for short. Anyways if you think it's a little weird that I separated out copying my cabal file being copied in before building dependencies then yeah it is weird, the reason for that is that docker caches the result of each line of the dockerfile being evaluated and I rarely change my cabal file so by copying that in and building dependencies first I don't need to rebuild pandoc every time I want to rebuild the docker container on my machine. Reason I set the working directory to `/github/workspace` is because I wasn't sure if github did that for me and also it made sense to have a clean working directory in the event I use this for something else regardless. Finally we have that wacky RUN command, the reason for the wackiness is because I don't want to hard code the ghc version into the dockerfile and this was the easiest solution for avoiding that.
+Anyways if you think it's a little weird that I separated out copying my cabal file into the container and building dependencies then yeah it is weird. The reason for that is that docker caches the result of each line of the dockerfile being evaluated and I rarely change my cabal file so by copying that in and building dependencies first I don't need to rebuild pandoc every time I want to rebuild the docker container on my machine. Reason I set the working directory to `/github/workspace` is because I wasn't sure if github did that for me and also it made sense to have a clean working directory in the event I use this for something else regardless. Finally we have that wacky RUN command, the reason for the wackiness is because I don't want to hard code the ghc version into the dockerfile and this was the easiest solution for avoiding that.
 
-Lastly you might be wondering why I didn't separate a container to run the static site generator out from building it like I tend to do for other cases where that's a thing. The reasoning is simple, there's no Haskell container that uses Alpine/Musl libc and I don't want to set one up myself and I kinda don't care about having a separate stage if I can't get it down to just musl libc and SSL certs so fuck it just make a chonky container image.
+Lastly you might be wondering why I didn't split building the container psb out from running it in the dockerfile like I tend to do for other cases where that's a thing. The reasoning is simple, there's no Haskell container that uses Alpine/Musl libc and I don't want to set one up myself and I kinda don't care about having a separate stage if I can't get it down to just musl libc and SSL certs so fuck it just make a chonky container image.
 
 After publishing this I will probably make a github workflow to build the container because right now site build times in the CI are obnoxiously long due to github rebuilding it every single time.
 
@@ -110,7 +116,7 @@ This site now has dark and light themed versions and will be whichver version yo
 
 ### Picking colors
 
-Picking colors was annoying because I wanted colors with good contrast so this site would be reasonable but I also wanted to use colors other than black and white. Doing that in RGB color space is annoyingly difficult to accomplish but I perservered and convergent evolutioned my way to colors which are similar to the default colors for links on the light theme and more interesting colors on the dark theme. This was an even more interesting problem when I had navigation elements that were text which were a different color from the normal links, that styling is still there as a fallback in case the svg icons don't load for some reason or another. Outside of code snippets I did somewhat fail at adding colors though.
+Picking colors was annoying because I wanted colors with good contrast so this site would be reasonable but I also wanted to use colors other than black and white. Doing that in RGB color space is annoyingly difficult to accomplish but I perservered and convergent evolutioned my way to colors which are similar to the default colors for links on the light theme and more interesting colors on the dark theme. This was an even more interesting problem when I had navigation elements that were text which were a different color from the normal links. Outside of code snippets I did somewhat fail at adding colors though.
 
 ### Icons
 
@@ -122,7 +128,7 @@ I wanted the logos to respond to light/dark theming so I mucked around with the 
 
 ##### Black boxes go brrrr
 
-Problem being that if you do what I just wrote in the obvious way then while the CSS is loading in your icons will have all the coloring be black which for reasons I will get to in a moment will lead to the every icon being a black square for a moment. This isn't great, what makes things worse is that imports
+The problem with that approach is that while the CSS is loading in your icons will have all the coloring be black which for reasons I will get to in a moment will lead to the every icon being a black square for a moment. This isn't great, what makes things worse is that imports
 
 1) block the css below them until they're done
 2) have to be at the top of whatever CSS you're writing
@@ -183,7 +189,7 @@ Alright I think that covers everything about making this site that I think is in
 
 ### Rip out Pandoc in favor of my own parsing
 
-A lot of changes I want to make are downstream of getting greater control of parsing my posts and controlling what HTML is output. I could deal with Pandoc's AST but that sounds unnecessarily difficult and complicated considering that I'm only going to deal with 2 input formats and 1 output format. As a part of this I will be replacing Typst with [reStructuredText](https://docutils.sourceforge.io/rst.html).
+A lot of changes I want to make are downstream of getting greater control of parsing my posts and controlling what HTML is output. I could deal with Pandoc's AST but that sounds unnecessarily difficult and complicated considering that I'm only going to deal with two input formats and one output format. As a part of this I will be replacing Typst with [reStructuredText](https://docutils.sourceforge.io/rst.html).
 
 ### Do code highlights at build time
 
@@ -203,7 +209,7 @@ Don't remember which blog(s) did this one either but I wanna copy them.
 
 ### Make a section of the site dedicated to demos
 
-It may ultimately only have 1 demo for all time but I somewhat doubt it.
+It may ultimately only have one demo for all time but I somewhat doubt it.
 
 ### Add a service worker to cache CSS and SVG icons
 
@@ -215,6 +221,6 @@ For some reason on slow connections fonts will load in, unload in and then load 
 
 ## Conclusion
 
-I have a bunch of things I can do to improve the site. At this point I'll probably make those changes incrementally as I find the motivation.  For now however I have 2 more blog articles to write before I get distracted.
+I have a bunch of things I can do to improve the site. At this point I'll probably make those changes incrementally as I find the motivation.  For now however I have two more blog articles to write before I get distracted.
 
-Oh also Happy New years. Okay bye.
+Oh also Happy New years (only 1 day late). Okay bye.
