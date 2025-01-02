@@ -39,6 +39,6 @@ else setupServiceWorker();
 async function setupServiceWorker() {
     await navigator.serviceWorker.register("sw.js", {
         // we only need to interact with index.html for this demo
-        scope: "./index.html"
+        scope: "./"
     });
 }

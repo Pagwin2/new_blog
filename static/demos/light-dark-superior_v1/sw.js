@@ -19,10 +19,12 @@ async function fetchResponse(event) {
     }
     // this is a brittle way of accomplishing our desired behavior
     body.replace(`<input id="css_state" type="checkbox" hidden>`,
-        `<input id="css_state" type="checkbox" hidden ${theme_toggled ? "checked" : ""}>`)
+        `<input id="css_state" type="checkbox" hidden ${theme_toggled ? "checked" : ""}>`);
+    return new Response(body, resp);
 }
 
 self.addEventListener('fetch', (event) => {
+    if (!event.request.url.endsWith(".html")) return;
     //https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith
     event.respondWith(fetchResponse(event));
 })
