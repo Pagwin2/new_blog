@@ -9,6 +9,7 @@ async function fetchResponse(event) {
     const resp = await fetch(request);
     const body = await resp.text();
     const cookies = resp.headers.getSetCookie();
+    console.log(cookies);
     let theme_toggled = false;
     for (let cookie of cookies) {
         const [key, value] = cookie.split("=");
@@ -25,7 +26,7 @@ async function fetchResponse(event) {
 }
 
 self.addEventListener('fetch', (event) => {
-    if (!event.request.url.endsWith(".html")) return;
+    if (!event.request.url.endsWith(".html") || event.request.url.indexOf(".") !== -1) return;
     //https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith
     event.respondWith(fetchResponse(event));
 })
