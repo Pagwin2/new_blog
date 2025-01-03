@@ -1,7 +1,6 @@
-- icon on hover css
------cutoff-----
 - add button to save articles for offline reading
 - post jump points and table of contents (be wary of having this take up too much space on mobile) probably done with position: sticky in some way
+    - refer to implementation here https://blog.kizu.dev/repetition-and-attribution/
 - investigate fixing paragraph spacing https://zellwk.com/blog/2016-05-04-wrong-about-vertical-rhythm/
 - make overflow behavior in print so scrollbars go away and full content visible
 - make h1 elems in article content h2 elems or otherwise fix semantics
