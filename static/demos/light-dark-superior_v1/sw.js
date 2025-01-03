@@ -26,7 +26,7 @@ async function fetchResponse(event) {
 }
 
 // needed if we actually want to get requests
-self.addEventListener('activate', () => self.clients.claim());
+//self.addEventListener('activate', (event) => event.waitUntil(self.clients.claim()));
 
 self.addEventListener('fetch', (event) => {
     if (!event.request.url.endsWith(".html") || event.request.url.indexOf(".") !== -1) return;

@@ -38,7 +38,6 @@ if (!("serviceWorker" in navigator)) {
 else setupServiceWorker();
 async function setupServiceWorker() {
     await navigator.serviceWorker.register("sw.js", {
-        // we only need to interact with index.html for this demo
-        scope: "./"
+        scope: "/static/demos/light-dark-superior_v1/"
     });
 }
