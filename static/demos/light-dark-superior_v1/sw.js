@@ -20,6 +20,7 @@ async function fetchResponse(event) {
     // this is a brittle way of accomplishing our desired behavior
     body.replace(`<input id="css_state" type="checkbox" hidden>`,
         `<input id="css_state" type="checkbox" hidden ${theme_toggled ? "checked" : ""}>`);
+    console.log(body);
     return new Response(body, resp);
 }
 
