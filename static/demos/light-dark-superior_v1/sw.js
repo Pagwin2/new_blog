@@ -25,6 +25,9 @@ async function fetchResponse(event) {
     return new Response(body, resp);
 }
 
+// needed if we actually want to get requests
+self.addEventListener('activate', () => self.clients.claim());
+
 self.addEventListener('fetch', (event) => {
     if (!event.request.url.endsWith(".html") || event.request.url.indexOf(".") !== -1) return;
     //https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith
