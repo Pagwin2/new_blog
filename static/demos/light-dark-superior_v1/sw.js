@@ -30,7 +30,7 @@ async function fetchResponse(event) {
 
 self.addEventListener('fetch', (event) => {
     console.log("Fetch:", event.request.url);
-    if (!event.request.url.endsWith(".html") && event.request.url.indexOf(".") !== -1) {
+    if (!event.request.url.endsWith(".html") && event.request.url.match("pagwin.xyz/.+\\..+") !== null) {
         console.log("blocked");
         return;
     }
