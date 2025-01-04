@@ -1,3 +1,5 @@
+- get demo working on chrome
+- make demo use class or attr instead of checkbox
 - add button to save articles for offline reading
 - post jump points and table of contents (be wary of having this take up too much space on mobile) probably done with position: sticky in some way
     - refer to implementation here https://blog.kizu.dev/repetition-and-attribution/

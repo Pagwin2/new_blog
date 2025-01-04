@@ -29,6 +29,7 @@ async function fetchResponse(event) {
 //self.addEventListener('activate', (event) => event.waitUntil(self.clients.claim()));
 
 self.addEventListener('fetch', (event) => {
+    console.log("Fetch:", fetch.request.url);
     if (!event.request.url.endsWith(".html") || event.request.url.indexOf(".") !== -1) return;
     //https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith
     event.respondWith(fetchResponse(event));
