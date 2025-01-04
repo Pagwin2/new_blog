@@ -8,7 +8,8 @@ async function fetchResponse(event) {
     const { request } = event;
     const resp = await fetch(request);
     const body = await resp.text();
-    const cookies = resp.headers.getSetCookie();
+    console.log(request.headers);
+    const cookies = request.headers.getSetCookie();
     console.log(cookies);
     let theme_toggled = false;
     for (let cookie of cookies) {
