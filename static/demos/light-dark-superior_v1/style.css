@@ -7,7 +7,7 @@
         --background-color: black;
         --text-color: white;
     }
-    :root:has(#css_state:checked){
+    :root[toggletheme="true"]{
         --background-color: white;
         --text-color: black;
     }
@@ -17,7 +17,7 @@
         --background-color: white;
         --text-color: black;
     }
-    :root:has(#css_state:checked){
+    :root[toggletheme="true"]{
         --background-color: black;
         --text-color: white;
     }

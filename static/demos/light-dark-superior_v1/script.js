@@ -1,13 +1,7 @@
 "use strict";
 
 const toggle_button = document.body.querySelector("#light_dark_toggle");
-const css_state_checkbox = document.body.querySelector("#css_state");
-
-// this does nothing but I was hoping it would let my LSP figure out 
-// that css_state_checkbox is an input element so the remaining code 
-// is valid
-// Real use case might still find this useful as self documenting code
-console.assert(css_state_checkbox instanceof HTMLInputElement);
+const root = document.body.parentElement;
 
 toggle_button.addEventListener("click", (event) => {
 
@@ -15,7 +9,9 @@ toggle_button.addEventListener("click", (event) => {
     event.preventDefault();
 
 
-    const theme_toggled = !css_state_checkbox.checked;
+    // !== could be used but the check is to see if the attribute is "true"
+    // this writing is intend to make that clearer
+    const theme_toggled = !(root.getAttribute("toggletheme")?.at(0) === "t");
 
     // set the cookie so backend/service worker can do it's thing
     // cookies have other options you may wanna set especially
@@ -24,7 +20,7 @@ toggle_button.addEventListener("click", (event) => {
     document.cookie = `theme_toggled=${theme_toggled}`;
 
 
-    css_state_checkbox.checked = theme_toggled;
+    root.setAttribute("toggletheme", theme_toggled);
 });
 
 // If you wanna implement this for a site with a backend

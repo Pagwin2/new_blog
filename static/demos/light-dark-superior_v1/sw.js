@@ -18,9 +18,9 @@ async function fetchResponse(event) {
         }
         theme_toggled = value[0] === "t";
     }
-    // this is a brittle way of accomplishing our desired behavior
-    body.replace(`<input id="css_state" type="checkbox" hidden>`,
-        `<input id="css_state" type="checkbox" hidden ${theme_toggled ? "checked" : ""}>`);
+    // this is a somewhat brittle way of accomplishing our desired behavior
+    body.replace(`<html lang="en">`,
+        `<html lang="en" toggletheme="${theme_toggled}">`);
     console.log(body);
     return new Response(body, resp);
 }
