@@ -19,10 +19,10 @@ async function fetchResponse(event) {
         theme_toggled = value[0] === "t";
     }
     // this is a somewhat brittle way of accomplishing our desired behavior
-    body.replace(`<html lang="en">`,
+    const new_body = body.replace(`<html lang="en">`,
         `<html lang="en" toggletheme="${theme_toggled}">`);
-    console.log(body);
-    return new Response(body, resp);
+    console.log(new_body);
+    return new Response(new_body, resp);
 }
 
 // needed if we actually want to get requests
