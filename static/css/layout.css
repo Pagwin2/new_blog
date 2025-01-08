@@ -8,7 +8,7 @@
 body {
     padding: 0px;
     margin: 0px;
-
+    font-size: 1.75rem;
     font-family: "Atkinson Hyperlegible", sans-serif;
     -webkit-font-smoothing: antialiased;
 
@@ -125,7 +125,7 @@ header#header {
     /*https://ux.stackexchange.com/a/34148*/
     /*https://pearsonified.com/golden-ratio-typography-intro/*/
     /*https://grtcalculator.com/*/
-    max-width: 55em;
+    max-width: 55ch;
 
     border-radius: 0.5rem;
 
