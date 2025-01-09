@@ -24,6 +24,8 @@
     --highlight-fg: #000;
     --nav-link-bg-color-active: #118411;
     --nav-link-color-active: white;
+
+    scrollbar-color: yellow transparent;
 }
 }
 /*
@@ -63,6 +65,8 @@
     --highlight-fg: #fff;
     --nav-link-bg-color-active: #118411;
     --nav-link-color-active: white;
+
+    scrollbar-color: red transparent;
 }
 }
 }
@@ -87,6 +91,7 @@ a.icon:has(.nav-link){
 }
 }
 @layer baseline{
+
 body {
     background: var(--bg-color);
     color: var(--normal-text);
