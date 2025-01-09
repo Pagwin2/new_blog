@@ -1,7 +1,7 @@
 ---
 title: "Some minor writing things I just learned"
 
-description: "TIL what [sic] and [emphasis mine mean]"
+description: "TIL what [sic] and [emphasis mine] mean"
 
 date: "2025-01-05"
 
