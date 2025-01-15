@@ -1,7 +1,7 @@
 ---
 title: "Impossible problems: Bot Detection"
 
-description: ""
+description: "Attempting to describe various ways one might go about countering bots."
 
 date: "2025-01-09"
 

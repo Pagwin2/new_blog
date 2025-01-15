@@ -95,8 +95,9 @@ ul, ol {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    /*I want serifs dangit*/
     font-family: "Courier Prime", Georgia, serif;
+    /* Default bold hurt Banan's eyes*/
+    font-weight: normal;
 }
 p{
   font-size: var(--base-text-size);
