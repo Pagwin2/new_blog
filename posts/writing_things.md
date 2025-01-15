@@ -30,9 +30,11 @@ I will not quote this post in this example because doing the same thing twice wi
 
 "I will not quote this post in this example \[sic\] because doing the same thing twice without variation seems iffy"
 
+After posting and sharing with a friend they got confused so quick clarification. The error is the statement that I won't quote this post. The reason that's an error is that that quote is a quote from this post.
+
 ### Above may be wrong/incomplete
 
-Upon having this proofread by a friend they pointed out that my understanding of \[sic\] is incomplete. Linking me to a [merriam webster post](https://www.merriam-webster.com/wordplay/sic-meaning-usage-editorial-citation) which says.
+Upon having this proofread by a different friend (before friend mentioned in clarification) they pointed out that my understanding of \[sic\] is incomplete. Linking me to a [merriam webster post](https://www.merriam-webster.com/wordplay/sic-meaning-usage-editorial-citation) which says.
 
 > [*Sic*](https://www.merriam-webster.com/dictionary/sic) usually appears in parentheses or brackets, sometimes with the letters in italics. In this context it means “intentionally so written.” On its own, *sic* means “so” or “thus” and can be found in phrases such as *sic transit gloria mundi* ("so passes away the glory of the world") and *sic semper tyrannis* ("thus ever to tyrants," the motto of the state of Virginia).
 
