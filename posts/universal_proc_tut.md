@@ -25,7 +25,7 @@ someNum ← 5
 "Sidenote: when I have a statement that can take multiple lines of code"
 "I'll surround those lines with curly brackets, also when I need to make"
 "a comment which is intended to do nothing to the code like this it'll be"
-"a free floating string(s) which nothing is done with like this"
+"a bunch of free floating string(s) where nothing is done with like this"
 IF someNum = 5 {
     DISPLAY("someNum is indeed 5")
 }
@@ -60,15 +60,15 @@ i <- 0
 dataSet = []
 WHILE i < 50 {
     dataSet[i] <- i + 1
+
+    "We need to keep adding 1 to i so the loop doesn't run forever"
+    i <- i + 1
 }
 "both loops below will display all the values in the list in the var dataSet"
 i <- 0
 WHILE i < 50 {
     DISPLAY(dataSet[i])
-    "August 2024 pagwin here, just realized I"
-    "also forgot this for the other while loop"
-    "if you saw this article prior to March 2024"
-    "I forgot to include the line below sorry about that."
+
     i <- i + 1
 }
 FOREACH n <- dataSet {
