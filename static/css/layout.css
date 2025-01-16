@@ -22,6 +22,14 @@ body {
     margin-left:0px;
 }
 
+figure {
+    background: hsla(0, 0%, 30%, 50%);
+}
+
+figcaption {
+    text-align: center;
+}
+
 a {
     font-weight: bold;
     text-decoration: none;
@@ -198,8 +206,8 @@ blockquote {
     height: 2rem;
 }
 
-/* div element with this class can be a bitch so need to select those as well as pre*/
-.sourceCode {
+/* all of these can break out of the box we want to put them in*/
+.sourceCode, object, :has(> object), img, :has(> img), pre{
     max-width: -moz-available;
     max-width: -webkit-fill-available;;
     max-width: fill-available;
@@ -207,17 +215,8 @@ blockquote {
 }
 
 pre {
-    /*We also need it on pre because not all pre blocks are source code >:(*/
-    max-width: -moz-available;
-    max-width: -webkit-fill-available;;
-    max-width: fill-available;
-    width: fit-content;
     box-sizing: border-box;
     min-height: 2em;
-    /* 
-     * previously a cludge of 75 em this is now a cludge of 2 different vendor extensions
-     * 
-     * */
 
     /*
      * need to may y axis scroll hidden for chromium
