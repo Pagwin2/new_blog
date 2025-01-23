@@ -50,6 +50,9 @@ Disallow: /
 User-agent: YouBot
 Disallow: /
 
+# https://marginalia-search.com/ it's a search engine so it's fine
+User-Agent: search.marginalia.nu
+Allow: /
 # generic allowance for search engines and what not
 User-Agent: *
 Allow: /
