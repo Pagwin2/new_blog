@@ -1,7 +1,7 @@
 "use strict";
 
 // used so I can prompt updates to the service worker
-const version = "09-01-2025";
+const version = "22-01-2025";
 
 const cache = new Cache();
 

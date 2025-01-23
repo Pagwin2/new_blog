@@ -1,4 +1,10 @@
-@layer pre-load, baseline, print;
+@layer pre-load, baseline, overload-1, print;
+
+@layer overload-1{
+dt{
+  font-weight:normal;
+}
+}
 
 @layer baseline {
 
@@ -76,7 +82,6 @@ footer {
 
 dt {
   font-family: "Courier Prime", Georgia, serif;
-
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow:hidden;
