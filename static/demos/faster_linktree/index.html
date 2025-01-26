@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TERMINALMONTAGE PORTAL - Home</title>
+
+</head>
+
+<body>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        #container {
+            width: 100vw;
+            height: 100vh;
+            overflow-x: hidden;
+            display: grid;
+            grid-template-areas:
+                "header"
+                "content"
+                "footer";
+            grid-template-rows: 5em auto 0fr;
+        }
+
+        header {
+            font-weight: bold;
+            font-size: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 0.1em;
+
+            a> {
+                color: black;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            gap: 1.5em;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background: url("stars.png");
+            color: #d5d5d5;
+            font-family: sans-serif;
+
+            >a {
+                &:hover {
+                    color: #333;
+                }
+
+                transition: all 300ms ease;
+                font-weight: bold;
+                color: inherit;
+                font-family: inherit;
+                text-align: center;
+                font-size: 40px;
+            }
+
+            >p {
+                color: inherit;
+                font-family: inherit;
+                text-align: center;
+                font-size: 15px;
+            }
+        }
+    </style>
+    <div id="container">
+        <header>TERMINALMONTAGE PORTAL</header>
+        <main>
+            <a href="https://www.youtube.com/user/TerminalMontage" target="_blank">Main YT Channel</a>
+            <a href="https://www.youtube.com/c/TerminalMontageClips" target="_blank">Clips YT Channel</a>
+            <a href="https://www.patreon.com/terminalmontage" target="_blank">Patreon</a>
+            <a href="https://twitter.com/TerminalMontage" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/jeremeyyyyyy/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/TerminalMontage/" target="_blank">Facebook</a>
+            <a href="https://bsky.app/profile/terminalmontage.bsky.social" target="_blank">Bluesky</a>
+            <a href="https://terminalmontagemerchportal.weebly.com/" target="_blank">Merch</a>
+            <a href="https://www.patreon.com/posts/terminalmontage-28399129" target="_blank">FAQ</a>
+            <a href="https://terminalmontageportal.weebly.com/legal-notices-and-disclaimers.html" target="_blank">Legal
+                Notices</a>
+            <p>For business inquiries or questions email us at AskTerminalMontage@gmail.com</p>
+            <p>The links provided on this portal direct to third party websites that are not under the control of
+                TERMINALMONTAGE LLC. We are not an agent for these third parties, nor do we endorse or guarantee their
+                services or their website content. We make no representation or warranty regarding the accuracy of the
+                information contained in the linked sites. Please be aware that the security and privacy policies on
+                these third-party sites may differ, so please read third party privacy and security policies closely. If
+                you have any questions or concerns about the services or content offered on linked third party websites,
+                please contact the third party directly.</p>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
