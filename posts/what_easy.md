@@ -127,6 +127,73 @@ myProduct l1 l2 = do
 
 Changing functions is just a `map` and flattening is just well... exactly what you think when you flatten a 2d list into a 1d list.
 
+#### Writer
+
+Writer is interesting, I only got it (as in understood how it's useful) fairly recently (read as the day this was initially written).
+
+Writer has 2 associated types.
+The second type is the associated type for it's monad.
+However the first type is interesting.
+The first type has to fit a specific interface, that interface is the `Monoid` interface.
+
+The `Monoid` interface requires that a type have 2 properties.
+First it must have a way of combining 2 values of that type.
+Second it must have a value where when you use the combination of that value with any other value it's equivalent to the identity.
+Examples being the integers via multiplication with the identity being 1 and the integers again via addition with the identity being 0.
+
+Now when I say "get it" I mean, realized how it can be useful.
+The initial spark of this was [this](https://reasonablypolymorphic.com/blog/use-monoids/index.html) blog post, albeit the presentation is difficult to process.
+Before that post my main exposure to Writer was via [Learn You a Haskell for Great Good](https://learnyouahaskell.com/).
+This exposure communicated a technically correct explanation but did a poor job motivating the usefulness.
+
+So, how is Writer useful?
+Well, entirely for using Haskell's `do` notation.
+You see sometimes you have a value that you want to construct and you don't necessarily want to have all the data needed to build it in one place in the source code or want to configure things on multiple lines.
+In procedural programming this is what the builder pattern is for.
+
+```rs
+let my_foo = FooBuilder::new()
+    .bar()
+    .baz()
+    .finish();
+
+```
+
+But it isn't obvious how you'd do this in Haskell without pain.
+
+```hs
+-- naive method
+
+let foo_builder = FooBuilder
+let foo_builder' = bar foo_builder
+let foo_builder'' = baz foo_builder
+let my_foo = finish foo_builder''
+```
+
+But we can have `FooBuilder` as a monoid and do the above with less pain.
+
+```hs
+-- assuming that FooBuilder is a newtype of Writer PartialFoo
+-- or something like that with the prior functions being instances
+-- with PartialFoo values modified appropriately
+
+-- finish does runWriter, pulls the second element of the tuple
+-- and if we have a monoid type specifically for constructing a 
+-- Foo like this it converts it to Foo
+
+let my_foo = finish $ runWriter $ do
+    FooBuilder
+    bar
+    baz
+```
+
+So yeah it's cool. Intermediary `Writer`s having an associated value with them is just a side benefit. Here's an example of the finish function for a `Writer (Product a)` that I wrote while playing with `Writer`.
+
+```hs
+finish :: (Num a) => Writer (Product a) b -> a
+finish = getProduct . snd . runWriter
+```
+
 ## Not easy for me, still need the insight
 
 ### Finding a job
