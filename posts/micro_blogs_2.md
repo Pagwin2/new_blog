@@ -3,7 +3,7 @@ title: "Micro blogs (2)"
 
 description: "a bunch of thoughts ideas and what not that aren't worth of full blogs but that I still want to write down"
 
-date: "2024-01-30"
+date: "2025-01-29"
 
 draft: true
 
@@ -102,4 +102,77 @@ Correlary: if you don't have a proof that the halting problem is equivalent to t
 This is most relevant to the question "why can't you just quit out when the program is in an infinite loop an keep going when it isn't in an infinite loop".
 A correct answer to that question will not invoke the Halting problem, instead it will invoke the inability to generate an accurate time estimate ahead of time (specifics of why varying per task) and or difficulties in recording every prior state.
 
-## 
+## Different ways of making a web app
+
+So, in the classical model of the web there are 3 things you use to make a web app.
+
+- HTML
+- CSS
+- and Javascript
+
+And generally this is a pretty good way of making a web app and is a very good set of defaults.
+
+However HTML is not strictly necessary, there are two (notable) alternatives which depending on your use case might be preferable.
+
+### JS Canvas
+
+The obvious choice is of course a JS canvas where you just render everything out yourself.
+Machine readability and performance be damned.
+
+For some things, like Flutter apps, I think this is dumb.
+But for others like Games it's necessary.
+Either way this isn't why I'm writing this micro post.
+
+### SVG
+
+The actual reason is SVG.
+
+Yes I'm talking about the vector image format.
+
+No I'm not joking.
+
+You see for making a web app SVG does much of the things you need HTML for while also allowing complete control of the layout.
+Of course this comes at the cost of having little to no ability to have that layout respond to different environments and user agents.
+But I can see that plausibly being an acceptable cost in some, rare, circumstances, like kiosks for example.
+
+Reason I realized this is possible is... well... you can add [CSS](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/style) and [Javascript](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/script) to  a SVG.
+In addition to SVG supporting [outright text](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/text) (also [wacky text](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/textPath)) and the [anchor element](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/a) just like HTML does.
+There's [a bunch more](https://developer.mozilla.org/en-US/docs/Web/SVG/Element) but it's mostly for the intended use of SVG of vector images.
+
+Probably would need an editor which gives more access to the underlying XML to make use of this in a practical setting however.
+
+## Text editor [pareto front](https://en.wikipedia.org/wiki/Pareto_front)
+
+This was going to be it's own post but I realized it was boring and I don't know how to make it better right now so I'm mostly abadoning it.
+
+In summary text editors generally live on a Pareto front with trade offs for ease of use vs performance vs power.
+
+Reason I wanted to write was because I stumbled upon an [opinion by Jonathon Blow](https://youtu.be/_MRUmRDzsI0) and felt he over simplified the situation even though I do think he's mostly correct.
+
+I made an [Excalidraw](https://excalidraw.com/) drawing for that post.
+I modified the svg export to add a style tag which makes the colors follow Excalidraw's light vs dark theming depending on a css media query.
+Thankfully whoever did light/dark theming was super lazy and just did a filter which I could replicate in CSS rather than needing to painstakingly pick every color from their site.
+After removing their filter from the XML I just added the following to the SVG.
+```xml
+<style>
+@media (prefers-color-scheme: dark){
+svg{
+    filter: invert(93%) hue-rotate(180deg);
+}
+}
+</style>
+```
+
+Anyways the image is below
+
+<figure>
+<img aria-describedby="editor_frontier_image" src="/static/images/editor_frontier.svg"></img>
+<hr style="width: 80%">
+<figcaption><p id="editor_frontier_image">Triangle with 3 points corresponding to Power, Ease of Use and Low Resource Usage. 
+Some editors sit on the points while others are broadly placed on the lines of the triangle without specific positioning</p></figcaption>
+</figure>
+
+## Conclusion
+
+This was written over months (maybe over a year?) and is super rambly.
+I also have another super rambly post in the works but maybe I'll edit it down (I won't).
