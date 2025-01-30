@@ -5,7 +5,7 @@ description: "a bunch of thoughts ideas and what not that aren't worth of full b
 
 date: "2025-01-29"
 
-draft: true
+draft: false
 
 tags: []
 ---
