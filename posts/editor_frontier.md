@@ -10,6 +10,8 @@ draft: true
 tags: []
 ---
 
+https://irreal.org/blog/?p=697
+
 So recently I got a Youtube reccomendation of [Primeagen](https://www.youtube.com/@ThePrimeTimeagen) where he reacted to the video below. 
 Of course as I do at this point I didn't watch his reaction and just went to the source to form my own opinion.
 

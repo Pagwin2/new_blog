@@ -176,11 +176,12 @@ article {
 }
 blockquote {
     /*font-style: italic;*/
-    padding: 0.5em 1em;
+    padding: 0;
     border-radius: 0.5rem;
     p{
         /*margin is annoying in this case*/
-        margin: 0;
+        margin: 0.4em 0.5em;
+        padding: 0em 0.5em;
     }
 }
 /*might need to become grid when adding in table of contents and sidenotes*/

@@ -19,7 +19,10 @@
     --nav-link-bg-color-hover:hsl(0,0%,20%);
     --content-border-color: #5ac;
     /*stolen from code theme*/
-    --blockquote-bg: rgb(29, 31, 33);
+    
+    --codeblock-bg: rgb(29, 31, 33);
+    --blockquote-bg: oklch(30% 0.01 325);
+    --blockquote-accent-color: oklch(45% 0.1628 256.77);
     --highlight-bg: #fff;
     --highlight-fg: #000;
     --nav-link-bg-color-active: #118411;
@@ -60,7 +63,9 @@
     --nav-link-bg-color: hsl(0,0%,75%);
     --nav-link-bg-color-hover:hsl(0,0%,70%);
     --content-border-color: #026;
-    --blockquote-bg: rgb(226,224,222);
+    --codeblock-bg: rgb(226,224,222);
+    --blockquote-bg: oklch(70% 0.012 296.97);
+    --blockquote-accent-color: oklch(45% 0.1628 256.77);
     --highlight-bg: #000;
     --highlight-fg: #fff;
     --nav-link-bg-color-active: #118411;
@@ -123,6 +128,9 @@ a:active {
 
 blockquote {
     background: var(--blockquote-bg);
+    & > * {
+        border-left: solid var(--blockquote-accent-color);
+    }
     strong {
         color:red;
     }
@@ -130,7 +138,7 @@ blockquote {
 
 pre:has( > code), pre.hljs {
     /*I don't wanna dig into highlight.js internals to make !important redundant*/
-    background: var(--blockquote-bg) !important;
+    background: var(--codeblock-bg) !important;
 }
 /*fancy user selection for funsies*/
 ::selection {
