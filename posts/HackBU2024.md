@@ -51,6 +51,7 @@ conveniently the Hackathon can't really prevent prior work that isn't code so al
 That reminds me I should probably mention why I was working on this solo as well as what I'm even using to build it. So unlike last year I did try a little bit more to get a group to work on something with but none of the other ideas were interesting and the people I was hoping to group with assumed I'd be fine on my own. Which they were right but I'd have liked the help if only so I could've increase the scope a bit. 
 
 But yeah once it was clear I'd be working on my own I decided to go with a language I was comfortable with and that I knew had all the tools I needed. That language being [Rust](https://www.rust-lang.org/). [Tide]() for the http server backend, [Reqwest]() for making http requests to various apis, [SerDe]() for serializing and deserializing json, and some other libraries which aren't interesting to list out<sup><a href="#2">2</a></sup>. 
+
 ## Corners cut
 
 I'm not going to talk about the overall development process because it's boring and mostly obvious stuff. However due to being solo and only having 24 hours I did need to cut some corners. 
