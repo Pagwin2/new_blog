@@ -93,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Courier Prime", Georgia, serif;
     /* Default bold hurt Banan's eyes*/
     font-weight: normal;
+    text-align: center;
 }
 p{
   text-wrap: pretty;
