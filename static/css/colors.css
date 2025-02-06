@@ -22,7 +22,8 @@
     
     --codeblock-bg: rgb(29, 31, 33);
     --blockquote-bg: oklch(30% 0.01 325);
-    --blockquote-accent-color: oklch(45% 0.1628 256.77);
+    /*--blockquote-accent-color: oklch(45% 0.1628 256.77);*/
+    --blockquote-accent-color: oklch(86.64% 0.29 142);
     --highlight-bg: #fff;
     --highlight-fg: #000;
     --nav-link-bg-color-active: #118411;
@@ -65,7 +66,8 @@
     --content-border-color: #026;
     --codeblock-bg: rgb(226,224,222);
     --blockquote-bg: oklch(70% 0.012 296.97);
-    --blockquote-accent-color: oklch(45% 0.1628 256.77);
+    /*--blockquote-accent-color: oklch(45% 0.1628 256.77);*/
+    --blockquote-accent-color: oklch(96.17% 0.2432 109);
     --highlight-bg: #000;
     --highlight-fg: #fff;
     --nav-link-bg-color-active: #118411;

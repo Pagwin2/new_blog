@@ -1,5 +1,18 @@
 @layer pre-load, baseline, overload-1, print;
 
+/*
+ * saving this for when doing a table of contents, position: sticky isn't good enough
+ *https://lea.verou.me/blog/2020/06/hybrid-positioning-with-css-variables-and-max/
+ * will also need to make use of container queries to shift it into static positioning when the screen isn't wide enough
+ *nav{
+  border: dashed lime 3px;
+  position:fixed;
+  left: 20px;
+  top: 100px;
+  min-width:200px;
+}
+ * */
+
 @layer overload-1{
 dt{
   font-weight:normal;
