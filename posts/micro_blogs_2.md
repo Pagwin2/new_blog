@@ -89,6 +89,10 @@ Think that a dependency that specifies CSS variables or SCSS/SASS variables woul
 
 Oh also I suspect that past a certain complexity working with Tailwind is basically the CSS equivalent of [Dear Sir, You Have Built a Compiler](https://rachit.pl/post/you-have-built-a-compiler/).
 
+### post publishing update
+
+[Open props](https://open-props.style/) exists so that tailwind designing with constraints thing not only has a theoretical solution but a solution that already exists.
+
 ## All computers are Finite state machines
 
 Correlary: barring special circumstances your program is functionally equivalent to a super convoluted ReGex.
