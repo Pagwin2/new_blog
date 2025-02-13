@@ -13,6 +13,8 @@
     --link-clicked: #B250D8;
     --link-unclicked: #d80;
     --link-active: lab(100% 0% 100%);
+    --link-highlight: unset;
+    --link-highlight-bg: green;
     --header-bg: hsl(0,0%,15%);
     --nav-link-color: #6B0;
     --nav-link-bg-color: hsl(0,0%,25%);
@@ -51,6 +53,8 @@
     --link-unclicked: #2535B4;
     --link-clicked: #832244;
     --link-active: lab(20% 80% -80%);
+    --link-highlight: unset;
+    --link-highlight-bg: var(--highlight-bg);
     /*#E6DDE6
      * #dce2e5
      *
@@ -149,6 +153,13 @@ pre:has( > code), pre.hljs {
 ::selection {
   background-color: var(--highlight-bg);
   color: var(--highlight-fg);
+}
+a::selection {
+    color: var(--link-highlight);
+    background: var(--link-highlight-bg);
+}
+strong::selection{
+  color:unset;
 }
 
 }
