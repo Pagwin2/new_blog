@@ -24,7 +24,7 @@
     --blockquote-bg: oklch(30% 0.01 325);
     /*--blockquote-accent-color: oklch(45% 0.1628 256.77);*/
     --blockquote-accent-color: oklch(86.64% 0.29 142);
-    --highlight-bg: #fff;
+    --highlight-bg: lime;
     --highlight-fg: #000;
     --nav-link-bg-color-active: #118411;
     --nav-link-color-active: white;
@@ -68,8 +68,8 @@
     --blockquote-bg: oklch(70% 0.012 296.97);
     /*--blockquote-accent-color: oklch(45% 0.1628 256.77);*/
     --blockquote-accent-color: oklch(74.18% 0.1719 66.77);
-    --highlight-bg: #000;
-    --highlight-fg: #fff;
+    --highlight-bg: yellow;
+    --highlight-fg: #000;
     --nav-link-bg-color-active: #118411;
     --nav-link-color-active: white;
 
