@@ -13,8 +13,8 @@
     --link-clicked: #B250D8;
     --link-unclicked: #d80;
     --link-active: lab(100% 0% 100%);
-    --link-highlight: unset;
-    --link-highlight-bg: green;
+    --link-highlight: white;
+    --link-highlight-bg: blue;
     --header-bg: hsl(0,0%,15%);
     --nav-link-color: #6B0;
     --nav-link-bg-color: hsl(0,0%,25%);
