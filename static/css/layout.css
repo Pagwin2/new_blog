@@ -266,6 +266,7 @@ footer {
 }
 pre {
     page-break-inside: avoid;
+    text-wrap: wrap;
 }
 .socials {
     display: none;
