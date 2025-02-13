@@ -67,7 +67,7 @@
     --codeblock-bg: rgb(226,224,222);
     --blockquote-bg: oklch(70% 0.012 296.97);
     /*--blockquote-accent-color: oklch(45% 0.1628 256.77);*/
-    --blockquote-accent-color: oklch(96.17% 0.2432 109);
+    --blockquote-accent-color: oklch(74.18% 0.1719 66.77);
     --highlight-bg: #000;
     --highlight-fg: #fff;
     --nav-link-bg-color-active: #118411;
@@ -130,8 +130,11 @@ a:active {
 
 blockquote {
     background: var(--blockquote-bg);
-    & > * {
-        border-left: solid var(--blockquote-accent-color);
+    
+    &:not(:has(>inner-bq)) {
+      border-left: solid var(--blockquote-accent-color);
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
     }
     strong {
         color:red;
