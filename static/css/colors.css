@@ -108,11 +108,6 @@ body {
     color: var(--normal-text);
 }
 
-/*iffy if this should be here but it doesn't mess with the layout so I'll allow it*/
-:focus-visible {
-  outline: 2px solid var(--focus-outline-color);
-  border-radius: 0.25rem;
-}
 
 a {
     color: var(--link-unclicked);
@@ -160,6 +155,24 @@ a::selection {
 }
 strong::selection{
   color:unset;
+}
+
+/*iffy if this should be here but it doesn't mess with the layout so I'll allow it*/
+:focus-visible {
+  /* only viable way of changing colors for the svgs*/
+  filter: invert(100%);
+    /*would prefer light-dark but it no worky*/
+  @media (prefers-color-scheme: light) {
+    background: white;
+    color: black!important;
+  }
+  @media (prefers-color-scheme: dark) {
+    background: black;
+    color: white!important;
+  }
+  /*yeeting annoying potential defaults*/
+  outline: none;
+  border-radius: 0px;
 }
 
 }
