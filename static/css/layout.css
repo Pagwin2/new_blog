@@ -137,7 +137,7 @@ header#header {
     width: 100vw;
     padding: 0.5em 1em;
 }
-#content {
+main {
     box-sizing: border-box;
     display: block flex;
     margin-top: 1rem;/*calc(24px + 3rem) 1rem 1rem 1rem;*/
@@ -160,11 +160,6 @@ header#header {
     justify-content: center;
     align-items: center;
 
-}
-main {
-    max-width: -moz-available;
-    max-width: -webkit-fill-available;;
-    max-width: fill-available;
 }
 header#article-header {
     max-width: -moz-available;
@@ -250,7 +245,7 @@ footer {
 }
 /* we really want to make sure this doesn't stick around when colors load in regardless of when/how colors get loaded in*/
 @layer pre-load{
-    #content {
+    main {
         border: 0.7rem solid white;
     }
 }
@@ -261,7 +256,7 @@ footer {
 #header {
     visibility: hidden;
 }
-#content {
+main {
     border-style: none;
 }
 pre {
