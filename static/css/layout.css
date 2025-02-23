@@ -56,6 +56,10 @@ a {
     width: fit-content;
     height: fit-content;
 }
+#github_shrink {
+    transform: scale(0.37);
+    transform-origin: top left;
+}
 a.obj-wrapper{
     display: block;
 }
@@ -83,6 +87,7 @@ footer {
     gap: 1rem;
     align-items: center;
     justify-content: center;
+    max-height: 2rem;
 }
 
 .nav-link{
