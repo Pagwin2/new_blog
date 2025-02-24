@@ -119,6 +119,24 @@ a:visited {
 a:active {
     color: var(--link-active)
 }
+
+a:not(.nav-link) {
+  text-decoration: underline dotted var(--link-unclicked) 1.5px;
+  &:visited {
+    text-decoration-color: var(--link-clicked);
+  }
+  &:active{
+    text-decoration-color: var(--link-active);
+  }
+  &:focus-visible {
+    text-decoration-style: solid;
+    text-decoration-color: var(--normal-text);
+    &:active {
+      text-decoration-color: cyan;
+    }
+  }
+}
+
 #header {
     background: var(--header-bg);
 }
