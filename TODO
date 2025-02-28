@@ -1,19 +1,13 @@
-- fix github icon
+- XSLT for atom feedhttps://developer.mozilla.org/en-US/docs/Web/XML/XSLT
 - get demo working (need to use message passing instead of cookies due to no cookies in service workers)
 - add button to save articles for offline reading
 - post jump points and table of contents (be wary of having this take up too much space on mobile) probably done with position: sticky in some way
+    - make h elems have anchor elems with rel="bookmark" and a name to make them proper bookmarks, also add :target css as needed
+- Make references(the tiny number things) appear to the side instead of the bottom on desktop, try to make it bottom of page in print or bottom of print otherwise, might need grid or float hard to say atm
     - refer to implementation here https://blog.kizu.dev/repetition-and-attribution/
-- investigate fixing paragraph spacing https://zellwk.com/blog/2016-05-04-wrong-about-vertical-rhythm/
-- make overflow behavior in print so scrollbars go away and full content visible
-- make h1 elems in article content h2 elems or otherwise fix semantics
-- make h2 elems have anchor elems with rel="bookmark" and a name to make them proper bookmarks, also add :target css as needed
-- stick stuff under h elements into section elems
-- add aria roles where sensible https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
 - Fix articles with inline html in them and/or links
 - ico?
-- Make references(the tiny number things) appear to the side instead of the bottom on desktop, try to make it bottom of page in print or bottom of print otherwise, might need grid or float hard to say atm
 - analytics
     https://github.com/electerious/Ackee
     https://umami.is/ (https://github.com/umami-software/umami)
 - search functionality
-- seek out RSS icon for home button maybe?
