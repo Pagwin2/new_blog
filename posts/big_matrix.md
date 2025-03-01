@@ -17,7 +17,7 @@ Not the middle school draw y=mx+b graph but a connect the dots graph.
 
 <img src="/static/images/simple_graph.svg" alt="image of a simple graph">
 
-Some examples include: the graph of people connected to their friends, the graph of knight movement on a chess board and every real world computer.
+Some examples of graphs include: the graph of people connected to their friends, the graph of knight movement on a chess board and every real world computer.
 
 ... Okay, for that last one the graph is incomprehensibly big (2 to the power of your disk+ram+registers+etc measured in bits big) but still it's a graph.
 Nodes (the circles in the picture above) are just some particular combination of bits across the entire machine and edges (the arrows in the picture above) are just the machine ticking 1 step forwards with its clock.
