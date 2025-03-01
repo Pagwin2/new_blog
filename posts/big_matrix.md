@@ -61,7 +61,7 @@ Then I remembered one more thing.
 
 Okay so wait because category makes a lot of math, including linear algebra, into a graph we can turn math into a giant matrix where every mathematical object has a row and column in the matrix.
 This is our universal graph matrix by the way.
-Of course most of these morphisms are useless so we can 0 out edges and get a disjoint graph.
+Of course most of these morphisms (graph edges) are useless so we can 0 out edges and get a disjoint graph.
 
 > Makes sense
 
