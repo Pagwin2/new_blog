@@ -34,7 +34,7 @@ Addition is just `f+g = h -> h(x)=f(x)+g(x)` and scalar multiplication is just `
 
 If you haven't taken a linear algebra class then don't worry the function thing isn't important for this story.
 
-One more thing that's a vectorspace is the set of matrices of a specific size.
+One more thing that's a vector space is the set of matrices of a specific size.
 Matrices are important to linear algebra but for this post all you need to know as a baseline is that they're 2d arrays.
 This fact was a spark which while not relevent to the conclusion ignited the realization.
 
