@@ -39,4 +39,4 @@ That said, for work done in this class, so far I've.
 
 ## 2025/03/01-2025/03/08
 
-
+To Be Written
