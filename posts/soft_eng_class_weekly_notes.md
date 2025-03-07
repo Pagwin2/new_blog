@@ -37,6 +37,16 @@ That said, for work done in this class, so far I've.
 
 
 
-## 2025/03/01-2025/03/08
+## 2025/03/01-2025/03/07
 
-To Be Written
+So a few things happened. First we had our first meeting going over a prior sprint. Learned that those meetings are reasonably loose in what needs to be done but also are expected on Monday and need the relevant folder made ahead of time.
+
+More importantly broome county stops are now in the needed API format mostly but routes/trips are going to be trickier, there isn't an easy out like there is for OCCT with everything in roughly the way we want it already.
+Already it seems the API is going to have a focus on trips rather than routes as a part of coping so time will need to be dealt with which is annoying.
+As such that's a work in progress converting from GTFS to something we can use, other than that this week will be actually setting up the backend for me and some validation tests, possibly messing around with the api spec more.
+
+Ideally but this is a bit of a stretch everything will just work and I'll be able to also setup Caddy and we can start playing with this whole setup in a proto-prod setup.
+
+## 2025/03/07-2025/03/15
+
+To Be Written.
