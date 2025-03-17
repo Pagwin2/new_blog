@@ -14,7 +14,7 @@ This is going to be a bit different.
 Unlike other blog posts of mine which I fire off and forget this one I'm intending to update 😱.
 Specifically I'm going to try and update it weekly with a status report.
 
-*Updated 2025-03-01*
+*Updated 2025-03-16*
 
 ## Foreword
 
@@ -49,4 +49,9 @@ Ideally but this is a bit of a stretch everything will just work and I'll be abl
 
 ## 2025/03/07-2025/03/15
 
-To Be Written.
+It's spring break, might need to use a flex week if this sprint isn't skipped.
+Depends on Levi and me making a prototype of the BCT setup with an LLM.
+
+## 2025/03/15-2025/03/22
+
+To be written.
