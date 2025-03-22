@@ -14,7 +14,7 @@ This is going to be a bit different.
 Unlike other blog posts of mine which I fire off and forget this one I'm intending to update 😱.
 Specifically I'm going to try and update it weekly with a status report.
 
-*Updated 2025-03-16*
+*Updated 2025-03-22*
 
 ## Foreword
 
@@ -53,5 +53,15 @@ It's spring break, might need to use a flex week if this sprint isn't skipped.
 Depends on Levi and me making a prototype of the BCT setup with an LLM.
 
 ## 2025/03/15-2025/03/22
+
+We needed to use a technical flex for reasons that should be apparent from the prior week's note.
+
+In any case work on making things fit toegether continues and now I also need to get a setup to produce a route from point A to point B using one bus system probably with the naive hub algorithm.
+I've got a partial setup for an sqlite db to cache all the stop lattitude and longitude values and give `n` points which are closest to a given point.
+However I haven't set that system up to read the stop json files yet.
+When I do I'll probably want to add a table to the sqlite db to relate stops with trips.
+I'll also want a table specifying trips and which hub they lead to.
+
+## 2025/03/22-2025/03/29
 
 To be written.
