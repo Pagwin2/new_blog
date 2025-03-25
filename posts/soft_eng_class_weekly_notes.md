@@ -64,4 +64,15 @@ I'll also want a table specifying trips and which hub they lead to.
 
 ## 2025/03/22-2025/03/29
 
-To be written.
+So, the naive strategy for finding paths doesn't work.
+
+Fuck.
+
+Anyways the client and the server technically exist and follow the same spec.
+In theory.
+
+Expanding on that first sentence though it's looking like I'll need to actually make a graph for even a basic algorithm which pains me greatly.
+The reason why the naive algorithm doesn't work is actually one which the HackBU2024 version also suffers from, namely it pretends every stop  goes in both directions when that's generally false.
+Some stops are "outbound" and some are "inbound" due to being on opposite sides of the road.
+As such the way I was doing things doesn't really work.
+Another issue being that I'd have needed to actually grab relevant trips/routes using the stop id which is doable but iffy and not very robust.
