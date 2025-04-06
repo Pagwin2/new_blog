@@ -14,7 +14,7 @@ This is going to be a bit different.
 Unlike other blog posts of mine which I fire off and forget this one I'm intending to update 😱.
 Specifically I'm going to try and update it weekly with a status report.
 
-*Updated 2025-03-22*
+*Updated 2025-04-05*
 
 ## Foreword
 
@@ -76,3 +76,17 @@ The reason why the naive algorithm doesn't work is actually one which the HackBU
 Some stops are "outbound" and some are "inbound" due to being on opposite sides of the road.
 As such the way I was doing things doesn't really work.
 Another issue being that I'd have needed to actually grab relevant trips/routes using the stop id which is doable but iffy and not very robust.
+
+## 2025/03/29-2025/04/05
+
+Minor delay/skip, oops, we're close to the end though.
+Client and server are integrated?
+Client may call to slighly incorrect endpoints but eeeeh it's fine and probably an easy fix.
+We do need to present something which my partner being MIA for a few weeks will complicate but we'll see how that goes this Monday if we can't reschedule.
+Up next comes my reckoning though as I actually need to do things with the graph.
+Afterwards will probably be reconciling the API to actually be a sensible interface to how routes, trips and stops actually interact with each other.
+Then if I'm still working on this, bells and wissles with ML, and hardware.
+
+## 2025/04/05-2025/04/12
+
+To be written
