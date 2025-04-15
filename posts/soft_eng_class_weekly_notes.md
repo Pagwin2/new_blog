@@ -14,7 +14,7 @@ This is going to be a bit different.
 Unlike other blog posts of mine which I fire off and forget this one I'm intending to update 😱.
 Specifically I'm going to try and update it weekly with a status report.
 
-*Updated 2025-04-05*
+*Updated 2025-04-15*
 
 ## Foreword
 
@@ -88,5 +88,9 @@ Afterwards will probably be reconciling the API to actually be a sensible interf
 Then if I'm still working on this, bells and wissles with ML, and hardware.
 
 ## 2025/04/05-2025/04/12
+
+Nothing of note, other classes are on fire, getting to MVP for this class is currently my lowest priority.
+
+## 2025/04/12-2025/04/19
 
 To be written
