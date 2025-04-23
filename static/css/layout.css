@@ -177,6 +177,11 @@ header#article-header {
     justify-content: center;
     align-items: center;
 }
+dl {
+    max-width: -moz-available;
+    max-width: -webkit-fill-available;;
+    max-width: fill-available;
+}
 article {
     max-width: -moz-available;
     max-width: -webkit-fill-available;;
