@@ -14,7 +14,7 @@ This is going to be a bit different.
 Unlike other blog posts of mine which I fire off and forget this one I'm intending to update 😱.
 Specifically I'm going to try and update it weekly with a status report.
 
-*Updated 2025-04-15*
+*Updated 2025-04-23*
 
 ## Foreword
 
@@ -93,4 +93,8 @@ Nothing of note, other classes are on fire, getting to MVP for this class is cur
 
 ## 2025/04/12-2025/04/19
 
-To be written
+Same as prior week
+
+## 2025/04/19-2025/04/26
+
+To Be written
