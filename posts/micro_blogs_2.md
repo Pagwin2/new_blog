@@ -7,8 +7,10 @@ date: "2025-01-29"
 
 draft: false
 
-tags: []
+tags: [micro blogs]
 ---
+
+[Previously](/posts/micro_blogs/)
 
 ## I think react native or expo is haunted
 

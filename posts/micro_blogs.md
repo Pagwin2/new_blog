@@ -7,7 +7,7 @@ date: "2024-01-30"
 
 draft: false
 
-tags: []
+tags: [micro blogs]
 ---
 
 # You know the drill
