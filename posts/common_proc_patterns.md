@@ -26,7 +26,7 @@ Oh yeah, I'm going to drop the procedural specifier for a lot of this because
 A quick refresher for the pseudo code established in the prior post.
 There are 3 basic data types, strings, booleans, and numbers.
 We can put values of these data types into variables or into entries of a list.
-In addition, although previously unmentioned, we can pust lists into lists.
+In addition, although previously unmentioned, we can put lists into lists.
 
 ```
 fancyList <- [[], [1, true], [">:)"]]
@@ -142,7 +142,7 @@ PROC setAttribute(assocList, name, newValue) {
     assocList[pairIndex] <- newValue
     
     "If you're uncertain about how necessary returning the list is"
-    "that's good, I encourage that curiousity/suspicion, some"
+    "that's good, I encourage that curiosity/suspicion, some"
     "languages in some cases won't require that you do this"
     "however because this is my language I've decided that you do"
     "have to do this, at least in this current iteration of the language,"
@@ -205,7 +205,7 @@ new way to set the age of a person corresponding to the prior example.
 Take a breath you may argue that I over complicated explaining a concept as simple as having names in names.
 However... okay I did do that but also this should show that really nothing in programming is magic, everything can be built from the basics and if something annoys you, you have options for changing things.
 
-Anways moving on and returning to the style of the prior post of just giving stuff for free.
+Anyways moving on and returning to the style of the prior post of just giving stuff for free.
 
 ## Procedures as data
 
@@ -261,7 +261,7 @@ Previously when I defined the `FOREACH` loop, I said
 > a foreach loop will go through each item in a collection of items **such as a list**
 
 Implying that a `FOREACH` loop can be used on something that isn't a list.
-So lets try using our new associated procedures superpower to formalise what something needs in order for us to plug it into a `FOREACH` loop.
+So lets try using our new associated procedures superpower to formalize what something needs in order for us to plug it into a `FOREACH` loop.
 
 To avoid me accidentally having a circular definition we're going to add a `length` procedure to our pseudocode which simply gives the length of a list you give it so `[]` would be 0 `[true]` would be 1, `[1,2,false]` would be 3 etc.
 
@@ -305,7 +305,7 @@ The first case generally approaches error handling as something to get out of th
 The second case approaches error handling as a fundamental part of writing a program which should be integrated smoothly into the rest of the language.
 
 Neither approach is universally correct.
-Also while each specific approach may be more closely aligned with one philosphy than the other that doesn't mean it's just that one philosophy.
+Also while each specific approach may be more closely aligned with one philosophy than the other that doesn't mean it's just that one philosophy.
 With that in mind what are our specific options.
 
 ### If there's an error then never return
@@ -394,7 +394,7 @@ iterableList <- {
 }
 ```
 
-This kind of error handling is what our pseudoecode will use however there's 1 more kind of error handling worth mentioning.
+This kind of error handling is what our pseudocode will use however there's 1 more kind of error handling worth mentioning.
 
 ## If there's an error perform magic
 
