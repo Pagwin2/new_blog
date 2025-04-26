@@ -327,7 +327,7 @@ Regardless this strategy won't work for our iterator because we would really lik
 Close Philosophical Camp: Error handling as a primary concern
 
 Aside from not returning from the procedure this seems like the second most obvious way to handle this problem, but how can we distinguish between an error and just a value?
-Well we already have `label` which defined earlier in this post so how about we just use that.
+Well we already have `label` which was defined earlier in this post so how about we just use that.
 
 ```
 PROC myDivision (numerator, denominator) {
@@ -355,7 +355,7 @@ PROC findValue (someList, value){
 }
 ```
 
-returning some normal list in the nothing case may feel a bit weird but keep in mind that our `label` procedure is just returning a 2 element list so having it be 1 element when it's just the label and no value overall makes sense.
+returning some normal list in the nothing case may feel a bit weird but keep in mind that our `label` procedure is just returning a 2 element list so having it be 1 element when it's just the label and no value should makes sense.
 That said it's a little bleh and I imagine we'll be giving back errors and values frequently going forwards so lets just make procedures and a variable for them
 
 ```
@@ -592,7 +592,7 @@ PROC makeLoop(originalIterator) {
         storage: [],
         nextItem: PROC(&self) {
             "An append procedure which adds an item to"
-            "the back of a list now exists" the list"
+            "the back of a list now exists the list"
             "being appended to is the first argument,"
             "the value being appended is the second"
             
