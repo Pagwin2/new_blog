@@ -3,9 +3,9 @@ title: "Common procedural programming abstractions"
 
 description: "a sequel to a post I wrote about the basics of procedural programming"
 
-date: "2025-04-25"
+date: "2025-04-26"
 
-draft: true
+draft: false
 
 tags: []
 ---
@@ -46,9 +46,9 @@ We're going to call the first procedure `label` and define it like so
 "these are both oversights that I will hopefully correct in the future"
 
 PROC label (labelName, labeledValue) {
-    "return is just the word we put in front of the value that the"
+    "RETURN is just the word we put in front of the value that the"
     "procedure will give back"
-    return [labelName, labeledValue]
+    RETURN [labelName, labeledValue]
 }
 
 pet <- label("Dog", "Charlie")
@@ -126,7 +126,7 @@ PROC getAttribute(assocList, name) {
         }
     }
 
-    return attributeValue
+    RETURN attributeValue
 }
 
 PROC setAttribute(assocList, name, newValue) {
@@ -145,11 +145,10 @@ PROC setAttribute(assocList, name, newValue) {
     "that's good, I encourage that curiousity/suspicion, some"
     "languages in some cases won't require that you do this"
     "however because this is my language I've decided that you do"
-    "have to do this, trust me it's for your own good. Explaining"
-    "why is beyond the scope of this article but trust me most of"
-    "the time it's a footgun"
+    "have to do this, at least in this current iteration of the language,"
+    "because makes where and how values change clearer."
 
-    return assocList
+    RETURN assocList
 }
 ```
 
@@ -172,7 +171,7 @@ This abstraction is so useful in fact that we're going to add notation into the 
 "notice how we replaced the space with an underscore in favorite_food"
 
 "also be aware that many languages don't allow question marks in"
-"variable, function and attribute names due to using the question mark"
+"variable, procedure and attribute names due to using the question mark"
 "as an operator for reasons of varying quality"
 
 henry <- {
@@ -221,7 +220,7 @@ So now in the pseudocode something like
 
 ```
 PROC someProcedure(arg1){
-    return arg1
+    RETURN arg1
 }
 
 a <- someProcedure
@@ -263,3 +262,358 @@ Previously when I defined the `FOREACH` loop, I said
 
 Implying that a `FOREACH` loop can be used on something that isn't a list.
 So lets try using our new associated procedures superpower to formalise what something needs in order for us to plug it into a `FOREACH` loop.
+
+To avoid me accidentally having a circular definition we're going to add a `length` procedure to our pseudocode which simply gives the length of a list you give it so `[]` would be 0 `[true]` would be 1, `[1,2,false]` would be 3 etc.
+
+With that minor book keeping out of the way what are we going to require for the shape of our iterator?
+
+Well we want a way to go through each item in a collection, so how about we just ask the collection for each item one by one?
+
+```
+iterableList <- {
+    underlying: [1,2,3],
+    currentIndex: 0,
+    nextItem: PROC(self) {
+
+        tmpIndex <- self.currentIndex
+        self.currentIndex <- self.currentIndex + 1
+        
+        "we need to return the updated object alongside each element of the collection"
+        "for this iteration of the language"
+        RETURN [self, self.underlying[tmpIndex]]
+    }
+}
+```
+
+This almost works as is however the problem is what happens when we try to index past the end of the list?
+More generally we have no way for the iterator to communicate when it's ended.
+There are other problems but this is the most pressing one.
+
+To solve it we'll want to discuss
+
+## Error handling
+
+To clarify we don't need to have defined error handling to complete our iterator implementation however good solutions to that problem and error handling have high overlap so we might as well.
+
+Philosophically there a 2 camps regarding error handling
+
+- Error handling as a secondary concern
+- Error handling as a primary concern
+
+The first case generally approaches error handling as something to get out of the way as much as possible with as little disruption as possible.
+
+The second case approaches error handling as a fundamental part of writing a program which should be integrated smoothly into the rest of the language.
+
+Neither approach is universally correct.
+Also while each specific approach may be more closely aligned with one philosphy than the other that doesn't mean it's just that one philosophy.
+With that in mind what are our specific options.
+
+### If there's an error then never return
+
+Close Philosophical Camp: error handling as a secondary concern (but really this one just goes to show that categorizing them is foolish)
+
+Using this form of error handling is basically declaring
+
+> This procedure is defined in a very specific way, if we leave that definition then the universe is broken and we should avoid making it worse
+
+Oftentimes, this is a perfectly reasonable declaration due to some functionality simply being critical to the program, being impossible as far as you're aware or simply because handling that error in a more correct manner would be a lot of work and not giving back a result is good enough.
+
+The 2 ways of doing this are having a procedure which simply exits the program without returning from the procedure and simply going into an infinite loop.
+
+Regardless this strategy won't work for our iterator because we would really like to be able to have code after `FOREACH` loops that runs.
+
+### If there's an error then return the error
+
+Close Philosophical Camp: Error handling as a primary concern
+
+Aside from not returning from the procedure this seems like the second most obvious way to handle this problem, but how can we distinguish between an error and just a value?
+Well we already have `label` which defined earlier in this post so how about we just use that.
+
+```
+PROC myDivision (numerator, denominator) {
+    IF denominator = 0 {
+        RETURN label("error", "Division by 0")
+    }
+    ELSE {
+        RETURN label("value", numerator/denominator)
+    }
+}
+```
+
+sometimes though an operation isn't actually erroneous though and we just want to return nothing and we can do the same thing there.
+
+```
+PROC findValue (someList, value){
+    i <- 0
+    WHILE i < length(someList) {
+        IF someList[i] = value {
+            RETURN label("value", i)
+        }
+        i <- i + 1
+    }
+    RETURN ["nothing"]
+}
+```
+
+returning some normal list in the nothing case may feel a bit weird but keep in mind that our `label` procedure is just returning a 2 element list so having it be 1 element when it's just the label and no value overall makes sense.
+That said it's a little bleh and I imagine we'll be giving back errors and values frequently going forwards so lets just make procedures and a variable for them
+
+```
+"I'm capitalizing the first letter of Value, Error and Nothing"
+"with the expectation that they'll be used frequently and worth"
+"having stand out a bit in the code"
+PROC Value(someValue) {
+    RETURN label("value", someValue)
+}
+
+PROC Error(someError) {
+    RETURN label("error", someError)
+}
+
+Nothing <- ["nothing"]
+```
+
+With this methodology of error handling changing our list iterator is pretty natural and easy.
+
+```
+iterableList <- {
+    underlying: [1,2,3],
+    currentIndex: 0,
+    nextItem: PROC(self) {
+
+        tmpIndex <- self.currentIndex
+        self.currentIndex <- self.currentIndex + 1
+        
+        IF tmpIndex > length(underlying)-1 {
+            RETURN [self, Nothing]
+        }
+        ELSE {
+            RETURN [self, Value(self.underlying[tmpIndex])]
+        }
+    }
+}
+```
+
+This kind of error handling is what our pseudoecode will use however there's 1 more kind of error handling worth mentioning.
+
+## If there's an error perform magic
+
+Close Philosophical Camp: Error handling as a secondary concern
+
+Okay it isn't really magic, really it's the prior return the error as a value thing we did except we only know about any errors if we ask.
+
+This kind of error handling is called "exception handling" where we can "throw" an exception.
+What this basically means is that we return it but if the caller doesn't have their call to us inside of a `TRY` then it will automatically return the error itself and so on until a `TRY` is reached at which point the error is accessed and dealt with.
+
+Example:
+```
+PROC a(){
+    THROW "hey"
+}
+PROC b(){
+    a()
+    DISPLAY("I'm never going to be run")
+}
+PROC c(){
+    TRY {
+        b()
+        DISPLAY("I will also never be run")
+    }
+    CATCH caughtError {
+        "displays hey"
+        DISPLAY(caughtError)
+    }
+    DISPLAY("I will be run after everything above regardless of whether there's an error")
+}
+```
+
+Using this for our iterator we can make something like this.
+
+```
+iterableList <- {
+    underlying: [1,2,3],
+    currentIndex: 0,
+    nextItem: PROC(self) {
+
+        tmpIndex <- self.currentIndex
+        self.currentIndex <- self.currentIndex + 1
+        
+        IF tmpIndex > length(underlying)-1 {
+            THROW "No more items"
+        }
+        ELSE {
+            RETURN [self, Value(self.underlying[tmpIndex])]
+        }
+    }
+}
+```
+
+then we can either have our `FOREACH` do an implicit `TRY`, `CATCH` which checks if the error is `"No more items"` and if not rethrows or we can not do that and make it so every `FOREACH` loop has to be wrapped in a `TRY`, `CATCH` for some reason.
+
+In case you can't tell this is not my preferred error handling mechanism.
+
+## Our Iterator so far
+
+at the moment we've made it so an iterator is anything with a `nextItem` attribute which is a procedure which takes the iterator and either returns the value with a label of value or returns a label which is just nothing.
+
+But well... needing to use our iterator like
+
+```
+tmp <- somethingIterable.nextItem(somethingIterable)
+somethingIterable <- tmp[0]
+currentItem <- tmp[1]
+```
+
+is kinda annoying, it'd be much more convenient to have all of this be just 1 line instead of 3, preferably with that 1 line being shorter rather than longer.
+Of course it's totally possible to do this all one line, hell there's even multiple paths of adding syntax we can take to achieving that.
+We're going to pick the one which most procedural languages pick.
+
+## References
+
+If you've been reading all the code blocks you may remember that back when we were building up to data with attributes which can be easily accessed I wrote
+
+> If you're uncertain about how necessary returning the list is that's good, I encourage that curiousity/suspicion, some languages in some cases won't require that you do this
+
+The reason languages don't need you to do that is because they allow (often require) you to pass values by reference.
+A reference is basically a way to modify a value without reassigning the relevant variable with `<-`.
+Most languages will have lists and objects passed in by reference so.
+
+```
+PROC m(mLess){
+    mLess.m <- "m"
+}
+
+john <- {
+    m: "T"
+}
+m(john)
+
+"will print out m if john is passed by reference to the m procedure"
+DISPLAY(john.m)
+```
+
+Most of the time having what can/will modify some data be hidden in a procedure call makes understanding what's happening more difficult.
+Which is why up to this point everything we've done have been done by passing in a copy of the value the variable holds rather than a reference to the variable.
+However sometimes the loss of readability is worth it to make using an abstraction easier.
+
+As such we are going to add some syntax to our language to allow for passing things by reference.
+Specifically when we pass a variable into a procedure, if we prefix the variable name with `&` from now on that will mean that we are passing that variable by reference, in the procedure if we're receiving a variable by reference we will be required to prefix the argument with an `&`.
+
+This leaves our iterable list looking like so
+
+```
+iterableList <- {
+    underlying: [1,2,3],
+    currentIndex: 0,
+    nextItem: PROC(&self) {
+        "self how has & prefixed to it"
+
+        tmpIndex <- self.currentIndex
+        self.currentIndex <- self.currentIndex + 1
+        
+        IF tmpIndex > length(underlying)-1 {
+            "we no longer need to return self because self has already"
+            "been modified"
+            RETURN Nothing
+        }
+        ELSE {
+            RETURN Value(self.underlying[tmpIndex])
+        }
+    }
+}
+```
+
+and using it looking like so
+
+```
+currentItem <- iterableList.nextItem(&iterableList)
+```
+
+many languages take this further by making `self` a magic argument name that causes the language to pass in the object in for us or have `this` as a magic variable within procedures which isn't an explicit argument which allows accessing the parent value by reference.
+
+In addition other languages will frequently allow for storing references to modify variables later.
+
+For our purposes neither of those additions are necessary so we won't add them.
+
+## Minor pain point fix
+
+Up to this point we've had our list itself be an iterator but this is annoying because it means after each foreach loop we need to reset the `currentIndex` value one way or another.
+
+Instead of doing that it would be much more convenient if we just made a new iterator every time.
+
+So lets make a procedure that does that.
+
+```
+PROC makeListIterator(list){
+    RETURN {
+        underlyingList: list,
+        index: 0,
+        nextItem: PROC(&self){
+            tmpIndex <- self.index
+            self.index <- self.index + 1
+            
+            IF tmpIndex > length(underlyingList)-1 {
+                RETURN Nothing
+            }
+            ELSE {
+                RETURN Value(self.underlying[tmpIndex])
+            }
+        }
+    }
+}
+```
+
+
+
+## Other iterators
+
+There wouldn't really be any point to this whole exercise if we didn't make at least one iterator that isn't a list, so lets make one.
+
+```
+evenNumberIter <- {
+    num:0,
+    nextItem: PROC(&self){
+        tmp <- self.num
+        self.num <- self.num + 2
+        RETURN Value(tmp)
+    }
+}
+```
+
+This iterator will emit values forever, which is fine, if we only want to have some of those values without getting stuck in a loop we can manually use `nextItem`, `FOREACH` is just a convenience not a necessity.
+
+Here's something a bit meta, we can make an iterator which takes a different iterator and loops it forever (side effects of the original iterator will not be repeated) if iterator has anything.
+
+```
+PROC makeLoop(originalIterator) {
+    RETURN {
+        iter: originalIterator,
+        filledStorage: false,
+        storage: [],
+        nextItem: PROC(&self) {
+            "An append procedure which adds an item to"
+            "the back of a list now exists" the list"
+            "being appended to is the first argument,"
+            "the value being appended is the second"
+            
+            item <- self.iter.nextItem(&self.iter)
+            IF item[0] = "value" {
+                IF NOT self.fillledStorage{
+                    append(&self.storage, item[1])
+                }
+                RETURN item
+            }
+            ELSE {
+                self.filledStorage <- true
+                self.iter <- makeListIterator(storage)
+                RETURN self.iter.nextItem(&self.iter)
+            }
+        }
+    }
+}
+```
+
+## Conclusion
+
+I could go on and bring in other features and abstractions which could be useful for our iterators but I think this is good enough.
+We'll see if I realize I should come back to this again.
