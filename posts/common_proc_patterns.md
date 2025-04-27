@@ -243,6 +243,8 @@ foo <- {
 foo.bar(foo)
 ```
 
+Anyways that's enough free stuff lets go build another common abstraction.
+
 ## Iterators
 
 Previously when I defined the `FOREACH` loop, I said 
@@ -313,8 +315,6 @@ Regardless this strategy won't work for our iterator because we would really lik
 
 ### If there's an error then return the error
 
-Close Philosophical Camp: Error handling as a primary concern
-
 Aside from not returning from the procedure this seems like the second most obvious way to handle this problem, but how can we distinguish between an error and just a value?
 Well we already have `label` which was defined earlier in this post so how about we just use that.
 
@@ -344,7 +344,9 @@ PROC findValue (someList, value){
 }
 ```
 
-returning some normal list in the nothing case may feel a bit weird but keep in mind that our `label` procedure is just returning a 2 element list so having it be 1 element when it's just the label and no value should makes sense.
+returning a 1 element list in the nothing case may feel a bit weird but it actually makes perfect sense if you think about it for a second.
+Keep in mind that our `label` procedure is just returning a 2 element list meaning the way we check whether something is nothing is the same as checking if something is a value, we just take the first element of the array, the only difference being what string we're looking for.
+Furthermore for the case of nothing there isn't any particular value we want to put as the second value so we might as well not have a second value.
 That said it's a little bleh and I imagine we'll be giving back errors and values frequently going forwards so lets just make procedures and a variable for them
 
 ```
@@ -443,7 +445,7 @@ In case you can't tell this is not my preferred error handling mechanism.
 
 ## Our Iterator so far
 
-at the moment we've made it so an iterator is anything with a `nextItem` attribute which is a procedure which takes the iterator and either returns the value with a label of value or returns a label which is just nothing.
+at the moment we've made it so an iterator is anything with a `nextItem` attribute which is a procedure which takes the iterator and returns a 2 element list with the updated iterator and either the value with a label of value or a label which is just nothing.
 
 But well... needing to use our iterator like
 
@@ -454,7 +456,7 @@ currentItem <- tmp[1]
 ```
 
 is kinda annoying, it'd be much more convenient to have all of this be just 1 line instead of 3, preferably with that 1 line being shorter rather than longer.
-Of course it's totally possible to do this all one line, hell there's even multiple paths of adding syntax we can take to achieving that.
+Of course it's totally possible to add syntax to do this all one line, hell there's even multiple paths we can take to achieving that.
 We're going to pick the one which most procedural languages pick.
 
 ## References
@@ -482,7 +484,7 @@ DISPLAY(john.m)
 ```
 
 Most of the time having what can/will modify some data be hidden in a procedure call makes understanding what's happening more difficult.
-Which is why up to this point everything we've done have been done by passing in a copy of the value the variable holds rather than a reference to the variable.
+That's why up to this point everything we've done have been done by passing in a copy of the value the variable holds rather than a reference to the variable.
 However sometimes the loss of readability is worth it to make using an abstraction easier.
 
 As such we are going to add some syntax to our language to allow for passing things by reference.
