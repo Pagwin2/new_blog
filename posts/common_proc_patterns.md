@@ -55,18 +55,7 @@ pet <- label("Dog", "Charlie")
 
 ```
 
-Label's utility may not be immediately obvious however in addition to using it in conjunction with our second procedure it's also a way for us to mark out what some data is that can be read out programmatically.
-
-Say we want to write a procedure that calculates all the unknown bits of a triangle given some bits that we know.
-Previously we would've needed to either have one procedure for each set of triangle bits we can solve from or we would've needed to have some auxillary argument to tell the procedure which bits it's getting.
-But now, we can just label the bits we provide
-
-```
-"we'll get to what we can have solve_triangle return in a moment"
-solvedTriangle <- solve_triangle( label("side length", 10), label("angle radians", 1.2), label("angle degrees", 45) )
-```
-
-on the inside of this procedure we'll still need to deal with jank but a major part of programming is wrapping up jank in a way that's less janky to work with.
+The utility of this may not be immediately obvious but this procedure will be used quite a bit throughout the rest of the post.
 
 ### New procedures #2 and #3
 
