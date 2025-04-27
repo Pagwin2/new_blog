@@ -52,7 +52,7 @@ alongside the comment
 
 > this image format but it's "everything is either a vector space or a graph"
 
-Shortly after I remembered that matrices where a vector space and then the graph-matrix connection.
+Shortly after I remembered that matrices are a vector space and then the graph-matrix connection.
 Then I remembered one more thing.
 
 > Oh yeah doesn't category theory make just about everything everything a graph?
