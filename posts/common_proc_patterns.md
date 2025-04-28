@@ -32,11 +32,11 @@ In addition, although previously unmentioned, we can put lists into lists.
 fancyList <- [[], [1, true], [">:)"]]
 ```
 
-We're going to use this alongside our other syntax to define 3 new procedures.
+We're going to use this alongside our other syntax to define the procedures for some initial abstractions.
 
-### New procedure #1
+## `Label`
 
-We're going to call the first procedure `label` and define it like so
+Lets make a procedure called `Label` and define it like so
 
 ```
 "something I didn't mention in the prior post is that procedures can"
@@ -45,19 +45,35 @@ We're going to call the first procedure `label` and define it like so
 "I also didn't mention that we can have them give back values"
 "these are both oversights that I will hopefully correct in the future"
 
-PROC label (labelName, labeledValue) {
+"Also throughout this post you may notice that I will occasionally start"
+"a variable or procedure name with a capital letter, that is because I"
+"expect or know we will use it frequently and want it to stand out a bit"
+
+PROC Label (labelName, labeledValue) {
     "RETURN is just the word we put in front of the value that the"
     "procedure will give back"
     RETURN [labelName, labeledValue]
 }
 
-pet <- label("Dog", "Charlie")
+pet <- Label("Dog", "Charlie")
 
 ```
 
-The utility of this may not be immediately obvious but this procedure will be used quite a bit throughout the rest of the post.
+We now have a way of "labeling" a value, however making use of this still requires engaging with an underlying list after the fact.
+That sucks, it means that we can't think about just labels when working with labels, we need to think about lists as well.
+To fix that we'll add some more procedures for pulling out the label and value.
 
-### New procedures #2 and #3
+```
+PROC LabelName(label){
+    return label[0]
+}
+
+PROC LabelValue(label){
+    return label[1]
+}
+```
+
+## A new way of gathering values toegether
 
 Working with lists is great and all but ya know, wouldn't it be nice if we could put values toegether in a way where each value has a name within that collection?
 
@@ -65,14 +81,14 @@ Yeah that would be nice so lets put a bunch of labeled values in a list.
 
 ```
 henry <- [
-    label("age", 25),
-    label("favorite food", "pizza"),
-    label("married?", false)
+    Label("age", 25),
+    Label("favorite food", "pizza"),
+    Label("married?", false)
 ]
 mary <- [
-    label("favorite food", "orphan tears"),
-    label("married?", true),
-    label("age", 20105)
+    Label("favorite food", "orphan tears"),
+    Label("married?", true),
+    Label("age", 20105)
 ]
 ```
 
@@ -85,7 +101,7 @@ Whelp, I guess we gotta go through each element in the list and find the one wit
 FOREACH personAttribute <- somePerson {
     "reminder: labeled values are just 2 element lists so we can get the"
     "first value of that list with a normal list index"
-    IF personAttribute[0] = "age" {
+    IF LabelName(personAttribute) = "age" {
         "we do whatever we were doing with the value labeled age here"
         "accessing it via personAttribute[1]"
     }
@@ -109,9 +125,9 @@ PROC getAttribute(assocList, name) {
     "the variable will be used outside of the loop"
     attributeValue <- ""
 
-    FOREACH pair <- assocList {
-        IF pair[0] = name {
-            attributeValue <- pair[1]
+    FOREACH association <- assocList {
+        IF LabelName(association) = name {
+            attributeValue <- LabelValue(pair)
         }
     }
 
@@ -122,13 +138,13 @@ PROC setAttribute(assocList, name, newValue) {
     i <- 0
     pairIndex <- 0
     FOREACH pair <- assocList {
-        IF pair[0] = name {
+        IF LabelName(pair) = name {
             pairIndex <- i
         }
         i <- i + 1
     }
 
-    assocList[pairIndex] <- newValue
+    assocList[pairIndex] <- Label(name, newValue)
     
     "If you're uncertain about how necessary returning the list is"
     "that's good, I encourage that curiosity/suspicion, some"
@@ -153,8 +169,8 @@ and setting their age is just
 setAttribute(somePerson, "age", 10)
 ```
 
-and with that we've built a useful abstraction.
-This abstraction is so useful in fact that we're going to add notation into the language, at least for the case where we're looking things up with strings which don't have spaces or other kinds of blank space.
+creating a new abstraction from our prior abstraction.
+Our new abstraction is really useful but kinda clunky so we're going to add notation into the language, at least for the case where we're looking things up with strings which don't have spaces or other kinds of blank space.
 
 ```
 "notice how we replaced the space with an underscore in favorite_food"
@@ -192,9 +208,9 @@ new way to set the age of a person corresponding to the prior example.
 ## Ok...
 
 Take a breath you may argue that I over complicated explaining a concept as simple as having names in names.
-However... okay I did do that but also this should show that really nothing in programming is magic, everything can be built from the basics and if something annoys you, you have options for changing things.
+However the reason I explained this the way I did rather than just giving syntax is to give a demonstration of a reasonably simple but useful abstraction.
 
-Anyways moving on and returning to the style of the prior post of just giving stuff for free.
+That said I need to lay some ground work for our next abstraction so here's some freebies.
 
 ## Procedures as data
 
@@ -217,9 +233,11 @@ b <- a(someProcedure)
 c <- b(a)
 ```
 
-is valid, this is mostly for my convenience and unfortunately some languages *cough cough Java cough cough* don't let you do this kind of thing so while it is useful and can be used for make abstractions that help us out, I'm going to refrain from most of those abstractions for this post at least.
+is valid, unfortunately some languages *cough cough Java cough cough* don't let you do this kind of thing.
+So while it is a critical component for some abstractions, I'm going to refrain from most of those abstractions for this post at least.
+Instead most of the usage in this post will stick close to what's widely doable.
 
-Speaking of my convenience here's syntax that makes a procedure value without giving it a name so I don't need to name every procedure as long as it's put into a variable or procedure argument immediately.
+For my convenience here's syntax that makes a procedure value without giving it a name so I don't need to name every procedure as long as it's put into a variable or procedure argument immediately.
 
 ```
 a <- PROC(arg1, arg2, ...){
@@ -229,7 +247,7 @@ a <- PROC(arg1, arg2, ...){
 
 ## Associated procedures
 
-This follows pretty cleanly from our last 2 abstractions, no new syntax just pointing out that we can do this.
+This follows pretty cleanly from the syntax of the prior 2 sections, no new syntax just pointing out that we can do this.
 
 ```
 
@@ -243,7 +261,7 @@ foo <- {
 foo.bar(foo)
 ```
 
-Anyways that's enough free stuff lets go build another common abstraction.
+Anyways that's enough free stuff lets go build another abstraction.
 
 ## Iterators
 
@@ -286,22 +304,7 @@ To solve it we'll want to discuss
 
 To clarify we don't need to have defined error handling to complete our iterator implementation however good solutions to that problem and error handling have high overlap so we might as well.
 
-Philosophically there a 2 camps regarding error handling
-
-- Error handling as a secondary concern
-- Error handling as a primary concern
-
-The first case generally approaches error handling as something to get out of the way as much as possible with as little disruption as possible.
-
-The second case approaches error handling as a fundamental part of writing a program which should be integrated smoothly into the rest of the language.
-
-Neither approach is universally correct.
-Also while each specific approach may be more closely aligned with one philosophy than the other that doesn't mean it's just that one philosophy.
-With that in mind what are our specific options.
-
 ### If there's an error then never return
-
-Close Philosophical Camp: error handling as a secondary concern (but really this one just goes to show that categorizing them is foolish)
 
 Using this form of error handling is basically declaring
 
@@ -316,15 +319,15 @@ Regardless this strategy won't work for our iterator because we would really lik
 ### If there's an error then return the error
 
 Aside from not returning from the procedure this seems like the second most obvious way to handle this problem, but how can we distinguish between an error and just a value?
-Well we already have `label` which was defined earlier in this post so how about we just use that.
+Well we already have `Label` which was defined earlier in this post so how about we just use that.
 
 ```
 PROC myDivision (numerator, denominator) {
     IF denominator = 0 {
-        RETURN label("error", "Division by 0")
+        RETURN Label("error", "Division by 0")
     }
     ELSE {
-        RETURN label("value", numerator/denominator)
+        RETURN Label("value", numerator/denominator)
     }
 }
 ```
@@ -336,7 +339,7 @@ PROC findValue (someList, value){
     i <- 0
     WHILE i < length(someList) {
         IF someList[i] = value {
-            RETURN label("value", i)
+            RETURN Label("value", i)
         }
         i <- i + 1
     }
@@ -345,26 +348,32 @@ PROC findValue (someList, value){
 ```
 
 returning a 1 element list in the nothing case may feel a bit weird but it actually makes perfect sense if you think about it for a second.
-Keep in mind that our `label` procedure is just returning a 2 element list meaning the way we check whether something is nothing is the same as checking if something is a value, we just take the first element of the array, the only difference being what string we're looking for.
-Furthermore for the case of nothing there isn't any particular value we want to put as the second value so we might as well not have a second value.
+Keep in mind that our `Label` procedure is just returning a 2 element list and `LabelName` just grabs the first element.
+So a single element list works just fine for `LabelName` which is perfect because it doesn't exactly make sense for our "nothing" to have something now does it.
+Put another way for the case of nothing there isn't any particular value we want to put as the second value so we might as well not have a second value.
 That said it's a little bleh and I imagine we'll be giving back errors and values frequently going forwards so lets just make procedures and a variable for them
 
 ```
-"I'm capitalizing the first letter of Value, Error and Nothing"
-"with the expectation that they'll be used frequently and worth"
-"having stand out a bit in the code"
+
+"Like our Label procedures, I'm capitalizing the first letter of"
+"Value, Error and Nothing with the expectation that they'll be used
+"frequently and worth having stand out a bit in the code"
 PROC Value(someValue) {
-    RETURN label("value", someValue)
+    RETURN Label("value", someValue)
 }
 
 PROC Error(someError) {
-    RETURN label("error", someError)
+    RETURN Label("error", someError)
 }
 
+"Nothing is a variable rather than a procedure because there isn't"
+"much of a point to a procedure which takes no arguments and just"
+"immediately returns a value which never changes. Well... at least"
+"not in this post"
 Nothing <- ["nothing"]
 ```
 
-With this methodology of error handling changing our list iterator is pretty natural and easy.
+Changing our list iterator to line up with this idea is pretty natural and easy.
 
 ```
 iterableList <- {
@@ -385,11 +394,9 @@ iterableList <- {
 }
 ```
 
-This kind of error handling is what our pseudocode will use however there's 1 more kind of error handling worth mentioning.
+This is what I intend to go with for our iterator and error handling generally in this pseudocode however there's 1 more kind of error handling worth mentioning.
 
-## If there's an error perform magic
-
-Close Philosophical Camp: Error handling as a secondary concern
+### If there's an error perform magic
 
 Okay it isn't really magic, really it's the prior return the error as a value thing we did except we only know about any errors if we ask.
 
@@ -456,7 +463,7 @@ currentItem <- tmp[1]
 ```
 
 is kinda annoying, it'd be much more convenient to have all of this be just 1 line instead of 3, preferably with that 1 line being shorter rather than longer.
-Of course it's totally possible to add syntax to do this all one line, hell there's even multiple paths we can take to achieving that.
+Of course it's totally possible to add syntax to do this all in one line, hell there's even multiple paths we can take to achieve that.
 We're going to pick the one which most procedural languages pick.
 
 ## References
@@ -553,8 +560,6 @@ PROC makeListIterator(list){
     }
 }
 ```
-
-
 
 ## Other iterators
 
