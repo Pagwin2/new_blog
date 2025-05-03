@@ -14,7 +14,7 @@ This is going to be a bit different.
 Unlike other blog posts of mine which I fire off and forget this one I'm intending to update 😱.
 Specifically I'm going to try and update it weekly with a status report.
 
-*Updated 2025-04-23*
+*Updated 2025-05-03*
 
 ## Foreword
 
@@ -97,4 +97,16 @@ Same as prior week
 
 ## 2025/04/19-2025/04/26
 
-To Be written
+Forgot to write this week sorry
+
+## 2025/04/19-2025/05/03
+
+This is either the last or the second last post here.
+If it's the last then I chose to do a full post as a retrospective instead.
+Anyways Levi (partner for this project) is awesome and might be the reason this ends up having MVP functionality due to my dumbass procrastinating everything too much.
+To my understanding as things currently stand everything for MVP exists, albeit with incorrect assumptions, which for MVP is fine.
+I just need to bring it into docker, write tests for as much stuff as possible and finish any class requirements like the demo video.
+
+## Conclusion
+
+To Be Written
