@@ -13,170 +13,74 @@ tags: []
 So in my prior post [A universal tutorial on the basics for every* programming language](/posts/universal_proc_tut/) my explanations for variables and procedures are lacking.
 So lets start over and try explaining them one more time.
 
-## Naming via Substitution
+## Variables
 
-That is most of what variables and functions are.
-To see what I mean here's run through some examples treating variables and functions this way.
+Lets start with variables.
+In the original post I wrote
 
-```
-pi <- 3.141592
+> Variables allow for the storage of data in named buckets
 
-PROC area (radius) {
-    RETURN pi * radius * radius
-}
+but what does that mean really?
 
-DISPLAY( area(1) )
-```
-
-substituting we go through the following
+Well one way to think about it is that until you give the variable a new value you can just replace every instance of the variable with the value inside of it.
 
 ```
-"substituting in the code for area"
-DISPLAY ( pi * 1 * 1 )
+x <- 3
 
-"substituting the pi variable for it's value"
-DISPLAY( 3.141592 * 1 * 1 )
+y <- x + 2
 
-"after that we do the math and because 1 times"
-"anything is 1 we display 3.141592"
+DISPLAY (x)
+
+"becomes"
+
+y <- 3 + 2
+
+DISPLAY (3)
 ```
 
-> What's `RETURN`?
+If this feels similar to what you can do with variables in high school algebra that's because it's basically the same idea.
 
-Great question `RETURN` is how we have our procedure give a value back.
+Reassignment and lists mean that you need to be careful when applying this model but it still holds.
 
-> But aren't we substituting it in anyways?
+## Functions
 
-Yes, in this case what we're substituting in is the stuff that we put on the same line as `RETURN`.
-However in some cases we need to do many substitutions and changes before we get something that we can just shove in, like for example.
+Functions are a logical extension of that prior substitution method but now we substitute based on some values passed in.
 
-```
-PROC area (radius) {
-    DISPLAY("called area")
-    RETURN pi * length * length
-}
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>x</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">f(x) = x+2</annotation></semantics></math><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">f(2)</annotation></semantics></math><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2+2</annotation></semantics></math><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>4</mn><annotation encoding="application/x-tex">4</annotation></semantics></math></p><p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">g(x)=x^2</annotation></semantics></math><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">f(g(f(x))) = f(g(x+2)) = f((x+2)^2) = (x+2)^2+2</annotation></semantics></math></p>
 
-DISPLAY( area(1) )
-```
+> Aren't those just math equations?
 
-What would it even mean to
+Yes, math equations are a very clean way of demonstrating functions and are especially nice because they allow be to avoid making new syntax to explain them.
 
-```
-"DISPLAY in DISPLAY???"
-DISPLAY(
-    DISPLAY("called area")
-    pi * 1 * 1
-)
-```
+Functions aren't procedures though, the main reason we're taking a detour to functions is because they are simpler than but similar to procedures.
 
-of course we can just make it so we can't have `DISPLAY` in procedures but even with that what happens if we assign to a variable outside the procedure?
+There are a few things which make procedures different.
 
-Maybe we disallow that as well... congrats we've rederived pure functional programming.
+## Reason: side effects
 
-## You fool you've fallen for my trap card
+With that prior example I gave you the output of `f(2)`, telling you that it was 4.
+If I then asked you in the future what `f(2)` was then without needing to consult me or recalculate it you could answer 4.
+This is not something that can be done with procedures.
 
-Now you have to listen to me talk about applicatives and monads and wait where are you going come back!
-
-## Okay maybe procedures aren't substitution
-
-And maybe I shouldn't have tried to use the framing deviced used by at least 2 resources for functional programming when I'm not talking about functional programming...
-
-<iframe width="2048" height="937" src="https://www.youtube.com/embed/m_-qJKKz_Go" title="ISILDUR!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-Mmmmmm but it's really useful for the other stuff I wanna write about so how about we just impose those rules on ourselves for the rest of this blog post and not worry about it.
-
-## Recursion
-
-Lets write a function which adds up numbers in a list but for a challenge lets disallow `WHILE` and `FOR`.
-
-Well how can we do that?
-Okay baby steps lets see if we can figure out how to do this for lists which just have 1 number in them.
+The simplest side effect a procedure can do is update a variable outside the procedure, like for example.
 
 ```
-sum([1]) = 1
-sum([2]) = 2
-sum([3.14]) = 3.14
-```
-
-Oh so for lists which only have 1 number in them we can just substitute in the 1 number in the list, nice.
-
-```
-PROC sum(some_list) {
-    "length gives the number of values in a list"
-    IF ( length(some_list) = 1) {
-        RETURN some_list[0]
-    }
-    ELSE {
-        "brb gonna go get some milk"
-    }
+counter <- 0
+PROC display_add_counter(n) {
+    DISPLAY (n+counter)
+    counter <- counter + 1
 }
 ```
 
-But what about if the list has 2 or more numbers?
-Well what if we already had some magic method that can give us the sum of any list which has 1 less than the number of elements for a list we've got?
-Well then we can just make a copy of the list with all but 1 element and then add back the 1 element we took out
+If this were a function then you could call `display_add_counter(1)`, see `1` get displayed and know that if you did it again that exactly the same thing would happen.
 
-```
-PROC sum (some_list) {
-    all_but_last_element <- copy_all_but_one(some_list)
-    RETURN some_list[length(some_list)-1] + magic_sum(all_but_last_element)
-}
-```
+But it isn't a function, we update `counter` so when we call `display_add_counter(1)` in the future we'll see `2` get displayed and then `3` if we do it again.
 
-But hang on we can do a sum on a list with 1 number and we can do a sum on a list which is 1 longer than the longest list we know how to do so far then doesn't that let us to a sum on a list of 2 numbers and 3 numbers and so on?
+We can't just substitute in the final answer we need to do the work every time.
 
-Yes it does we get a procedure like this
+Of course in real programs in addition to state outside of the procedure we can also receive user input within the procedure which changes what the procedure does.
 
-```
-PROC sum(some_list) {
-    IF ( length(some_list) = 1 ) {
-        RETURN some_list[0]
-    }
-    ELSE {
-        all_but_last_element <- copy_all_but_one(some_list)
-        RETURN some_list[length(some_list)-1] + sum(all_but_last_element)
-    }
-```
+Also the effect on the outside world from `DISPLAY` in some value might be different due to the outside world changing in the meantime.
 
-To show this works we can just do substitution
-
-```
-sum([1,2,3]) = 3 + sum([1,2]) = 3 + 2 + sum([1]) = 3 + 2 + 1
-```
-
-which is exactly what we want.
-
-But hold on, are all the intermediate substitutions really free?
-I mean we have to store 3, 2 and the +s somewhere right?
-Yes we do but there is a solution
-
-## Tail recursion
-
-A function is tail recursive if recursion is the last thing it does when it does recursion.
-A counter example is the sum function we just did which does addition after the recursion
-
-We can write a tail recursive version of that however.
-
-```
-PROC tail_sum(list, partial_sum){
-    IF length(list) = 0 {
-        RETURN partial_sum
-    }
-    ELSE {
-        all_but_last_element <- copy_all_but_one(some_list)
-        RETURN tail_sum(all_but_last_element, partial_sum + some_list[length(some_list)-1])
-    }
-}
-
-PROC tsum(list){
-    RETURN tail_sum(list, 0)
-}
-```
-
-applying the same substitution but using `tsum` we get
-
-```
-tsum([1,2,3]) = tail_sum([1,2,3], 0) = tail_sum([1,2],3) = tail_sum([1], 5) = tail_sum([], 6) = 6
-```
-
-notice how we don't get that long of additions towards the end we just keep adding into the value for the second argument until we run out of things to add.
+Getting a value out of a procedure is convenient though so we have `RETURN` for that.
+Once we handle all side effects and have something sensible to substitute in we can just replace our procedure call with the value it `RETURN`s.
