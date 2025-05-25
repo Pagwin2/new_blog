@@ -99,11 +99,9 @@ Whelp, I guess we gotta go through each element in the list and find the one wit
 
 ```
 FOREACH personAttribute <- somePerson {
-    "reminder: labeled values are just 2 element lists so we can get the"
-    "first value of that list with a normal list index"
     IF LabelName(personAttribute) = "age" {
         "we do whatever we were doing with the value labeled age here"
-        "accessing it via personAttribute[1]"
+        "accessing it via LabelValue(personAttribute)"
     }
 }
 ```
@@ -593,9 +591,9 @@ PROC makeLoop(originalIterator) {
             "the value being appended is the second"
             
             item <- self.iter.nextItem(&self.iter)
-            IF item[0] = "value" {
+            IF LabelName(item) = "value" {
                 IF NOT self.fillledStorage{
-                    append(&self.storage, item[1])
+                    append(&self.storage, LabelValue(item))
                 }
                 RETURN item
             }
