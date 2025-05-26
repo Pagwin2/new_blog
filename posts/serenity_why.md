@@ -10,6 +10,8 @@ draft: false
 tags: []
 ---
 
+**Future pagwin note: this post is rather immature, I'm keeping it up mostly for historical record, in hindsight I shouldn't have written it.**
+
 This is the second blog article I've written dissing on how a library does something, the [first time](/blog/mineflayer_why) being effectively "Mineflayer doesn't do things the way I want it to and that annoys me". This article will probably follow in that tradition but unlike the Mineflayer one where I would've been inconvenienced to do what I want with Serenity I need to make my code potentially unsound to do what I want.
 
 ## What is Serenity?

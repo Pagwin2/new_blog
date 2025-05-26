@@ -48,6 +48,8 @@ Nope
 
 ## So what was the other hiccup?
 
+Future Pagwin note: it turns out that solving this is [really hard](https://hackmd.io/@BoxyUwU/BJ6_bfmD0#Why-does-generic_const_exprs-not-work)
+
 Oh yeah, there was a separate hiccup. Yeah that hiccup came from me trying to do SI-derived units via const generics, my minimum viable product version looked something like this
 ```rs
 struct Measure<const km:i16, const sec:i16, const kg:i16>{
