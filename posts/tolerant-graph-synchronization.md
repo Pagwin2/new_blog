@@ -51,7 +51,7 @@ The reason I don't include those yet is because I'm not sure what needs to be in
 
 I suspect (with my gut) the optimal solution is just to have the initial non-black node be red and then have the rule "if any neighbors are red turn red".
 
-I don't know if exponential graphs like social graphs mess that solution up though or if all the alternatives do no better.
+I don't know if ~~exponential graphs~~(edit: made up a term oops) scale-free networks like social graphs mess that solution up though or if all the alternatives do no better.
 
 ## Conclusion
 
