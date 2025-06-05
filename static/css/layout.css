@@ -276,5 +276,10 @@ pre {
 .socials {
     display: none;
 }
+/* https://piccalil.li/blog/printing-the-web-making-webpages-look-good-on-paper */
+a[href]:after {
+	content: " (" attr(href) ")";
+}
+
 }
 }
