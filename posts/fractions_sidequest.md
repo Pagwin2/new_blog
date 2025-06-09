@@ -204,4 +204,4 @@ So that was fun going through and making all this work out well, now I can gener
 
 Could I optimize this more? Yes I could pre-allocate a buffer and use a specialized thread pool(and probably some unsafe code as well thinking about it). But I won't because it's fast enough, the remaining speed gains probably aren't worth it and most of the execution time is spent writing the results to disk. Overall this was a fun sidequest as a part of the fraction quest. I did other stuff between the article before the fraction one and the fraction one and maybe I'll dump those articles at some point soon so I can stop feeling bad about them sitting in my website's git repo doing nothing.
 
-[git repo with the generator](https://github.com/Pagwin-Fedora/fraction_generator)
+[git repo with the generator](https://github.com/Pagwin2/fraction_generator)

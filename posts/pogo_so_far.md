@@ -9,11 +9,11 @@ draft: false
 tags: []
 ---
 
-So in [My last blog](https://pagwin.xyz/blog/gh_actions/), I briefly mentioned a project I'm working on called [Pogo](https://github.com/Pagwin-Fedora/Pogo) and then said absolutely nothing about what it actually is or what I was going to do with it. I did say I wanted to write a blog article on it though and this is that blog article.
+So in [My last blog](https://pagwin.xyz/blog/gh_actions/), I briefly mentioned a project I'm working on called [Pogo](https://github.com/Pagwin2/Pogo) and then said absolutely nothing about what it actually is or what I was going to do with it. I did say I wanted to write a blog article on it though and this is that blog article.
 
 ## What is Pogo?
 
-[Pogo](https://github.com/Pagwin-Fedora/Pogo) is a todo list I'm working on that I wanted to use as an excuse to learn 
+[Pogo](https://github.com/Pagwin2/Pogo) is a todo list I'm working on that I wanted to use as an excuse to learn 
 
 1. [Go](https://go.dev/)
 2. [Rust](https://www.rust-lang.org/)'s FFI

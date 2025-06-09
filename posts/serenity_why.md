@@ -16,7 +16,7 @@ This is the second blog article I've written dissing on how a library does somet
 
 ## What is Serenity?
 
-[Serenity](https://crates.io/crates/serenity) is a rust crate that can be used to create discord bots. I've used it a couple of times without issue mainly for [DBMS](https://github.com/Pagwin-Fedora/DBMS) and [frame yeet](https://github.com/Pagwin-Fedora/discord-frame-yeet), very professional names I know. However the issues come up when you want mutable state in the [event handler](https://docs.rs/serenity/0.11.5/serenity/client/trait.EventHandler.html).
+[Serenity](https://crates.io/crates/serenity) is a rust crate that can be used to create discord bots. I've used it a couple of times without issue mainly for [DBMS](https://github.com/Pagwin2/DBMS) and [frame yeet](https://github.com/Pagwin2/discord-frame-yeet), very professional names I know. However the issues come up when you want mutable state in the [event handler](https://docs.rs/serenity/0.11.5/serenity/client/trait.EventHandler.html).
 
 ## No mutable self
 

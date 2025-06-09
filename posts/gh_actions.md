@@ -22,7 +22,7 @@ I was aware of Github actions and a vague sense of how it should work observing 
 
 ## The spark to actually do it
 
-Then for a couple of reasons wanted to write a blog article about progress on [Pogo](https://github.com/Pagwin-Fedora/Pogo). But I decided that before I wrote any more articles that I should go look into setting up CD for my site.
+Then for a couple of reasons wanted to write a blog article about progress on [Pogo](https://github.com/Pagwin2/Pogo). But I decided that before I wrote any more articles that I should go look into setting up CD for my site.
 
 
 

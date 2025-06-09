@@ -20,7 +20,7 @@ I was planning on adding comments which meant doing more than static files so it
 
 ## Numbers with finite vs infinite kolmogorov complexity
 
-This is a blog post in the website git repo it's pretty much fully written but I decided I didn't want to publish it fully. You'll find the markdown [here](https://github.com/Pagwin-Fedora/website/blob/master/content/blog/finite_KCMP_nums.md). To describe the idea in brief for any mathematical object you can either describe it with a program written in a turing complete program that takes up a finite amount of space or you can't. If you can and the value you get as you run the program for an arbitrarily large number of steps is well defined then it has finite kolmogorove complexity and if you can't it has infinite. The blog post describes why the well defined part is needed as well as a badly written proof for why the set of all real numbers with finite kolmogorov complexity has the same cardinality as the intgers and ends with unfalsifiable nonsense conjecture about the universe. Sidenote: if you try to brute force the value of ψ (as described in the full post) you'll find that the cardinality of the set of all possible values for ψ is the same as for the Real numbers which is amusing.
+This is a blog post in the website git repo it's pretty much fully written but I decided I didn't want to publish it fully. You'll find the markdown [here](https://github.com/Pagwin2/website/blob/master/content/blog/finite_KCMP_nums.md). To describe the idea in brief for any mathematical object you can either describe it with a program written in a turing complete program that takes up a finite amount of space or you can't. If you can and the value you get as you run the program for an arbitrarily large number of steps is well defined then it has finite kolmogorove complexity and if you can't it has infinite. The blog post describes why the well defined part is needed as well as a badly written proof for why the set of all real numbers with finite kolmogorov complexity has the same cardinality as the intgers and ends with unfalsifiable nonsense conjecture about the universe. Sidenote: if you try to brute force the value of ψ (as described in the full post) you'll find that the cardinality of the set of all possible values for ψ is the same as for the Real numbers which is amusing.
 
 ## Remember pogo?
 
@@ -83,7 +83,7 @@ instance Ord SubShell where
 
 ```
 
-:) this was for modeling electron subshells btw here's a [gist](https://gist.github.com/Pagwin-Fedora/07042faaa3e5ae275652874b47cb969f) with the full program.
+:) this was for modeling electron subshells btw here's a [gist](https://gist.github.com/Pagwin2/07042faaa3e5ae275652874b47cb969f) with the full program.
 
 ## The fractions sidequest continues
 
