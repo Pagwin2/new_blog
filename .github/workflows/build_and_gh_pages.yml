@@ -8,7 +8,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
       - name: Build files
-        uses: Pagwin-Fedora/psb@v1.2
+        uses: Pagwin2/psb@v1.2
       - name: Upload site as artifact
         # needed for the url thingy later
         id: deployment
