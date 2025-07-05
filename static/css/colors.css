@@ -10,16 +10,13 @@
      * */
     --normal-text: #CCC;
     --focus-outline-color: #f00;
-    --link-clicked: #B250D8;
-    --link-unclicked: #d80;
+    --link-clicked: oklch(0.5589 0.2649 344.78);
+    --link-unclicked: oklch(0.5395 0.118 237.14);
     --link-active: lab(100% 0% 100%);
     --link-highlight: white;
     --link-highlight-bg: blue;
     --header-bg: hsl(0,0%,15%);
-    --nav-link-color: #6B0;
-    --nav-link-bg-color: hsl(0,0%,25%);
-    --nav-link-bg-color-hover:hsl(0,0%,20%);
-    --content-border-color: #5ac;
+    --title-border-color: oklch(0.6015 0.2198 152);
     /*stolen from code theme*/
     
     --codeblock-bg: rgb(29, 31, 33);
@@ -28,8 +25,6 @@
     --blockquote-accent-color: oklch(86.64% 0.29 142);
     --highlight-bg: lime;
     --highlight-fg: #000;
-    --nav-link-bg-color-active: #118411;
-    --nav-link-color-active: white;
 
     scrollbar-color: yellow transparent;
 }
@@ -51,8 +46,8 @@
     --normal-text: #000;
     --focus-outline-color: #f00;
     --link-unclicked: #2535B4;
-    --link-clicked: #832244;
-    --link-active: lab(20% 80% -80%);
+    --link-clicked: oklch(0.3895 0.1737 319.67);
+    --link-active: oklch(0.655 0.2317 30.17);
     --link-highlight: unset;
     --link-highlight-bg: var(--highlight-bg);
     /*#E6DDE6
@@ -64,41 +59,22 @@
     --header-bg: hsl(0,0%,85%);
     /*#841163
      * #115e84*/
-    --nav-link-color: #118411;
-    --nav-link-bg-color: hsl(0,0%,75%);
-    --nav-link-bg-color-hover:hsl(0,0%,70%);
-    --content-border-color: #026;
+    --title-border-color: #026;
     --codeblock-bg: rgb(226,224,222);
     --blockquote-bg: oklch(70% 0.012 296.97);
     /*--blockquote-accent-color: oklch(45% 0.1628 256.77);*/
     --blockquote-accent-color: oklch(74.18% 0.1719 66.77);
     --highlight-bg: yellow;
     --highlight-fg: #000;
-    --nav-link-bg-color-active: #118411;
-    --nav-link-color-active: white;
 
     scrollbar-color: red transparent;
 }
 }
 }
 @layer baseline-raised {
-.nav-link {
-    color: var(--nav-link-color);
-    background-color: var(--nav-link-bg-color);
-}
-
 /*avoiding color issues of nesting anchor inside objects for header icon links*/
 a.icon:has(.nav-link){
     color: rgba(0,0,0,0);
-}
-
-.nav-link:hover {
-  background: var(--nav-link-bg-color-hover);
-}
-
-.nav-link:active {
-    background: var(--nav-link-bg-color-active);
-    color: var(--nav-link-color-active)
 }
 }
 @layer baseline{
@@ -141,8 +117,8 @@ a:not(.nav-link) {
     background: var(--header-bg);
 }
 
-main {
-    border: 0.7rem solid var(--content-border-color);
+main > header {
+    border: 0.7rem solid var(--title-border-color);
 }
 
 blockquote {

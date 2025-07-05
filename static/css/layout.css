@@ -156,7 +156,9 @@ main {
     /*or maybe not, https://en.wikipedia.org/wiki/Line_length#Electronic_text*/
     max-width: 66ch;
 
-    border-radius: 0.5rem;
+    & > header {
+        padding: 0rem 1rem;
+    }
 
     /* needed due to being flex itself*/
     flex-direction:column;
@@ -255,7 +257,7 @@ footer {
 }
 /* we really want to make sure this doesn't stick around when colors load in regardless of when/how colors get loaded in*/
 @layer pre-load{
-    main {
+    main > header {
         border: 0.7rem solid white;
     }
 }
