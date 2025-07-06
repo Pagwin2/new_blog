@@ -17,7 +17,7 @@
     --link-highlight-bg: blue;
     --header-bg: hsl(0,0%,15%);
     --title-border-color: oklch(0.6015 0.2198 152);
-    --title-background-color: #000;
+    --title-background-color: oklch(0.2264 0 0);
     /*stolen from code theme*/
     
     --codeblock-bg: rgb(29, 31, 33);
