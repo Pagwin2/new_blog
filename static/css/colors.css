@@ -17,6 +17,7 @@
     --link-highlight-bg: blue;
     --header-bg: hsl(0,0%,15%);
     --title-border-color: oklch(0.6015 0.2198 152);
+    --title-background-color: #000;
     /*stolen from code theme*/
     
     --codeblock-bg: rgb(29, 31, 33);
@@ -59,7 +60,8 @@
     --header-bg: hsl(0,0%,85%);
     /*#841163
      * #115e84*/
-    --title-border-color: #026;
+    --title-border-color: #000;
+    --title-background-color: oklch(0.8776 0 26.97);
     --codeblock-bg: rgb(226,224,222);
     --blockquote-bg: oklch(70% 0.012 296.97);
     /*--blockquote-accent-color: oklch(45% 0.1628 256.77);*/
@@ -119,6 +121,7 @@ a:not(.nav-link) {
 
 main > header {
     border: 0.7rem solid var(--title-border-color);
+    background: var(--title-background-color);
 }
 
 blockquote {
