@@ -40,6 +40,61 @@ This situation was not helped by me getting sick on the last week but thankfully
 
 ## Tour of the code
 
+[Link to directory with code](https://github.com/bucs445spring2025/portfolio-team4/tree/main/src)
+
+In short the code is a mess.
+
+### `src/client/*`
+
+I don't understand anything here, I didn't write anything here and had little involvement in it's creation so I don't have any comments on it.
+
+### `src/data/azure_function_timer/*`
+
+This is code I wrote when I naively intended to do so much more with this project.
+
+Specifically it's most of the work needed to poll the university buses data from a live map's API.
+
+I was planning on gathering the data to do some machine learning to predict bus arrival times, this never ended up happening.
+
+### `src/reverse-proxy/*`
+
+Here lives the files for a caddy docker container which reverse proxies
+
+### `src/server/*`
+
+Here lives all the files for our API backend which... put simply I didn't work on this fast enough resulting in this code doing nothing useful to the end project.
+
+#### `src/server/data/*` and `src/server/usable_gtfs/*`
+
+Here lives static source data from the university bus system and the local county's bus system and my various attempts to deal with them.
+
+GTFS is a file format google specified to allow transit angencies to describe how their transit systems work in a computer readable way.
+If your local municipality has a transit system and you want to work with it via a computer program check to see if they just publish GTFS data for free with a quick search.
+
+#### `src/server/stops/*` and `src/server/trips/*`
+
+This... is bad.
+My idea with these files is that they'd just be something I generate once from the aforementioned static data commit to source control and then never touch again, able to serve static files over the network for most of the API (designing the API appropriately).
+
+That was foolish, the only things that should've been checked in were the source data and the code which turned that into the desired format with either a build or a startup step being used to generate these files.
+This decision caused headaches like "$base_domain" and being really reluctant to ever make changes to formats for the api.
+
+Hopefully this is a mistake I will only make with one project.
+
+I don't remember why `src/server/GET_STOPS.json` and `src/server/GET_routes.json` exist but I think they are the same idea with the same problem.
+
+#### `src/server/Dockerfile`, `src/deno.json`
+
+Files for tools used for development.
+
+#### `src/server/TODO.md`
+
+reading this file I can only laugh.
+
+#### `src/server/graph.ts` and `src/server/cypher-shell`
+
+
+
 ### Misc trouble
 
 The friend uses a Windows laptop the class requires Docker (and I prefer it) this combination led to some annoyances for both of us.
