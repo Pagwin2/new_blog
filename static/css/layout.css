@@ -142,6 +142,9 @@ header#header {
     width: 100vw;
     padding: 0.5em 1em;
 }
+article {
+    max-width: 66ch;
+}
 main {
     box-sizing: border-box;
     display: block flex;
@@ -154,10 +157,11 @@ main {
     /*https://pearsonified.com/golden-ratio-typography-intro/*/
     /*https://grtcalculator.com/*/
     /*or maybe not, https://en.wikipedia.org/wiki/Line_length#Electronic_text*/
-    max-width: 66ch;
 
     & > header {
+        box-sizing: border-box;
         padding: 0rem 1rem;
+        max-width: 66ch;
     }
 
     /* needed due to being flex itself*/
@@ -169,9 +173,9 @@ main {
 
 }
 header#article-header {
-    max-width: -moz-available;
+    /*max-width: -moz-available;
     max-width: -webkit-fill-available;;
-    max-width: fill-available;
+    max-width: fill-available;*/
     display: block flex;
     flex-direction:column;
     /* put things in center*/
@@ -185,9 +189,6 @@ dl {
     max-width: fill-available;
 }
 article {
-    max-width: -moz-available;
-    max-width: -webkit-fill-available;;
-    max-width: fill-available;
     display: block flex;
     flex-direction:column;
     /* put things in center*/
@@ -259,6 +260,7 @@ footer {
 @layer pre-load{
     main > header {
         border: 0.7rem solid transparent;
+
     }
 }
 /* I mean why not? */
