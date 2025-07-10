@@ -174,7 +174,7 @@ main {
 }
 header#article-header {
     /*max-width: -moz-available;
-    max-width: -webkit-fill-available;;
+    max-width: -webkit-fill-available;
     max-width: fill-available;*/
     display: block flex;
     flex-direction:column;
@@ -185,7 +185,7 @@ header#article-header {
 }
 dl {
     max-width: -moz-available;
-    max-width: -webkit-fill-available;;
+    max-width: -webkit-fill-available;
     max-width: fill-available;
 }
 article {
@@ -220,7 +220,7 @@ blockquote {
 /* all of these can break out of the box we want to put them in*/
 .sourceCode, object, :has(> object), img, :has(> img), pre{
     max-width: -moz-available;
-    max-width: -webkit-fill-available;;
+    max-width: -webkit-fill-available;
     max-width: fill-available;
     width: fit-content;
 }
@@ -276,6 +276,15 @@ main {
 pre {
     page-break-inside: avoid;
     text-wrap: wrap;
+}
+iframe, video {
+    display: none;
+}
+section {
+    break-inside: avoid;
+}
+:is(h1,h2,h3,h4,h5):has(+iframe), :is(h1,h2,h3,h4,h5):has(+video) {
+    display: none;
 }
 .socials {
     display: none;
