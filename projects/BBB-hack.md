@@ -4,7 +4,8 @@ See also: [My blog post on HackBU 2024](/posts/HackBU2024/)
 
 ## The what
 
-Binghamton better bus in both of it's iterations is a web app to find a route from point to point in Binghamton using both the Broome county bus system as well as the OCCT bus system.
+Binghamton better bus in both of it's iterations is a web app to find a route from point to point in Binghamton using both the Broome County bus system as well as the OCCT bus system.
+
 The HackBU iteration made use of the live maps available (at the time) to acquire the needed information about the bus systems.
 
 In the 24 hour hackathon I was able to get a setup where I could input a start and endpoint and get a route which could be a layover at Binghamton University, the downtown bus terminal or in theory no layover with a single bus.
