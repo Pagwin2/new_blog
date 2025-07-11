@@ -212,7 +212,7 @@ That said I need to lay some ground work for our next abstraction so here's some
 
 ## Procedures as data
 
-There are 2 ways to interpret what I just wrote.
+There are 2 ways to interpret the subtilte of this section.
 
 1. You can put a procedure in a variable or argument and call it from that variable or argument
 2. In addition to the first point you can manipulate procedures like any other data such as numbers or lists
@@ -502,7 +502,7 @@ iterableList <- {
     underlying: [1,2,3],
     currentIndex: 0,
     nextItem: PROC(&self) {
-        "self how has & prefixed to it"
+        "self now has & prefixed to it"
 
         tmpIndex <- self.currentIndex
         self.currentIndex <- self.currentIndex + 1
