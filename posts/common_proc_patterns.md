@@ -529,7 +529,7 @@ many languages take this further by making `self` a magic argument name that cau
 
 In addition other languages will frequently allow for storing references to modify variables later.
 
-For our purposes neither of those additions are necessary so we won't add them.
+For our purposes none of those additions are necessary so we won't add them.
 
 ## Minor pain point fix
 
