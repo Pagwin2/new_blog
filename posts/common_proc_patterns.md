@@ -576,7 +576,7 @@ evenNumberIter <- {
 
 This iterator will emit values forever, which is fine, if we only want to have some of those values without getting stuck in a loop we can manually use `nextItem`, `FOREACH` is just a convenience not a necessity.
 
-Here's something a bit meta, we can make an iterator which takes a different iterator and loops it forever (side effects of the original iterator will not be repeated) if iterator has anything.
+Here's something a bit meta, we can make an iterator which takes a different iterator and loops it forever (side effects of the original iterator will not be repeated).
 
 ```
 PROC makeLoop(originalIterator) {
