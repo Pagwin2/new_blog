@@ -1,4 +1,5 @@
 @layer pre-load, reset, baseline, overload-1, print;
+@import url("/static/css/reset.css") layer(reset);
 
 /*
  * saving this for when doing a table of contents, position: sticky isn't good enough
@@ -13,7 +14,6 @@
 }
  * */
 
-@import url("/static/css/reset.css") layer("reset")
 
 @layer overload-1{
 dt{
