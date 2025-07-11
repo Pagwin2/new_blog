@@ -1,4 +1,4 @@
-@layer pre-load, baseline, overload-1, print;
+@layer pre-load, reset, baseline, overload-1, print;
 
 /*
  * saving this for when doing a table of contents, position: sticky isn't good enough
@@ -12,6 +12,8 @@
   min-width:200px;
 }
  * */
+
+@import url("/static/css/reset.css") layer("reset")
 
 @layer overload-1{
 dt{
