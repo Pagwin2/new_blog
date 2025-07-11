@@ -257,6 +257,11 @@ footer {
     /*width:100%;*/
 }
 
+p, ul, ol {
+    /*need to take up full width for alignment reasons*/
+    width: 100%;
+}
+
 }
 /* we really want to make sure this doesn't stick around when colors load in regardless of when/how colors get loaded in*/
 @layer pre-load{
