@@ -10,6 +10,8 @@ See also:
 
 Binghamton better bus in both of it's iterations is a web app to find a route from point to point in Binghamton using both the Broome County bus system as well as the OCCT bus system.
 
+V2 is basically the same as the hackthon version but done over a semester for a class instead of just 24 hours for a hackathon (see the links).
+
 However it manages bus route data differently than the hackathon version.
 The OCCT data still came from the live map api however rather than making a request every time data was needed this iteration simply had the JSON data from some responses saved and used that.
 The Broome County data came from GTFS that Broome County makes publically available. Note: the live map provider for Broome County disappeared between the HackBU iteration and the start of this iteration.
