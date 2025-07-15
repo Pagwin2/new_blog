@@ -109,4 +109,4 @@ I just need to bring it into docker, write tests for as much stuff as possible a
 
 ## Conclusion
 
-To Be Written
+[Has been written in a separate post](/posts/soft-eng-project-retro/)
