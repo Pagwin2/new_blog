@@ -21,7 +21,7 @@ The end result of this project was a system where start and endpoints could be i
 ## What was learned
 
 1) **anything which is the output of a program should not be checked into the version control system** that output is a build artifact, something which should be generated on/pre startup or something which should be generated on demand.
-2) Barring genuinely hard problems the first unit (probably week) of work on a project should be scoped to whatever the MVP is.
+2) Barring genuinely hard problems the first unit (most of the time a week) of work on a project should be scoped to whatever the MVP is.
 3) If I'm working in a team which I want to get things done and nobody has taken charge by the end of the first unit of work I need to take charge.
 4) If in a team where I'm in charge I should never assume responsiveness (responding to communication and getting work done) from any team member regardless of prior knowledge.
 

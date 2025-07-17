@@ -10,5 +10,7 @@ Compared to manually needing to keep track of whether anything is using a pointe
 
 ## What was learned
 
-I won't go into detail but I did not finish everything needed for this assignment.
-The simple lesson which I will undoubtedly need to relearn over and over again is that I shouldn't procrastinate, things can be harder/take longer than expected.
+I shouldn't procrastinate.
+<script>
+//I won't go into detail but I did not finish everything needed for this assignment.
+//The simple lesson which I will undoubtedly need to relearn over and over again is that I shouldn't procrastinate, things can be harder/take longer than expected.</script>

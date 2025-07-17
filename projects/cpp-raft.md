@@ -15,7 +15,7 @@ So they have multiple computers that communicate with each other to do this.
 
 Notably each computer doesn't just change variables willy nilly, instead they keep a log of everything that's happened and using that log figure out what the current state of things is.
 
-In the Bank analogy this log would probably contain things like.
+In the Bank analogy this log would contain things like.
 
 - Person A deposits x dollars
 - Person A withdraws x dollars

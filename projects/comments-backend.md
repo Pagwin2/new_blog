@@ -8,4 +8,4 @@ If I remember correctly this was intended to use HTMX to minimize the need for p
 
 ## What was learned
 
-At the time besides probably realizing that I should've had the service use an SMTP connection instead of some specific API and with hindsight that I should've used sqlite rather than PostgreSQL for that project.
+At the time besides realizing that I should've had the service use an SMTP connection instead of some specific API and with hindsight that I should've used sqlite rather than PostgreSQL for that project.

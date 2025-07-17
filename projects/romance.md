@@ -8,5 +8,5 @@ I also had time to build a not great looking web ui for it.
 
 ## What was learned
 
-This is probably one of the earlier instances of me working on something with a very tight deadline where I found that constraint made me worke more effieciently than I normally do.
+This is one of the earlier instances of me working on something with a very tight deadline where I found that constraint made me worke more effieciently than I normally do.
 This takeaway is something which I don't think I've fully internalized yet but it is something I will occasionally stumble into under the right circumstances.
