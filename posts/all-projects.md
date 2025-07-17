@@ -70,8 +70,8 @@ layover in statically set hubs but didn’t factor in Bus direction.</p>
 checked into the version control system</strong> that output is a build
 artifact, something which should be generated on/pre startup or
 something which should be generated on demand.</li>
-<li>Barring genuinely hard problems the first unit (probably week) of
-work on a project should be scoped to whatever the MVP is.</li>
+<li>Barring genuinely hard problems the first unit (most of the time a
+week) of work on a project should be scoped to whatever the MVP is.</li>
 <li>If I’m working in a team which I want to get things done and nobody
 has taken charge by the end of the first unit of work I need to take
 charge.</li>
@@ -126,10 +126,9 @@ to email being annoying and deciding that comments didn’t add much.</p>
 <p>If I remember correctly this was intended to use HTMX to minimize the
 need for page reloads without needing a bunch of javascript.</p>
 <h2 id="what-was-learned">What was learned</h2>
-<p>At the time besides probably realizing that I should’ve had the
-service use an SMTP connection instead of some specific API and with
-hindsight that I should’ve used sqlite rather than PostgreSQL for that
-project.</p>
+<p>At the time besides realizing that I should’ve had the service use an
+SMTP connection instead of some specific API and with hindsight that I
+should’ve used sqlite rather than PostgreSQL for that project.</p>
 </section>
 <section>
 <h1 id="raft-implemention-in-c">Raft implemention in C++</h1>
@@ -149,7 +148,7 @@ other to do this.</p>
 <p>Notably each computer doesn’t just change variables willy nilly,
 instead they keep a log of everything that’s happened and using that log
 figure out what the current state of things is.</p>
-<p>In the Bank analogy this log would probably contain things like.</p>
+<p>In the Bank analogy this log would contain things like.</p>
 <ul>
 <li>Person A deposits x dollars</li>
 <li>Person A withdraws x dollars</li>
@@ -214,10 +213,10 @@ something on the heap and a counter to track how many
 hits 0 the pointer is freed. Compared to manually needing to keep track
 of whether anything is using a pointer it’s reasonably nice.</p>
 <h2 id="what-was-learned">What was learned</h2>
-<p>I won’t go into detail but I did not finish everything needed for
-this assignment. The simple lesson which I will undoubtedly need to
-relearn over and over again is that I shouldn’t procrastinate, things
-can be harder/take longer than expected.</p>
+I shouldn’t procrastinate.
+<script>
+//I won't go into detail but I did not finish everything needed for this assignment.
+//The simple lesson which I will undoubtedly need to relearn over and over again is that I shouldn't procrastinate, things can be harder/take longer than expected.</script>
 </section>
 <section>
 <h1 id="fraction-generator">Fraction Generator</h1>
@@ -278,12 +277,11 @@ hackathon. If I remember correctly it was a git hook which read a config
 file to figure out which docker container(s) to run. I also had time to
 build a not great looking web ui for it.</p>
 <h2 id="what-was-learned">What was learned</h2>
-<p>This is probably one of the earlier instances of me working on
-something with a very tight deadline where I found that constraint made
-me worke more effieciently than I normally do. This takeaway is
-something which I don’t think I’ve fully internalized yet but it is
-something I will occasionally stumble into under the right
-circumstances.</p>
+<p>This is one of the earlier instances of me working on something with
+a very tight deadline where I found that constraint made me worke more
+effieciently than I normally do. This takeaway is something which I
+don’t think I’ve fully internalized yet but it is something I will
+occasionally stumble into under the right circumstances.</p>
 </section>
 <section>
 <h1 id="small-echo">Small echo</h1>
