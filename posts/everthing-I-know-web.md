@@ -63,11 +63,60 @@ Now you may be wondering?
 
 Anyways.
 
+### HTTP body
+
+The HTTP body is the main content of a response.
+
+The file content, the API respose, etc.
+
 ### HTTP trailers
 
 HTTP trailers are pretty obscure.
 If they weren't used for [Server-Timing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Server-Timing) debugging information (based on MDN) and gRPC nobody would use them.
 
+My understanding is that they are HTTP headers which in the TCP/TLS/QUIC socket connection come after the HTTP body
+
 ## HTML
 
+Platonically ideal HTML exists to communicate content in a way which computers can understand which web browsers then translate into something humans can interpret and interact with.
 
+HTML is a text format which looks like the following.
+
+```html
+<html>
+    <!--whitespace in HTML is janky but this example behaves the way you'd expect-->
+    <head></head>
+
+    <body>
+        <h1 id="greeting">hello</h1>
+    </body>
+</html>
+```
+
+I am not going to go into the details of every single tag, all I'll say is that barring tags like `div`, `span` and anything custom, tags generally convey useful information about their contents which are mainly used by screen readers and search engines but can be used by anything else.
+
+I will try to explain my understanding of `head` and `body` though
+
+### The `head` Tag
+
+The `head` tag is for information which doesn't exist primarily to be shown in the main view.
+
+It has the web page's title, various metadata for things like RSS feed(s), the text encoding being used, CSS stylesheets and social media embed information.
+
+That isn't to say you can't make stuff in `head` visible in the main view or that all of those things can only be done in `head`.
+However you shouldn't make stuff in `head` visible in the main view and should do those things in `head` if you can.
+
+There are situations where that isn't an option but those situations involve needing to run code when the page is done loading and have the page work on old browsers.
+Reason that trick would be necessary is that browsers will (barring certain element attributes) process HTML in the order it appears in.
+
+### The `body` Tag
+
+The `body` tag is where all the fun human visible stuff should go.
+
+That doesn't mean it's all visible to humans though.
+
+### HTML is not XML
+
+Forgetting that will lead to footguns like `<video src="..." />` making certain tags their children even though you didn't want them to.
+
+The slash doesn't do anything for elements you can omit a closing tag from either, `<img src="...">` is just fine.
