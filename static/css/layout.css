@@ -146,6 +146,7 @@ header#header {
 }
 article {
     max-width: 66ch;
+    width: 100%;
 }
 main {
     box-sizing: border-box;
@@ -164,6 +165,7 @@ main {
         box-sizing: border-box;
         padding: 0rem 1rem;
         max-width: 66ch;
+        width: 100%;
     }
 
     /* needed due to being flex itself*/
