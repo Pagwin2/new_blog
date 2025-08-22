@@ -1,3 +1,10 @@
 self.addEventListener("fetch", event =>{
-    event.respondWith(new Response("hi"));
+    
+    event.respondWith((async ()=>{
+        const resp = await fetch(event.request);
+        const body = await resp.body.text();
+        new Response(body.replace("<body>", '<body class="toggled">'), {
+            ...resp
+        });
+    })());
 })
