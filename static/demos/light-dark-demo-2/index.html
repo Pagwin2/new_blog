@@ -6,42 +6,44 @@
 
     <title>Demo of the simplest implementation of a light/dark theme toggle</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 </head>
 
 <body>
     <style>
         @media (prefers-color-scheme: light) {
-            body {
-                color: black;
-                background: white;
-                --button-bg: #888;
+            :root {
+                --pico-color: black;
+                --pico-background-color: white;
             }
 
-            body.toggled {
-                color: white;
-                background: black;
-                --button-bg: #888;
+            :root:has(body.toggled) {
+                --pico-color: white;
+                --pico-background-color: black;
 
             }
         }
 
         @media (prefers-color-scheme: dark) {
-            body {
-                color: white;
-                background: black;
-                --button-bg: #888;
+            :root {
+                --pico-color: white;
+                --pico-background-color: black;
             }
 
-            body.toggled {
-                color: black;
-                background: white;
-                --button-bg: #888;
+            :root:has(body.toggled) {
+                --pico-color: black;
+                --pico-background-color: white;
             }
         }
 
         button {
-            color: inherit;
-            background: var(--button-bg);
+            transition-duration: 0.05s;
+            transition-property: outline;
+            transition-delay: 0s;
+        }
+
+        button:active {
+            outline: turquoise 5px solid;
         }
     </style>
     <script>
