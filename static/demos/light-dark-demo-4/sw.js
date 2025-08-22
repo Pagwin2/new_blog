@@ -2,7 +2,7 @@ self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
   
   // Only handle /set-theme endpoint
-  if (url.pathname === '/set-theme') {
+  if (url.pathname.endsWith('/set-theme')) {
     event.respondWith(handleThemeToggle(event.request));
   }
   // For all other requests, let the browser handle them normally
