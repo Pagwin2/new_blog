@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Demo of the simplest implementation of a light/dark theme toggle</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+
+<body>
+    <style>
+        @media (prefers-color-scheme: light) {
+            :root {
+                --pico-color: black;
+                --pico-background-color: white;
+            }
+
+            :root:has(body.toggled) {
+                --pico-color: white;
+                --pico-background-color: black;
+
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --pico-color: white;
+                --pico-background-color: black;
+            }
+
+            :root:has(body.toggled) {
+                --pico-color: black;
+                --pico-background-color: white;
+            }
+        }
+
+        button {
+            transition-duration: 0.05s;
+            transition-property: outline;
+            transition-delay: 0s;
+        }
+
+        button:active {
+            outline: turquoise 5px solid;
+        }
+    </style>
+    <script type="module">
+        function toggleTheme(e) {
+            e.preventDefault();
+
+            if (!document.body.classList.contains("toggled")) {
+                document.body.classList.add("toggled")
+                localStorage.setItem("toggled-theme", "yes");
+            }
+            else {
+                document.body.classList.remove("toggled")
+                localStorage.setItem("toggled-theme", "no");
+            }
+        }
+        window.addEventListener("load", () => {
+            document
+                .getElementById("full-demo")
+                .addEventListener("click", toggleTheme);
+        });
+
+        await navigator.serviceWorker.register("sw.js");
+    </script>
+    <p>Here is some example text</p>
+    <form action="" method="get">
+        <input id="full-demo" type="submit" value="Fully enhanced demo">
+    </form>
+    <form action="" method="get">
+        <input id="min-demo" type="submit" value="No javascript simulation">
+    </form>
+</body>
+
+</html>
