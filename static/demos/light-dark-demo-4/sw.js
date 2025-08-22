@@ -1,3 +1,3 @@
 self.addEventListener("fetch", event =>{
-    event.respondWith("hi");
+    event.respondWith(new Response("hi"));
 })
