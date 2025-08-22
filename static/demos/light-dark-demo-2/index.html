@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Demo of the simplest implementation of a light/dark theme toggle</title>
+
+</head>
+
+<body>
+    <style>
+        @media (prefers-color-scheme: light) {
+            body {
+                color: black;
+                background: white;
+                --button-bg: #888;
+            }
+
+            body.toggled {
+                color: white;
+                background: black;
+                --button-bg: #888;
+
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: white;
+                background: black;
+                --button-bg: #888;
+            }
+
+            body.toggled {
+                color: black;
+                background: white;
+                --button-bg: #888;
+            }
+        }
+
+        button {
+            color: inherit;
+            background: var(--button-bg);
+        }
+    </style>
+    <script>
+        function toggleTheme() {
+            if (!document.body.classList.contains("toggled")) {
+                document.body.classList.add("toggled")
+                localStorage.setItem("toggled-theme", "yes");
+            }
+            else {
+                document.body.classList.remove("toggled")
+                localStorage.setItem("toggled-theme", "no");
+            }
+        }
+        if (localStorage.getItem("toggled-theme") === "yes") {
+            document.body.classList.add("toggled");
+        }
+        console.log(localStorage.getItem("toggled-theme") === "yes");
+    </script>
+    <p>This is a basic demo, it needs Javascript to make the button work</p>
+    <button onclick="toggleTheme()">Toggle the theme</button>
+</body>
+
+</html>

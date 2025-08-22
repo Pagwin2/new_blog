@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Demo of the simplest implementation of a light/dark theme toggle</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+
+<body>
+    <style>
+        @media (prefers-color-scheme: light) {
+            :root {
+                --pico-color: black;
+                --pico-background-color: white;
+                --button-bg: #888;
+            }
+
+            :root:has(#light-dark-toggle:checked) {
+                --pico-color: white;
+                --pico-background-color: black;
+                --button-bg: #888;
+
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --pico-color: white;
+                --pico-background-color: black;
+                --button-bg: #888;
+            }
+
+            :root:has(#light-dark-toggle:checked) {
+                --pico-color: black;
+                --pico-background-color: white;
+                --button-bg: #888;
+            }
+        }
+
+        label {
+            display: inline;
+        }
+
+        p {
+            max-width: 65ch;
+        }
+    </style>
+    <p>This is a basic demo, unlike the other demos it doesn't need javascript to work, Pico CSS was used for some basic
+        styling but this technique works without it</p>
+    <label for="light-dark-toggle">Toggle alt themeing:</label> <input name="light-dark-toggle" id="light-dark-toggle"
+        type="checkbox" role="switch">
+</body>
+
+</html>
