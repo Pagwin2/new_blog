@@ -156,7 +156,7 @@ looks good at first glance(actual version code quality is bad but blog version s
 
 <video width="700" height="400" controls src="/static/video/frac_gen_v2.mp4"></video>
 
-Oh... we run out of memory... or well we run out of 30 gigabytes of memory because I set a limit to avoid effecting the other stuff running on the server(because it isn't mine). But why? Doing the math if all we had to deal with was the fractions we'd be using about `17501876*4/1000**3 ~ 0.07 GB`, if we include the overhead of all the Vecs we make and are pretty agressive with how much memory they use maybe 0.21 GB which is a difference of over 142x. So what's the rest of the memory?
+Oh... we run out of memory... or well we run out of 30 gigabytes of memory because I set a limit to avoid affecting the other stuff running on the server(because it isn't mine). But why? Doing the math if all we had to deal with was the fractions we'd be using about `17501876*4/1000**3 ~ 0.07 GB`, if we include the overhead of all the Vecs we make and are pretty agressive with how much memory they use maybe 0.21 GB which is a difference of over 142x. So what's the rest of the memory?
 
 Well... I'm not 100% sure actually but my current best guess is the green threads/tokio tasks. Whatever it is on average it seems to have memory usage measured in hundreds of bytes and/or a kilobyte or 2 roughly doing a bit of quick math(I just divided 30GB/num_of_running_tasks). So I guess I gotta take out the green thread usage huh.
 
