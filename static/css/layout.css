@@ -145,8 +145,13 @@ header#header {
     padding: 0.5em 1em;
 }
 article {
-    max-width: 66ch;
+    max-width: min(66ch, 100vw);
     width: 100%;
+    padding: 1rem;
+}
+video, img {
+    max-width: -moz-available;
+    max-width: fill-available;
 }
 main {
     box-sizing: border-box;
