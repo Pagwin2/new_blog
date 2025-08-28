@@ -36,6 +36,7 @@ body {
     /*make the width and scrolling behavior correct
      * If horizontal scrolling is needed the layout broke*/
     width: 100vw;
+    width: 100svw;
     overflow: hidden scroll;
 }
 
@@ -142,10 +143,12 @@ header#header {
     align-items: center;
     justify-content: space-between;
     width: 100vw;
+    width: 100svw;
     padding: 0.5em 1em;
 }
 article {
     max-width: min(66ch, 100vw);
+    max-width: min(66ch, 100svw);
     width: 100%;
     padding: 1rem;
 }
