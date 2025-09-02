@@ -88,7 +88,7 @@ async function handle_html(req, resp, body){
             transaction.objectStore("light-dark-store", "readwrite");
             toggleLightDark(transaction);
             const grab = obj_store.get(1);
-            grab.onsuccess event => res(!!event.result);
+            grab.onsuccess = (event) => {res(!!event.result)};
         };
     });
 
