@@ -8,10 +8,10 @@ self.addEventListener("fetch", event =>{
         const body = await resp.text();
         const url = new URL(event.request.url);
         if(url.pathname.endsWith("light-dark-toggle")){
-            return await handle_redirect(req);
+            return await handle_redirect(event.request);
         }
         else {
-            return await handle_html(req,resp);
+            return await handle_html(event.request,resp);
         }
     })());
 })
