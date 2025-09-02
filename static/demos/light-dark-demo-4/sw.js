@@ -22,8 +22,7 @@ async function handle_redirect(req){
     const up_promise = new Promise((res)=>{
         db_req.onupgradeneeded = (event) => {
             const db = event.target.result;
-            await IDB_cond_create(db, "light-dark-store", {});
-            res();
+            IDB_cond_create(db, "light-dark-store", {}).then(res);
         }
     };
     const suc_promise = new Promise((res)=>{
