@@ -85,8 +85,7 @@ async function handle_html(req, resp, body){
             const transaction = db.transaction("light-dark-store");
             transaction.oncomplete = res;
 
-            transaction.objectStore("light-dark-store", "readwrite");
-            toggleLightDark(transaction);
+            const obj_store = transaction.objectStore("light-dark-store", "read");
             const grab = obj_store.get(1);
             grab.onsuccess = (event) => {res(!!event.result)};
         };
