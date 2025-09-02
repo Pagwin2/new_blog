@@ -49,6 +49,7 @@ function IDB_cond_create(db, objectStoreName, opts={}){
     return new Promise((res)=>{
         if(!db.objectStoreNames.contains(objectStoreName)){
             db.createObjectStore(objectStoreName, opts);
+        }
         res();
     });
 }
