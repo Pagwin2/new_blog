@@ -11,7 +11,7 @@ self.addEventListener("fetch", event =>{
             return await handle_redirect(event.request);
         }
         else {
-            return await handle_html(event.request,resp);
+            return await handle_html(event.request,resp, body);
         }
     })());
 })
@@ -71,17 +71,27 @@ function toggleLightDark(transaction){
     });
 }
 
-async function handle_html(req, resp){
-    // TODO: read from indexDB to figure out if we fiddle with the body classes or not
-    const obj_store = transaction.objectStore("light-dark-store");
-    const grab = obj_store.get(1);
-    const toggled = await (new Promise((res)=>{
-        grab.onsuccess = (event)=>{
-            const val = event.result;
-            const toggled = !!val;
-            res(toggled);
+async function handle_html(req, resp, body){
+    const db_req = self.indexedDB.open("light-dark-store");
+    const up_promise = new Promise((res)=>{
+        db_req.onupgradeneeded = (event) => {
+            const db = event.target.result;
+            IDB_cond_create(db, "light-dark-store", {}).then(res);
         }
-    }));
+    });
+    const toggled = await new Promise((res)=>{
+        db_req.onsuccess = (event) => {
+            const db = event.target.result;
+            const transaction = db.transaction("light-dark-store");
+            transaction.oncomplete = res;
+
+            transaction.objectStore("light-dark-store", "readwrite");
+            toggleLightDark(transaction);
+            const grab = obj_store.get(1);
+            grab.onsuccess event => res(!!event.result);
+        };
+    });
+
     if(!toggled) return resp;
 
     return new Response(body.replace("<body>", '<body class="toggled">'), {
