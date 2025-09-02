@@ -6,10 +6,13 @@ self.addEventListener("fetch", event =>{
     event.respondWith((async ()=>{
         const resp = await fetch(event.request);
         const body = await resp.text();
-        return new Response(body.replace("<body>", '<body class="toggled">'), {
-            headers:resp.headers,
-            status: resp.status
-        });
+        const url = new URL(event.request.url);
+        if(url.pathname.endsWith("light-dark-toggle")){
+            return await handle_redirect(req);
+        }
+        else {
+            return await handle_html(req,resp);
+        }
     })());
 })
 
@@ -34,7 +37,14 @@ async function handle_redirect(req){
             transaction.commit();
         };
     };
-    await Promise.all([up_promise, suc_promise])
+    await Promise.all([up_promise, suc_promise]);
+    const referrer = request.headers.get('Referer') || '/';
+    return new Response("You should be getting redirected back to the page you came from shortly",{
+        status: 302,
+        headers: {
+            'Location': referrer
+        }
+    })
 }
 function IDB_cond_create(db, objectStoreName, opts={}){
     return new Promise((res)=>{
@@ -61,6 +71,21 @@ function toggleLightDark(transaction){
     });
 }
 
-async function handle_html(req){
+async function handle_html(req, resp){
     // TODO: read from indexDB to figure out if we fiddle with the body classes or not
+    const obj_store = transaction.objectStore("light-dark-store");
+    const grab = obj_store.get(1);
+    const toggled = await (new Promise((res)=>{
+        grab.onsuccess = (event)=>{
+            const val = event.result;
+            const toggled = !!val;
+            res(toggled);
+        }
+    }));
+    if(!toggled) return resp;
+
+    return new Response(body.replace("<body>", '<body class="toggled">'), {
+            headers:resp.headers,
+            status: resp.status
+        });
 }
