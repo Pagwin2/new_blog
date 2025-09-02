@@ -24,7 +24,7 @@ async function handle_redirect(req){
             const db = event.target.result;
             IDB_cond_create(db, "light-dark-store", {}).then(res);
         }
-    };
+    });
     const suc_promise = new Promise((res)=>{
         db_req.onsuccess = (event) => {
             const db = event.target.result;
