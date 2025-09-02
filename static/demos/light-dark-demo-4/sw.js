@@ -35,7 +35,7 @@ async function handle_redirect(req){
             toggleLightDark(transaction);
             transaction.commit();
         };
-    };
+    });
     await Promise.all([up_promise, suc_promise]);
     const referrer = request.headers.get('Referer') || '/';
     return new Response("You should be getting redirected back to the page you came from shortly",{
@@ -43,7 +43,7 @@ async function handle_redirect(req){
         headers: {
             'Location': referrer
         }
-    })
+    });
 }
 function IDB_cond_create(db, objectStoreName, opts={}){
     return new Promise((res)=>{
