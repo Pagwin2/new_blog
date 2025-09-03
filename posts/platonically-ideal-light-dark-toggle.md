@@ -21,13 +21,15 @@ So I thought it'd be interesting to explore these tradeoffs and throw my own hat
 
 ## The Obvious Way
 
-[demo]()
+[demo](/static/demos/light-dark-demo-1)
+
+The obvious way to attempt a toggle between light and dark mode is 
 
 ## A Suboptimal Solution
 
 A trick from from [](https://www.joshwcomeau.com/react/dark-mode/)
 
-[demo]()
+[demo](/static/demos/light-dark-demo-2)
 
 
 ## An Ideal Stateless Toggle

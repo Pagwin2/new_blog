@@ -22,6 +22,15 @@ self.addEventListener("fetch", event =>{
 async function handle_redirect(req){
     const go_back_to = req.headers.get('Referer') || '/';;
     const db_req = self.indexedDB.open("light-dark-store");
+
+    db_req.onerror = (event) => {
+            console.error("Database error:", event);
+            resolve(new Response("Database error", {
+                status: 302,
+                headers: { 'Location': go_back_to }
+            }));
+        };
+
     const up_promise = new Promise((res)=>{
         db_req.onupgradeneeded = (event) => {
             const db = event.target.result;
