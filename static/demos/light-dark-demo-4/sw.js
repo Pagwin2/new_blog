@@ -25,7 +25,7 @@ async function handle_redirect(req){
     const up_promise = new Promise((res)=>{
         db_req.onupgradeneeded = (event) => {
             const db = event.target.result;
-            IDB_cond_create(db, "light-dark-store", {keyPath: 'id'}).then(res);
+            IDB_cond_create(db, "light-dark-store", {}).then(res);
         }
     });
     const suc_promise = new Promise((res)=>{
@@ -83,7 +83,6 @@ async function handle_html(req, resp, body){
         db_req.onsuccess = (event) => {
             const db = event.target.result;
             const transaction = db.transaction("light-dark-store");
-            transaction.oncomplete = res;
 
             const obj_store = transaction.objectStore("light-dark-store", "readonly");
             const grab = obj_store.get(1);
