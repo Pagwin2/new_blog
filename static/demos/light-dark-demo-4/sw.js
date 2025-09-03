@@ -31,7 +31,7 @@ async function handle_redirect(req){
     const suc_promise = new Promise((res)=>{
         db_req.onsuccess = (event) => {
             const db = event.target.result;
-            const transaction = db.transaction("light-dark-store");
+            const transaction = db.transaction("light-dark-store", "readwrite");
             transaction.oncomplete = res;
 
             transaction.objectStore("light-dark-store", "readwrite");
@@ -89,7 +89,7 @@ async function handle_html(req, resp, body){
             const transaction = db.transaction("light-dark-store");
             transaction.oncomplete = res;
 
-            const obj_store = transaction.objectStore("light-dark-store", "read");
+            const obj_store = transaction.objectStore("light-dark-store", "readonly");
             const grab = obj_store.get(1);
             grab.onsuccess = (event) => {res(!!event.result)};
         };
