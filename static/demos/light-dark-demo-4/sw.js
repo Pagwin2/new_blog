@@ -63,15 +63,18 @@ function toggleLightDark(transaction){
     return new Promise((res)=>{
         const obj_store = transaction.objectStore("light-dark-store");
         const grab = obj_store.get(1);
+        grab.onerror = ()=>{console.error("grab error");res();};
         grab.onsuccess = (event)=>{
             const val = event.result;
             if(val){
                 const yeet = obj_store.delete(1);
                 yeet.onsuccess = res;
+                yeet.onerror = ()=>{console.error("yeet error");res();};
             }
             else {
                 const plonk = obj_store.add({id:1}, 1);
                 plonk.onsuccess = res;
+                plonk.onerror = ()=>{console.error("plonk error");res();};
             }
         }
     });
