@@ -34,8 +34,9 @@ async function handle_redirect(req){
             transaction.oncomplete = res;
 
             transaction.objectStore("light-dark-store", "readwrite");
-            toggleLightDark(transaction);
-            transaction.commit();
+            toggleLightDark(transaction)
+                .then(transaction.commit.bind(transaction))
+                .then(res);
         };
     });
     await Promise.all([up_promise, suc_promise]);
