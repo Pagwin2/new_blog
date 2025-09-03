@@ -66,7 +66,7 @@ function toggleLightDark(transaction){
         grab.onerror = ()=>{console.error("grab error");res();};
         grab.onsuccess = (event)=>{
             const val = event.result;
-            console.log(val);
+            console.log("Val is: ",val);
             if(val){
                 const yeet = obj_store.delete(1);
                 yeet.onsuccess = res;
