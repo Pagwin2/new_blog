@@ -68,7 +68,7 @@ function toggleLightDark(transaction){
                 yeet.onsuccess = res;
             }
             else {
-                const plonk = obj_store.add({id:1});
+                const plonk = obj_store.add({id:1}, 1);
                 plonk.onsuccess = res;
             }
         }
