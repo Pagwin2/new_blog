@@ -69,12 +69,12 @@ function toggleLightDark(transaction){
             if(val){
                 const yeet = obj_store.delete(1);
                 yeet.onsuccess = res;
-                yeet.onerror = ()=>{console.error("yeet error");res();};
+                yeet.onerror = (e)=>{console.error("yeet error",e );res();};
             }
             else {
                 const plonk = obj_store.add({id:1}, 1);
                 plonk.onsuccess = res;
-                plonk.onerror = ()=>{console.error("plonk error");res();};
+                plonk.onerror = (e)=>{console.error("plonk error", e);res();};
             }
         }
     });
