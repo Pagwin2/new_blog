@@ -20,7 +20,7 @@ self.addEventListener("fetch", event =>{
 })
 
 async function handle_redirect(req){
-    const go_back_to = req.referrer;
+    const go_back_to = req.headers.get('Referer') || '/';;
     const db_req = self.indexedDB.open("light-dark-store");
     const up_promise = new Promise((res)=>{
         db_req.onupgradeneeded = (event) => {
@@ -40,12 +40,11 @@ async function handle_redirect(req){
                 .then(res);
         };
     });
-    await Promise.all([up_promise, suc_promise]);
-    const referrer = request.headers.get('Referer') || '/';
+    await suc_promise;
     return new Response("You should be getting redirected back to the page you came from shortly",{
         status: 302,
         headers: {
-            'Location': referrer
+            'Location': go_back_to
         }
     });
 }
