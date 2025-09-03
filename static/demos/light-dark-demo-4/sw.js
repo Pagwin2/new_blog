@@ -12,7 +12,7 @@ self.addEventListener("fetch", event =>{
             return await handle_redirect(event.request);
         }
         else {
-            return await handle_html(event.request, resp2, body);
+            return await handle_html(event.request, resp2.clone(), body);
         }
     })());
 })
