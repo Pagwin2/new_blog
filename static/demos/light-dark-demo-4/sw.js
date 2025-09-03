@@ -6,13 +6,14 @@ self.addEventListener("fetch", event =>{
     event.respondWith((async ()=>{
         const resp = await fetch(event.request);
         const resp2 = resp.clone();
+        const resp3 = resp2.clone();
         const body = await resp2.text();
         const url = new URL(event.request.url);
         if(url.pathname.endsWith("light-dark-toggle")){
             return await handle_redirect(event.request);
         }
         else {
-            return await handle_html(event.request, resp2.clone(), body);
+            return await handle_html(event.request, resp3, body);
         }
     })());
 })
