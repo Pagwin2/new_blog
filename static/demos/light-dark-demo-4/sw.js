@@ -34,7 +34,6 @@ async function handle_redirect(req){
             const transaction = db.transaction("light-dark-store", "readwrite");
             transaction.oncomplete = res;
 
-            transaction.objectStore("light-dark-store", "readwrite");
             toggleLightDark(transaction)
                 .then(transaction.commit.bind(transaction))
                 .then(res);
