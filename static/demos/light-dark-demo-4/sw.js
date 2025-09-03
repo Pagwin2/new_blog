@@ -5,13 +5,14 @@ self.addEventListener("fetch", event =>{
     //TODO: make an endpoint to set the localStorage up then set the form to go to there and have it HTTP 302 or 307 with handle_html for html responses and handle_redirect for the other case
     event.respondWith((async ()=>{
         const resp = await fetch(event.request);
-        const body = await resp.text();
+        const resp2 = resp.clone();
+        const body = await resp2.text();
         const url = new URL(event.request.url);
         if(url.pathname.endsWith("light-dark-toggle")){
             return await handle_redirect(event.request);
         }
         else {
-            return await handle_html(event.request,resp, body);
+            return await handle_html(event.request, resp2, body);
         }
     })());
 })
