@@ -73,7 +73,7 @@ function toggleLightDark(transaction){
                 yeet.onerror = (e)=>{console.error("yeet error",e );res();};
             }
             else {
-                const plonk = obj_store.add({id:1}, 1);
+                const plonk = obj_store.put({id:1}, 1);
                 plonk.onsuccess = res;
                 plonk.onerror = (e)=>{console.error("plonk error", e);res();};
             }
