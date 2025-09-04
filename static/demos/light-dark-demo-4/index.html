@@ -76,7 +76,7 @@
     <script type="module">
         function toggleTheme(e) {
             e.preventDefault();
-            fetch('./light-dark-toggle')
+            fetch('./light-dark-toggle?ref=https%3A%2F%2Fpagwin.xyz%2Fstatic%2Fdemos%2Flight-dark-demo-4%2F')
             if (!document.body.classList.contains("toggled")) {
                 document.body.classList.add("toggled")
             }
@@ -92,13 +92,16 @@
 
         await navigator.serviceWorker.register("sw.js");
     </script>
-    <p>Don't copy this code at all, it is for demo purposes only and is terrible code. <span class="red">Note: if you
+    <p>Don't copy this code at all, it is for demo purposes only and is terrible code. <span class="red"><br>Note: if
+            you
             hard refresh you will get your system preference of light/dark due to this demo being powered by a service
             worker</span></p>
     <form action="./light-dark-toggle" method="get">
+        <input type="hidden" name="ref" value="https://pagwin.xyz/static/demos/light-dark-demo-4/">
         <input id="full-demo" type="submit" value="Fully enhanced demo">
     </form>
     <form action="./light-dark-toggle" method="get">
+        <input type="hidden" name="ref" value="https://pagwin.xyz/static/demos/light-dark-demo-4/">
         <input id="min-demo" type="submit" value="No javascript simulation">
     </form>
 </body>
