@@ -20,6 +20,8 @@ self.addEventListener("fetch", event =>{
 
 async function handle_redirect(req){
     const go_back_to = req.headers.get('Referer') || '/';;
+    console.log("ref:",req.headers.get('Referer'), go_back_to);
+    console.log("headers:",req.headers)
     const db_req = self.indexedDB.open("light-dark-store");
 
 

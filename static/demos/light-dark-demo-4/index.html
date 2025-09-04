@@ -11,28 +11,53 @@
 
 <body>
     <style>
+        p {
+            max-width: 66ch;
+        }
+
         @media (prefers-color-scheme: light) {
             :root {
                 --pico-color: black;
                 --pico-background-color: white;
+
+                & .red {
+                    color: black;
+                    background: red;
+                }
             }
 
             :root:has(body.toggled) {
                 --pico-color: white;
                 --pico-background-color: black;
 
+                & .red {
+                    color: red;
+                    background: black;
+                }
+
             }
+
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
                 --pico-color: white;
                 --pico-background-color: black;
+
+                & .red {
+                    color: red;
+                    background: black;
+                }
             }
 
             :root:has(body.toggled) {
                 --pico-color: black;
                 --pico-background-color: white;
+
+                & .red {
+                    color: black;
+                    background: red;
+                }
             }
         }
 
@@ -67,7 +92,9 @@
 
         await navigator.serviceWorker.register("sw.js");
     </script>
-    <p>Here is some example text</p>
+    <p>Don't copy this code at all, it is for demo purposes only and is terrible code. <span class="red">Note: if you
+            hard refresh you will get your system preference of light/dark due to this demo being powered by a service
+            worker</span></p>
     <form action="./light-dark-toggle" method="get">
         <input id="full-demo" type="submit" value="Fully enhanced demo">
     </form>
