@@ -74,7 +74,7 @@ function toggleLightDark(transaction){
         const grab = obj_store.get(1);
         grab.onerror = ()=>{console.error("grab error");res();};
         grab.onsuccess = (event)=>{
-            const val = event.result;
+            const val = event.target.result;
             console.log("Val is: ",val);
             if(val){
                 const yeet = obj_store.delete(1);
@@ -105,7 +105,7 @@ async function handle_html(req, resp, body){
 
             const obj_store = transaction.objectStore("light-dark-store", "readonly");
             const grab = obj_store.get(1);
-            grab.onsuccess = (event) => {res(!!event.result)};
+            grab.onsuccess = (event) => {res(!!event.target.result)};
         };
     });
 
