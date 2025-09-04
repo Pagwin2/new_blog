@@ -108,9 +108,7 @@ async function handle_html(req, resp, body){
             grab.onsuccess = (event) => {res(!!event.target.result)};
         };
     });
-
     if(!toggled) return resp;
-
     return new Response(body.replace("<body>", '<body class="toggled">'), {
             headers:resp.headers,
             status: resp.status

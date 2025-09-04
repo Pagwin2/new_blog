@@ -51,14 +51,12 @@
     <script type="module">
         function toggleTheme(e) {
             e.preventDefault();
-
+            fetch('./light-dark-toggle')
             if (!document.body.classList.contains("toggled")) {
                 document.body.classList.add("toggled")
-                localStorage.setItem("toggled-theme", "yes");
             }
             else {
                 document.body.classList.remove("toggled")
-                localStorage.setItem("toggled-theme", "no");
             }
         }
         window.addEventListener("load", () => {
