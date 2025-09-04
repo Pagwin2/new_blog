@@ -19,7 +19,7 @@ self.addEventListener("fetch", event =>{
 })
 
 async function handle_redirect(req){
-    const url = new URL(req);
+    const url = new URL(req.url);
     const go_back_to = url.searchParams.get('ref') ?? '/';
     console.log("ref:",url.searchParams.get('ref'), go_back_to);
     const db_req = self.indexedDB.open("light-dark-store");
