@@ -60,6 +60,15 @@ function IDB_cond_create(db, objectStoreName, opts={}){
     });
 }
 function toggleLightDark(transaction){
+    // Add this temporarily to see all keys/values
+    const cursor = obj_store.openCursor();
+    cursor.onsuccess = (event) => {
+        const cursor = event.target.result;
+        if (cursor) {
+            console.log("Key:", cursor.key, "Value:", cursor.value);
+            cursor.continue();
+        }
+    };
     return new Promise((res)=>{
         const obj_store = transaction.objectStore("light-dark-store");
         const grab = obj_store.get(1);
@@ -73,7 +82,7 @@ function toggleLightDark(transaction){
                 yeet.onerror = (e)=>{console.error("yeet error",e );res();};
             }
             else {
-                const plonk = obj_store.put({id:1}, 1);
+                const plonk = obj_store.put(true, 1);
                 plonk.onsuccess = res;
                 plonk.onerror = (e)=>{console.error("plonk error", e);res();};
             }
