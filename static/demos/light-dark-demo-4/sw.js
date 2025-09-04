@@ -9,10 +9,10 @@ self.addEventListener("fetch", event =>{
         const resp3 = resp2.clone();
         const body = await resp2.text();
         const url = new URL(event.request.url);
-        console.log(url.pathname);
         if(url.pathname.endsWith("light-dark-toggle")){
             return await handle_redirect(event.request);
         }
+        else if(url.hostname !== "pagwin.xyz") return;
         else {
             return await handle_html(event.request, resp3, body);
         }
