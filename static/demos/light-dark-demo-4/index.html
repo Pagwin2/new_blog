@@ -90,10 +90,9 @@
 
         await navigator.serviceWorker.register("sw.js");
     </script>
-    <p>Don't copy this code at all, it is for demo purposes only and is terrible code. <span class="red"><br>Note: if
-            you
-            hard refresh you will get your system preference of light/dark due to this demo being powered by a service
-            worker</span></p>
+    <p>Don't copy this code at all, it is for demo purposes only and is terrible code.</p>
+    <p class="red">Note: This demo makes use of a service worker meaning it won't work for hard reloads or if you have
+        javascript disabled</p>
     <form action="./light-dark-toggle" method="get">
         <input type="hidden" name="ref" value="https://pagwin.xyz/static/demos/light-dark-demo-4/">
         <input id="full-demo" type="submit" value="Fully enhanced demo">
