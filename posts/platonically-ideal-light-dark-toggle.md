@@ -71,7 +71,7 @@ This of course comes at the cost of some amount of performance as blocking the b
 
 We can mitigate this a bit by adding `blocking="render"` to the script instead of having the script be fully blocking but this is still not ideal.
 
-For the curious read, [this](https://csswizardry.com/2024/08/blocking-render-why-whould-you-do-that/) for more info on what `blocking="render"` does.
+For the curious read [this](https://csswizardry.com/2024/08/blocking-render-why-whould-you-do-that/) for more info on what `blocking="render"` does.
 
 ## A CSS Only Solution
 
