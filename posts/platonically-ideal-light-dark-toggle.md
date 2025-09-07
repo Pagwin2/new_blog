@@ -33,7 +33,7 @@ And the page visually matching the state is a fundamental part of this being for
 
 The remaining points are there to address shortcomings that occur with current implementation of the first 5 points.
 
-Point six exists to address the "flash of white" from JavaScript which affects the styling taking a moment to load 
+Point six exists to address the "flash of white" from JavaScript which affects the styling taking a moment to load. (called "flash of white" due to a common pre-javascript default being the light theme)
 
 Point seven is because we want to give the best experience possible even under suboptimal conditions.
 
