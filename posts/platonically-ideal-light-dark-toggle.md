@@ -120,6 +120,18 @@ That said the demo above doesn't do that because
 
 As such the demo uses a service worker and because service workers can't access cookies I use IndexedDB, furthermore because service workers can't access DOM APIs the DOM manipulation is done by a hard coded string replacement.
 
+### Update: Added `view-transition`
+
+Default view transition via
+
+```css
+@view-transition {
+    navigation: auto;
+}
+```
+
+Makes this technique slightly better visually and so I added it to the demo. Although not sure if/how I'd add it to a real world application which doesn't have a pretty robust system for view transition setup.
+
 ## Why Don't I Have a Light/Dark Toggle Button on This Blog?
 
 Because doing it correctly is more effort than it's worth, I don't want to do it incorrectly, and for most people their system preference will already match what they want.
