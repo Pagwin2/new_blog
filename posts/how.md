@@ -16,7 +16,7 @@ most of those points are pretty easy if you read hugo's documentation and are wi
 ```html
 <a name="some_name_or_something_idk" href="./#some_name_or_something_idk">some content doesn't matter</a>
 ```
-this is nice now if somebody goes to example.com/#some_name_or_something_idk their browser will jump them straight down to wherever that anchor tag is. But it doesn't jump to the anchorblock when we click on it it simply sets our url and if we reload it jumps to it. *Editor's note: as I write this I'm unsure if I'm an idiot who didn't need to do the work with this javascript I'm about to talk about so it may well be possible that it's unnecessary and the above code already does that*. So in order to fix that we'll be adding an event to our anchor element like this.
+this is nice now if somebody goes to `example.com/#some_name_or_something_idk` their browser will jump them straight down to wherever that anchor tag is. But it doesn't jump to the anchorblock when we click on it it simply sets our url and if we reload it jumps to it. *Editor's note: as I write this I'm unsure if I'm an idiot who didn't need to do the work with this javascript I'm about to talk about so it may well be possible that it's unnecessary and the above code already does that*. So in order to fix that we'll be adding an event to our anchor element like this.
 ```html
 <a name="name" href="./#name" id="name">some text</a>
 <script>
