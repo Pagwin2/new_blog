@@ -35,8 +35,6 @@ That said, for work done in this class, so far I've.
 - setup some docker files and a docker compose for the client (being worked on by my project partner), the server and a reverse proxy
 - Converted some json blobs of OCCTs api into differently shaped json blobs so I can avoid writing code that does more than serve static files to the extent possible
 
-
-
 ## 2025/03/01-2025/03/07
 
 So a few things happened. First we had our first meeting going over a prior sprint. Learned that those meetings are reasonably loose in what needs to be done but also are expected on Monday and need the relevant folder made ahead of time.

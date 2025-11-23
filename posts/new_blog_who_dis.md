@@ -65,6 +65,7 @@ So yeah... More on that when I discuss what I'm probably going to change in futu
 #### Making a github action out of it
 
 I refuse to accept any downgrade in my own long term convenience as such it was imperative that I be able to have pushing/merging in a repo be equivalent to rebuilding and publishing the site. First things first I needed to containerize my static site generator. As such I wrote this `Dockerfile`
+
 ```dockerfile
 FROM haskell
 
@@ -120,7 +121,7 @@ Picking colors was annoying because I wanted colors with good contrast so this s
 
 ### Icons
 
-The navigation icons for this site were picked off the internet looking for a house icon and an RSS icon. Additionally in the footer I'm using [github's official svg logo](https://brand.github.com/foundations/logo)*, asterisk due to the css I added.
+The navigation icons for this site were picked off the internet looking for a house icon and an RSS icon. Additionally in the footer I'm using [github's official svg logo](https://brand.github.com/foundations/logo)\*, asterisk due to the css I added.
 
 #### The CSS I added
 

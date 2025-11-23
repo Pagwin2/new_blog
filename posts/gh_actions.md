@@ -31,17 +31,11 @@ Then for a couple of reasons wanted to write a blog article about progress on [P
 So with inspiration in my heart to go and do stuff with Github actions I began. First off I needed to set up the condition for my workflow running which was a pretty simple as I wasn't really doing anything interesting here.
 
 ```yaml
-
 on:
-
     push:
-
         branches:
-
             - master
-
 ```
-
 
 ## The jobs
 
@@ -82,35 +76,22 @@ Conveniently while `$user_home/.ssh/authorized_keys` is the default location for
 anyways yeah this is what I initially(spoiler I change it) wrote for Github actions to go and deploy the app.
 
 ```yaml
-
 uses: up9cloud/action-rsync@master
-
 env:
-
   HOST: pagwin.xyz
-
   KEY: ${{secrets.SSH_KEY}}
-
   TARGET: /var/www/pagwin.xyz/
-
 ```
 
 With that I saved the file to `.github/website-publish.yml` and felt a mild sense of accomplishment. In hindsight that sense and first file are hilarious and while I would love to immediately explain why first I want to take a second to show a step I added after I finished dealing with my stupidity. That step is a cleanup step that deletes the old site before copying over the new one so people can't snoop around in redundant files. I implemented that with this tidbit.
 
 ```yaml
-
 uses: appleboy/ssh-action@master
-
 with:
-
   host: pagwin.xyz
-
   username: website
-
   key: ${{secrets.SSH_KEY}}
-
   script: rm -rf /var/www/pagwin.xyz/*
-
 ```
 
 
@@ -126,79 +107,39 @@ The obvious act of stupidity if you paid attention to what I wrote is that I sav
 Overall I'm very happy I did this because it gave me a nice bit of practical understanding of how to set up Github actions for future projects. I hope reading about my technical spaghetti VPS and idiocy wasn't too boring. Oh yeah for those who care this is what the yaml file looked like in the end
 
 ```yaml
-
 name: Website publish
-
-
-
 on:
-
   push:
-
     branches:
-
       - master
-
-
-
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-
       - name: Code Checkout
-
         uses: actions/checkout@v2
-
         with:
-
           submodules: true
-
           fetch-depth: 0
-
       - name: Hugo Setup
-
         uses: peaceiris/actions-hugo@v2
-
         with:
-
           hugo-version: '0.91.2'
-
       - name: Build
-
         run: hugo --minify
-
       - name: Clean
-
         uses: appleboy/ssh-action@master
-
         with:
-
           host: pagwin.xyz
-
           username: website
-
           key: ${{secrets.SSH_KEY}}
-
           script: rm -rf /var/www/pagwin.xyz/*
-
       - name: Deploy
-
         uses: up9cloud/action-rsync@master
-
         env:
-
           HOST: pagwin.xyz
-
           USER: website
-
           KEY: ${{secrets.SSH_KEY}}
-
           SOURCE: ./public/*
-
           TARGET: /var/www/pagwin.xyz/
-
 ```

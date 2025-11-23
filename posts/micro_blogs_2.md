@@ -39,6 +39,7 @@ Example:
 
 Is it pseudo elements/pseudo classes?
 If so why not use this pattern where the `style` tag is directly next to what the CSS is touching?
+
 ```html
 <style>
 #unique_name {
@@ -53,8 +54,10 @@ If so why not use this pattern where the `style` tag is directly next to what th
 </style>
 <button id="unique_name">My Button</button>
 ```
+
 Replace `unique_name` with gibberish as needed.
 Once [scope](https://developer.mozilla.org/en-US/docs/Web/CSS/@scope) is ubiquitous you could even do this.
+
 ```html
 <!-- css-scope elem is an arbitrary elem, this could be a div or whatever else instead-->
 <css-scope>
@@ -74,6 +77,7 @@ Once [scope](https://developer.mozilla.org/en-US/docs/Web/CSS/@scope) is ubiquit
 <button>My Button</button>
 </css-scope>
 ```
+
 Maybe the gibberish solution doesn't scale without additional tooling and the scope solution will become standard practice in a few years, idk man.
 
 ### pre-publishing update
@@ -160,6 +164,7 @@ I made an [Excalidraw](https://excalidraw.com/) drawing for that post.
 I modified the svg export to add a style tag which makes the colors follow Excalidraw's light vs dark theming depending on a css media query.
 Thankfully whoever did light/dark theming was super lazy and just did a filter which I could replicate in CSS rather than needing to painstakingly pick every color from their site.
 After removing their filter from the XML I just added the following to the SVG.
+
 ```xml
 <style>
 @media (prefers-color-scheme: dark){

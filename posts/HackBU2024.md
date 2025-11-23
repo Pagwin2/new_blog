@@ -97,6 +97,7 @@ services:
       - backend
 ```
 and here's an nginx config
+
 ```nginx
 worker_processes  1;
 
@@ -172,6 +173,7 @@ Okay I didn't say this outright before so I'll say it now. Google's documentatio
 >`~oia@
 
 here's what I wrote trying to implement that
+
 ```rs
 fn enc_float(num:f64)->String{
     let mut working:i32 = (num*1e5).round() as i32;

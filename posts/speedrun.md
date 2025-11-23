@@ -29,6 +29,7 @@ Lol I redid it again and wrote a blog post on it but didn't publish it so that's
 ## Music notation
 
 So about a week ago I saw [this tantacrul video](https://www.youtube.com/watch?v=Eq3bUFgEcb4) and towards the start of it I decided to come up with a new music notation for fun. I yeeted the notes because I thought arbitrary symbols seemed dumb made use of color to communicate things like sharps and other symbols while keeping the current number of bars. Here's what I wrote down with little to no influence from the video.
+
 ```
 rather than arbitrary symbols lets use lines
 length is encoded via the length of a line
@@ -50,6 +51,7 @@ all notes need to end in a black endpoint to visually clarify the end of a note
 
 background staff I think it's called is kept the same so pitch is clear
 ```
+
 After watching the video I realized that I had reinvented piano bars and that I left a lot unspecified and had 2 problem, 1) short notes are hard to diferentiate from each other 2) this setup screws over color blind people. There are hacky solutions to those problems and I could work on making this system more complete but I did it for fun and I'm bored of it now so I won't.
 
 ## I'm dipping my toes in haskell and I made a monstrosity
