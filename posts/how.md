@@ -69,7 +69,6 @@ should work right? Nope nope nope for multiple reasons nope. For one thing tryin
 which is closer but it still jumps into the body for some reason. That reason as it turns out is because Hugo ~~being somewhat annoying because it decides not to warn you for failing to be explicit about whether you want a tag as a tag~~ being very cool and safe escaping all the tags to prevent cross site scripting/injection or whatever else problems in code that you're explicitly writing out in a folder for templates. Ugh anyways after running the output of the printf through [SafeHTML](https://gohugo.io/functions/safehtml/) we get this final iteration that works how I want it to of.
 
 ```html
-
 {{ cond (eq .Page.Kind "page") ( safeHTML (printf "<link rel='stylesheet' href='%s/css/single.css'>" .Site.BaseURL)) "" }}
 ```
 
