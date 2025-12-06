@@ -37,11 +37,8 @@ So yeah before anything I wasted an hour or 2 working on setting up an ORM that 
 First things first, I had to get the data. Now you'd think that reverse engineering a bus live map would be hard but as it turns out it's pretty easy at least for what I'm doing. It was literally just
 
 1. go to live map website
-
 2. open up the network tab of the browser dev tools
-
 3. refresh the page and search for the words "bus", "route" and "stop" in the requests
-
 4. click on the obvious results and use brain to figure out what json fields like "name" and "stops" and "lat" and "lon" could possibly mean
 
 conveniently the Hackathon can't really prevent prior work that isn't code so all of the api reverse engineering was done the day before the hackathon so the time wasted on ORM stuff canceled out.

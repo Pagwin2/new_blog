@@ -41,10 +41,8 @@ This situation was not helped by me getting sick on the last week but thankfully
 ## Lessons learned
 
 1) If I care about the success of something and nobody has taken charge of that thing within a timely manner, oftentimes this means within a week, then I need to take charge
-2) Barring circumstances where it isn't possible to do so a MVP of a project should be completed as the first unit of work, in this case that would've been a week.
-Afterwards units of work should be visible features.
-3) Any problem which is not fixed will remain a problem. 
-In this case a team member having low remote responsiveness will not magically change so it'd have been better to start scheduling in person meetings sooner.
+2) Barring circumstances where it isn't possible to do so a MVP of a project should be completed as the first unit of work, in this case that would've been a week. Afterwards units of work should be visible features.
+3) Any problem which is not fixed will remain a problem. In this case a team member having low remote responsiveness will not magically change so it'd have been better to start scheduling in person meetings sooner.
 
 ## What now
 
