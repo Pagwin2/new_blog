@@ -47,6 +47,7 @@ function handlePage(authority,response){
     }
 }
 ```
+
 Yeah, pretty simple but allow me to explain what bits of these 2 functions are doing and why.
 
 ```js

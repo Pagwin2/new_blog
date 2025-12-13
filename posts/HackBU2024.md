@@ -93,6 +93,7 @@ services:
     depends_on:
       - backend
 ```
+
 and here's an nginx config
 
 ```nginx
