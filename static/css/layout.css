@@ -211,6 +211,7 @@ article {
 blockquote {
     /*font-style: italic;*/
     padding: 0;
+    padding-left: 1ch;
     border-radius: 0.5rem;
     p{
         /*margin is annoying in this case*/
