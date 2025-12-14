@@ -5,7 +5,7 @@ description: "I made a Markdown parser for the static site generator powering th
 
 date: "2025-12-13"
 
-draft: true
+draft: false
 
 tags: []
 ---
