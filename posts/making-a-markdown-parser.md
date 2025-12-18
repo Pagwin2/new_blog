@@ -16,7 +16,7 @@ If you're wondering why I did this then see [the prior post on redoing things he
 Specifically the part where I say:
 
 > A lot of changes I want to make are downstream of getting greater control of parsing my posts and controlling what HTML is output.
-> I could deal with Pandoc's AST but that sounds unnecessarily difficult
+ I could deal with Pandoc's AST but that sounds unnecessarily difficult
 
 So yeah, that.
 
