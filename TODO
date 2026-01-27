@@ -1,4 +1,5 @@
 - XSLT for atom feedhttps://developer.mozilla.org/en-US/docs/Web/XML/XSLT
+- Swap out px units for em or rem on anything other than padding, margin or gap
 - post jump points and table of contents (be wary of having this take up too much space on mobile) probably done with position: sticky in some way
     - make h elems have anchor elems with rel="bookmark" and a name to make them proper bookmarks, also add :target css as needed
 - Make references(the tiny number things) appear to the side instead of the bottom on desktop, try to make it bottom of page in print or bottom of print otherwise, might need grid or float hard to say atm
