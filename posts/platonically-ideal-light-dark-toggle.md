@@ -23,7 +23,7 @@ For the purposes of this article an ideal theme toggle has the following propert
 7) The above should be done with progressive enhancement
 8) The above should be done with minimal impact on browser optimizations
 
-The purpose of the first four points should be reasonably apparent.
+The purpose of the first five points should be reasonably apparent.
 
 If the page can't be in a state of light or dark then what's the point of the toggle between the two.
 Having the page have both and not match `prefers-color-scheme` on the initial load is an anti-pattern.
@@ -31,7 +31,7 @@ Having the button change the state is the entire purpose of what we're trying to
 If the state doesn't persist then using the button becomes a chore that needs to be done on every page load in order to get any benefit.
 And the page visually matching the state is a fundamental part of this being for theming.
 
-The remaining points are there to address shortcomings that occur with current implementation of the first 5 points.
+The remaining points are there to address shortcomings that occur with current implementations of the first 5 points.
 
 Point six exists to address the "flash of white" from JavaScript which affects the styling taking a moment to load. (called "flash of white" due to a common pre-javascript default being the light theme)
 
