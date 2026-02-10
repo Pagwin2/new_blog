@@ -49,7 +49,7 @@ This situation was not helped by me getting sick on the last week but thankfully
 So now that the semester is over what will happen?
 
 This work is probably going to be abandoned due to me needing to focus on other things.
-If I come back to this project though I'm probably going to rewrite again due to probably doing it solo, choosing different technologies for front, getting rid of compromises which were made to accomodate development being done over Windows and Linux rather than just on Linux and backend and disliking some of the current solutions to problems.
+If I come back to this project though I'm probably going to rewrite again due to probably doing it solo, allowing different technology choices for front and backend, tech debt caused by compromises which were made to accomodate development being done over Windows and Linux rather than just on Linux and disliking some of the current solutions to problems.
 
 Note to self: never check generated files into the build system, the disk/network cost(s) of git are not the reason they're just salt in the wound.
 The actual reason is because generated files by nature of being generated are annoying to change so it'd be better to check the generator script in and have generating them as part of either process startup or a build step to put the friction where it causes the least damage.
