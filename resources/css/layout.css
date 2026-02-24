@@ -1,5 +1,5 @@
 @layer pre-load, reset, baseline, overload-1, print;
-@import url("/static/css/reset.css") layer(reset);
+@import url("./reset.css") layer(reset);
 
 /*
  * saving this for when doing a table of contents, position: sticky isn't good enough
