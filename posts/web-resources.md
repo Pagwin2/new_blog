@@ -20,8 +20,7 @@ I may add resources focused on Javascript and SSGs here in future but for now.
 
 The list that I pruned this list out from initially can be found [here](https://discourse.32bit.cafe/t/resources-list-for-the-personal-web/49)
 
-- [HTML Dog](https://www.htmldog.com/): Seems to do a good job not throwing things at you too quickly.
-Although I'd say its missing important information about flexbox and grid in addition to making some omissions and mistakes.
+- [HTML Dog](https://www.htmldog.com/): Seems to do a good job not throwing things at you too quickly. Although I'd say its missing important information about flexbox and grid in addition to making some omissions and mistakes.
 - [HTML for People](https://htmlforpeople.com/): Goes slower than HTML Dog, sticks to just HTML (CSS and Javascript learning needs to happen elsewhere) and is a bit more hand holdy overall
 - [Interneting is Hard](https://internetingishard.netlify.app/): Like *HTML for People* but goes over CSS as well
 - [Mozilla's Web Docs](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web): Shorter and less Hand holdy than the other resources listed so far, MDN is also a good reference to find information on specific bits of HTML, CSS and JS so even if the guide doesn't prove appropriate for you I advise saving the site regardless.
