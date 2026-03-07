@@ -3,7 +3,7 @@ title: "A list of useful resources for learning web dev"
 
 description: "Pruning down a list I found elsewhere so when I give resources in future I can at least vouch a little bit"
 
-date: "2025-03-07"
+date: "2026-03-07"
 
 draft: false
 
