@@ -16,7 +16,7 @@ This one is just a list of links with a short description so I can give out this
 No guarantees that all the links will jive with you but I've tried to make sure they aren't useless.
 
 For now this list is mostly focused on HTML and CSS with Javascript, HTTP and various tooling like SSGs, Bundlers and Frameworks mostly kept out.
-I may add resources focused on Javascript and SSGs here in future but for now.
+I may add resources focused on Javascript and SSGs here in future but for now this'll do.
 
 The list that I pruned this list out from initially can be found [here](https://discourse.32bit.cafe/t/resources-list-for-the-personal-web/49)
 
