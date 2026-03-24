@@ -1,0 +1,7 @@
+digraph {
+    start -> gather_requirements
+    gather_requirements -> write_spec
+    write_spec -> write_interface
+    write_interface -> write_tests
+    write_tests -> write_implementation
+}
