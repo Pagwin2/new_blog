@@ -6,9 +6,9 @@
     - refer to implementation here https://blog.kizu.dev/repetition-and-attribution/
     - Or just yolo that stuff with Anchor + css feature detection https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning
 - Fix articles with inline html in them and/or links
+- fix /posts/HackBU2024/
 - ico?
 - analytics
     https://github.com/electerious/Ackee
     https://umami.is/ (https://github.com/umami-software/umami)
 - search functionality
-- fix /posts/HackBU2024/
