@@ -19,7 +19,7 @@ It is **NOT**
 - A post about other use cases for LLMs
 - A post about other generative models e.g. image, audio and video generation.
 
-This experience was via Claude Code over the past few months or so.
+This experience was via Claude Code, using Sonnet, over the past few months or so.
 
 ## Experience 1: Working on a compiler
 
