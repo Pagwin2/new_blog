@@ -234,8 +234,8 @@ blockquote {
     max-width: fill-available;
     width: fit-content;
     /* this may bite me in the ass*/
-    display:flex;
-    justify-content: center;
+    /*display:flex;
+    justify-content: center;*/
 }
 
 pre {
