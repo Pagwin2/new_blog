@@ -5,6 +5,7 @@
 - Make references(the tiny number things) appear to the side instead of the bottom on desktop, try to make it bottom of page in print or bottom of print otherwise, might need grid or float hard to say atm
     - refer to implementation here https://blog.kizu.dev/repetition-and-attribution/
     - Or just yolo that stuff with Anchor + css feature detection https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning
+        - https://gemini.google.com/share/b49e9d4eeb18 can't handle overlap but I can have it so js bumps when overlap is detected until it stops
 - Fix articles with inline html in them and/or links
 - fix /posts/HackBU2024/
 - ico?

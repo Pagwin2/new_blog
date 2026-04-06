@@ -85,6 +85,9 @@ That said this tooling is still woefully inadequate in terms of maintaining code
 
 Anecdotally after starting on the writing that became this post I started refactoring the code and... unfortunately I'm running into many cases where the LLM made a bad decision based on insuffiecient information or incompetence. For example it defaulted to running the nodes of the graph in a fully synchronous manner (for loop of await in Rust 😬), using strings in places where strings shouldn't go as well and it used `Arc` in places where multiple threads never cropped up.
 
+Ultimately that refactor was made easier with an LLM but for better and worse it was only necessary because the code was written by an LLM.
+
+
 ----------------
 
 So, LLM Agents have recently gotten popular in some parts of software development.
