@@ -83,10 +83,19 @@ That said this tooling is still woefully inadequate in terms of maintaining code
 
 ## Reading the code and refactoring with Claude Code
 
-Anecdotally after starting on the writing that became this post I started refactoring the code and... unfortunately I'm running into many cases where the LLM made a bad decision based on insuffiecient information or incompetence. For example it defaulted to running the nodes of the graph in a fully synchronous manner (for loop of await in Rust 😬), using strings in places where strings shouldn't go as well and it used `Arc` in places where multiple threads never cropped up.
+Anecdotally after starting on the writing that became this post I started refactoring the code and... unfortunately I'm running into many cases where the LLM made a bad decision based on insuffiecient information or incompetence.
+For example it defaulted to running the nodes of the graph in a fully synchronous manner (for loop of await in Rust 😬), using strings in places where strings shouldn't go as well and it used `Arc` in places where multiple threads never cropped up.
 
 Ultimately that refactor was made easier with an LLM but for better and worse it was only necessary because the code was written by an LLM.
 
+## Actually it's worse than that
+
+I'm writing this bit a couple of weeks after that prior section where I've realized that the situation is a bit worse than I thought at that time.
+
+However there is a caveat to that, namely that while the prior blunders were from the LLM taking on too much these "blunders" were from me not building a strong mental model prior to having everything get built out.
+Namely I have a better sense of where things should be cut/split up, previously my module structure was `gor`, `gor-core`, `gor-impl` and `gor-providers` where most of the abstract pure logic, impl plugged a good chunk of that into code that did side effects, providers handled talking with LLM APIs and `gor` was the binary and some remaining stuff.
+But now with things put toegether I'm moving towards a setup where there's three binaries (maybe two but the logical split remains) of `gor-tui`, `gor-orchestrator` and `gor-agent` where the TUI is just the TUI, orchestrator handles dependency management, global state and spawning agents/shell processes and agent is just the stuff that drives forward 1 agent.
+Those three can then communicate through message passing which in the short term will be done via `mpsc` in a single process but in future will probably involve IPC, maybe via stdout/stdin for agents with the orchestrator and probably a unix or TCP socket for the UI assuming I don't keep the UI in the orchestrator process.
 
 ----------------
 
