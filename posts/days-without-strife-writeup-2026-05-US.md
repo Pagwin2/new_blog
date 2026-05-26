@@ -110,3 +110,9 @@ That said emotionally I'd prefer to kill arrows but that would definitely lose m
 This may be the wrong play but oh well.
 
 Arrows are going to be thrilled when they see the neutral spot. lol
+
+Okay day's done, I got a good chuckle from the arrows in exchange for some dashes and arrows pointed out the empire had a commend so... wow they really really misplayed and arrows really did a good job playing the siren situation to their advantage, if they win they deserve it.
+
+We'll see how their play with me compares to how the Muse played because as things stand if it's equal bids I'm probably giving Muse the game.
+
+## Day 3
