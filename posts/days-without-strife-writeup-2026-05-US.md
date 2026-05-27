@@ -116,3 +116,17 @@ Okay day's done, I got a good chuckle from the arrows in exchange for some dashe
 We'll see how their play with me compares to how the Muse played because as things stand if it's equal bids I'm probably giving Muse the game.
 
 ## Day 3
+
+Arrows have indicated they intend to buy everything on the last day originally with 18+-2 electrum but things didn't work out how they expect so it'll be less.
+
+They're keeping things private as a matter of not having agents try to double deal but tbh they'll need to pay good money for the next turn or two for me to not do that to them at this point.
+
+Anyways I have a few potential deals, we'll see how many go through, arrows offering 3 + collateral in exchange for two armies attacking muse, muse paying 0.1-0.2 for gaslighting and young empire paying 1 (may go higher if gaslight works) for an agent to attack with 5 for leveling up a commander.
+
+Muse attack went through, muse went from paying for gaslighting to paying to actually attack and multiple protection rackets failed.
+
+Also I may have started a war between Muse and Masks+Arrows although Muse vs Arrows may have happened without me.
+
+Seeing an after action report from the arrows will be interesting because from my POV they've somehow convinced empire and Masks that they should work toegether trust me bro which seems a bit crazy but we'll see.
+
+## Day 4
