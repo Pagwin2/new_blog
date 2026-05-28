@@ -130,3 +130,20 @@ Also I may have started a war between Muse and Masks+Arrows although Muse vs Arr
 Seeing an after action report from the arrows will be interesting because from my POV they've somehow convinced empire and Masks that they should work toegether trust me bro which seems a bit crazy but we'll see.
 
 ## Day 4
+
+Nobody's interested in doing business and we're at 3rd train :(.
+I did try to warn the factions about arrows being a likely threat for first but nothing obvious came from that but maybe it'll pay off in day 5.
+Either way I'm probably not winning, I haven't gotten enough from the early days and I don't think I'll get enough more on the last day to make up for that.
+
+Arrows are about to be airship shot + me trying to get on their border so... they may have flown too close to the sun with their make bank to spend on day 5 strat.
+
+Also struggling to sell 1 brass, may sell to the highwayman for an alliance day 5.
+
+Okay the it's so over we're so back loop happened to me, I got a late deal with arrows.
+
+They paid 4 + commend(turned into debt by accident) so now 1.5 debt to pay me for day 5.
+More importantly while I'm at 12.7 only merchant and brotherhood can be way ahead and merchant has indicated they aren't so either I win or Brotherhood stomps and everyone asks for nerf(s).
+
+That said there's no open spaces which is extremely scary because I might not be able to do anything without my competition getting paid a good chunk.
+
+We'll see, if I win my first game I will be quite happy and if I lose then I have some ideas for what I could've done better.
