@@ -147,3 +147,21 @@ More importantly while I'm at 12.7 only merchant and brotherhood can be way ahea
 That said there's no open spaces which is extremely scary because I might not be able to do anything without my competition getting paid a good chunk.
 
 We'll see, if I win my first game I will be quite happy and if I lose then I have some ideas for what I could've done better.
+
+## Day 5
+
+Just learned about Enforcer who yoinks electrum back if you're not allied with them at the game's end which is now a new thing for me the be stressed about.
+
+Wanderer seems likely to make room for me so I won't be completely screwed but it's going to be tough.
+
+No explicit offers for my services yet though which combined with enforcer is scary.
+
+0.5 for an alliance with arrows who have decent shot to get enforcer so...
+
+2.1e for mask alliance, I told them I'd hold it if their bid was higher than the bid to attack.
+
+Muse I'm doing a hard bargain with which may get me 0e but if it works it'll b 3.4e.
+
+Muse probably paying me but I'm definitely not winning regardless, didn't get enough electrum due to not being antagonistic enough.
+
+
