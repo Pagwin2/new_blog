@@ -10,6 +10,10 @@ draft: true
 tags: []
 ---
 
+Finite state machines (really finite state transducers or mealy machines) are very useful for the simple reason that they are a good model for the mechanism(s) you use to process a log of events to achieve some outcome.
+
+# Prior Writing
+
 Reading that title I expect roughly one of three responses.
 
 1. What's a Finite State machine
