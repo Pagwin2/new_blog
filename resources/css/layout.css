@@ -260,6 +260,9 @@ hr {
 p {
     /*https://pearsonified.com/golden-ratio-typography-intro/ is where this came from and tbh having a bigger line height does make things more readable although I tune it down a bit*/
     line-height: 1.5;
+    /* makes spacing better subjectively speaking*/
+    margin-bottom: 1lh;
+    margin-top:0;
 }
 
 footer {
