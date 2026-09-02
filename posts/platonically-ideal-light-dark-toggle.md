@@ -42,8 +42,9 @@ Point eight is so we can avoid breaking browser optimizations to our site's load
 ## Demo Caveat
 
 It's expected that most readers will be reading this article from a decently powerful device with a good internet connection on a modern browser and are unlikely to be disabling scripts.
-However most of the "issues" with these various solutions stem from circumstances where one of those circumstances are false.
-Furthermore issues that fall under points 6 and 8 only become particularly apparent on pages with some "girth" (dare I say bloat) to them, as such it's expected that all demos, being rather lightweight, will at first glance pass certain criteria even if they don't.
+However most of the "issues" with these various solutions stem from circumstances where one of those circumstances is false.
+Furthermore issues that fall under points 6 and 8 only become particularly apparent on pages with some "girth" (dare I say bloat) to them.
+As such it's expected that all demos, being rather lightweight, will at first glance pass certain criteria even if they don't.
 
 So I am relying on some amount of the reader taking me at my word regarding certain implementations failing some criteria.
 
@@ -130,7 +131,8 @@ Default view transition via
 }
 ```
 
-Makes this technique slightly better visually and so I added it to the demo. Although not sure if/how I'd add it to a real world application which doesn't have a pretty robust system for view transition setup.
+Makes this technique slightly better visually and so I added it to the demo. 
+That said, I'm not sure if/how I'd add it to a real world application which doesn't already have a pretty robust system for view transition setup.
 
 ### Update 2: Made js button also use view transitions
 
