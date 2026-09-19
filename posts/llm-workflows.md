@@ -1,7 +1,7 @@
 ---
 title: "Static LLM workflow automation seems underdiscussed"
 
-description: "In terms of the discourse I read or am aware of I'm not aware of much discussion arround static LLM workflows and how to do them well."
+description: "In terms of the discourse I read or am aware of I'm not aware of much discussion around static LLM workflows and how to do them well."
 
 date: "2026-09-19"
 
@@ -21,7 +21,7 @@ When I say static LLM workflow I mean that you have a well defined set of automa
 
 For example maybe I have a setup where I have an LLM interview me about a change I'd like to make to some software project.
 Then once I and the LLM are satisfied (air quotes for the LLM) that things are reasonably well specified that transcript can get passed to an LLM agent which writes out test cases in the repo for test driven development of functionality.
-Then after tests are written an agent implements things either checking things itself or being setup in a static loop with a script which runs the tests or LLM agent that verifies that everything looks good.
+Then after tests are written an agent implements things either checking things itself or being set up in a static loop with a script which runs the tests or LLM agent that verifies that everything looks good.
 
 Of course you could do all that by asking an LLM to spawn subagents for all that.
 But... why?
@@ -46,5 +46,5 @@ At least, that's what I'd naively expect.
 Unfortunately without having seen any other discussion on the matter I could be missing something obvious.
 
 Part of why I wrote this, is that I recently learned that tooling for this exists already.
-I just hadn't heard the tooling until I stumbled upon it by accident via reading an unrelated blog post which mentioned Apache Airflow. 
-Which lead me to ask about using LLMs in that to an LLM leading me to the existing static workflow tooling.
+I just hadn't heard of the tooling until I stumbled upon it by accident via reading an unrelated blog post which mentioned Apache Airflow. 
+Which caused me to ask about using LLMs in Airflow which led me to the existing static workflow tooling.
